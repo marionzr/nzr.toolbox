@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Nzr.ToolBox.Core</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>A collection of utility classes and extension methods that allow developers to have a social life.
+This is a all-in-one version of Nzr.ToolBox.Core, so you just need one import.</Description>
+    <Copyright>Copyright 2019</Copyright>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/marionzr/Nzr.ToolBox</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
+    <PackageReleaseNotes>Check the release notes at https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/README.md</PackageReleaseNotes>
+    <PackageTags>Extension Extension-Methods Utils Utility</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;SINGLE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;SINGLE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>..\Docs\Nzr.ToolBox.Core.Single.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Nzr.ToolBox.Core\BooleanUtils.cs" Link="BooleanUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\CollectionUtils.cs" Link="CollectionUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\Constants.cs" Link="Constants.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\DateTimeUtils.cs" Link="DateTimeUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\EnumUtils.cs" Link="EnumUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\NumberUtils.cs" Link="NumberUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\ObjectUtils.cs" Link="ObjectUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\RandomUtils.cs" Link="RandomUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\ReflectionUtils.cs" Link="ReflectionUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\StringUtils.cs" Link="StringUtils.cs" />
+    <Compile Include="..\Nzr.ToolBox.Core\ToolBox.cs" Link="ToolBox.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" Version="1.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Check the release notes at https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/README.md</PackageReleaseNotes>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageTags>Extension Extension-Methods Utils Utility</PackageTags>
+    <RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/marionzr/Nzr.ToolBox</PackageProjectUrl>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <Copyright>Copyright 2019</Copyright>
+    <Description>A collection of utility classes and extension methods that allow developers to have a social life.</Description>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>..\Docs\Nzr.ToolBox.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>..\Docs\Nzr.ToolBox.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" Version="1.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
