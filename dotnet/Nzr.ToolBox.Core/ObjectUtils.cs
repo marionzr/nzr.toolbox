@@ -75,6 +75,20 @@ namespace Nzr.ToolBox.Core
         }
 
         /// <summary>
+        /// To be used with IfNull. This method is invoked in case the value checked by IsNull actually is not null.
+        /// </summary>
+        /// <param name="notnull">Internal use.</param>
+        /// <param name="action">Action to be executed in case the value is null.</param>
+        public static void Else<T>(this NotNull<T> notnull, Action<T> action)
+        {
+            if (notnull != null)
+            {
+                action.Invoke(notnull.Value);
+            }
+        }
+
+
+        /// <summary>
         /// To be used with IfNotNull.
         /// This method is invoked in case the value checked by IsNotNull actually is null and
         /// throws a new ArgumentNullException.
@@ -93,19 +107,6 @@ namespace Nzr.ToolBox.Core
                 {
                     throw new ArgumentException("Value cannot be null.");
                 }
-            }
-        }
-
-        /// <summary>
-        /// To be used with IfNull. This method is invoked in case the value checked by IsNull actually is not null.
-        /// </summary>
-        /// <param name="notnull">Internal use.</param>
-        /// <param name="action">Action to be executed in case the value is null.</param>
-        public static void Else<T>(this NotNull<T> notnull, Action<T> action)
-        {
-            if (notnull != null)
-            {
-                action.Invoke(notnull.Value);
             }
         }
 
@@ -150,14 +151,14 @@ namespace Nzr.ToolBox.Core
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True is at least one value is null.</returns>
-        public static bool AnyNull(params object[] values) => values.Any(o => o == null);
+        public static bool IsAnyNull(params object[] values) => values.Any(o => o == null);
 
         /// <summary>
         /// Checks if any value is not null.
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True is at least one value is not null.</returns>
-        public static bool AnyNonNull(params object[] values) => values.Any(o => o != null);
+        public static bool IsAnyNonNull(params object[] values) => values.Any(o => o != null);
 
         /// <summary>
         /// Returns the first value which is not null.

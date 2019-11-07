@@ -52,6 +52,8 @@ namespace Nzr.ToolBox.Core
         public static void ExecuteForEachProperty(this object entity, Action<Reflect> action,
             BindingFlags bindingAttr = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
         {
+            entity.RequireNonNull();
+
             IList<PropertyInfo> properties = entity.GetType().GetProperties(bindingAttr).ToList();
 
             foreach (PropertyInfo property in properties)
@@ -94,6 +96,8 @@ namespace Nzr.ToolBox.Core
         /// <returns>IDictionary with entity name as key and properties names as value.</returns>
         public static IDictionary<string, IList<string>> GetPropertyNames(this object entity, BindingFlags bindingAttr = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
         {
+            entity.RequireNonNull();
+
             IDictionary<string, IList<string>> dictionary = new Dictionary<string, IList<string>>();
 
             entity.ExecuteForEachProperty(i =>
@@ -145,6 +149,8 @@ namespace Nzr.ToolBox.Core
         /// <returns></returns>
         public static R GetValue<R>(this object entity, string propertyPath)
         {
+            entity.RequireNonNull();
+
             PropertyInfo propertyInfo;
 
             if (!propertyPath.Contains("."))

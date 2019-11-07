@@ -6,7 +6,7 @@ namespace Nzr.ToolBox.Core.Tests
     public class CollectionUtilsTests
     {
         [Fact()]
-        public void ForEach_WithGenericListShouldExecuteAction()
+        public void ForEach_WithGenericList_ShouldExecuteAction()
         {
             // Arrange
 
@@ -25,7 +25,24 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact()]
-        public void ForEach_WithListShouldExecuteAction()
+        public void ForEach_WithNull_ShouldNotExecuteAction()
+        {
+            // Arrange
+
+            IList<string> list = null;
+            IList<char> actionResult = new List<char>();
+
+            // Act
+
+            list.ForEach<string>(e => actionResult.Add(e[0].ToLower()));
+
+            // Assert
+
+            Assert.Empty(actionResult);
+        }
+
+        [Fact()]
+        public void ForEach_WithList_ShouldExecuteAction()
         {
             // Arrange
 
@@ -41,6 +58,23 @@ namespace Nzr.ToolBox.Core.Tests
             Assert.Equal('a', actionResult[0]);
             Assert.Equal('b', actionResult[1]);
             Assert.Equal('c', actionResult[2]);
+        }
+
+        [Fact()]
+        public void ForEach_WithNullList_ShouldNotExecuteAction()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable list = null;
+            IList<char> actionResult = new List<char>();
+
+            // Act
+
+            list.ForEach(e => actionResult.Add(e.ToString()[0].ToLower()));
+
+            // Assert
+
+            Assert.Empty(actionResult);
         }
 
         [Fact()]
@@ -66,7 +100,29 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact()]
-        public void ForEach_WithList_ShouldExecuteFunction()
+        public void ForEach_WithNull_ShouldNotExecuteFunction()
+        {
+            // Arrange
+
+            IList<string> list = null;
+            IList<char> functionResult = new List<char>();
+
+            // Act
+
+            list.ForEach<string>(e =>
+            {
+                functionResult.Add(e[0]);
+                return e != "B";
+            });
+
+
+            // Assert
+
+            Assert.Empty(functionResult);
+        }
+
+        [Fact()]
+        public void ForEach_WithEnumerable_ShouldExecuteFunction()
         {
             // Arrange
 
@@ -86,6 +142,29 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             Assert.Equal(2, functionResult.Count);
+        }
+
+        [Fact()]
+        public void ForEach_WithNullEnumerable_ShouldNotExecuteFunction()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable list = null;
+            IList<char> functionResult = new List<char>();
+
+            // Act
+
+            list.ForEach(e =>
+            {
+                string s = e.ToString();
+                functionResult.Add(s[0]);
+                return s != "B";
+            });
+
+
+            // Assert
+
+            Assert.Empty(functionResult);
         }
 
 
@@ -109,6 +188,25 @@ namespace Nzr.ToolBox.Core.Tests
             Assert.Null(list.Get(0));
             Assert.Equal("", list.Get(1));
             Assert.Equal("x", list.Get(2));
+        }
+
+        [Fact()]
+        public void Add_WithNullCollection_ShouldNotAddAllElements()
+        {
+            // Arrange
+
+            string a = null;
+            string b = "";
+            string c = "x";
+            ICollection<string> list = null;
+
+            // Act
+
+            list.AddElements(a, b, c);
+
+            // Assert
+
+            Assert.Null(list);
         }
 
         [Fact()]
@@ -140,6 +238,31 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact()]
+        public void Add_WithNullCollectionSourceAndListAsArgument_ShouldNotAddAllElements()
+        {
+            // Arrange
+
+            string a = null;
+            string b = "";
+            string c = "x";
+
+            ICollection<string> another = new List<string>()
+            {
+                 a, b, c
+            };
+
+            ICollection<string> list = null;
+
+            // Act
+
+            list.AddEnumerable(another);
+
+            // Assert
+
+            Assert.Null(list);
+        }
+
+        [Fact()]
         public void ContainsAll_WithEnumerableAndSameElements_ShouldReturnTrue()
         {
             // Arrange
@@ -154,6 +277,57 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             Assert.True(result);
+        }
+
+        [Fact()]
+        public void ContainsAll_WithNullEnumerables_ShouldReturnTrue()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable list1 = null;
+            System.Collections.IEnumerable list2 = null;
+
+            // Act
+
+            bool result = list1.ContainsAll(list2);
+
+            // Assert
+
+            Assert.True(result);
+        }
+
+        [Fact()]
+        public void ContainsAll_WithNullSourceEnumerable_ShouldReturnFalse()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable list1 = null;
+            System.Collections.IEnumerable list2 = new List<string>() { "a", "b", "c" };
+
+            // Act
+
+            bool result = list1.ContainsAll(list2);
+
+            // Assert
+
+            Assert.False(result);
+        }
+
+        [Fact()]
+        public void ContainsAll_WithNullRefEnumerable_ShouldReturnFalse()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable list1 = new List<string>() { "a", "b", "c" };
+            System.Collections.IEnumerable list2 = null;
+
+            // Act
+
+            bool result = list1.ContainsAll(list2);
+
+            // Assert
+
+            Assert.False(result);
         }
 
         [Fact()]
@@ -191,6 +365,56 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact()]
+        public void ContainsAll_WithNullSourceAndRefGenericEnumerable_ShouldReturnTrue()
+        {
+            // Arrange
+
+            IList<string> list1 = null;
+            IList<string> list2 = null;
+
+            // Act
+
+            bool result = list1.ContainsAll(list2);
+
+            // Assert
+
+            Assert.True(result);
+        }
+
+        [Fact()]
+        public void ContainsAll_WithNullSourceEnumerable_ShouldReturnTrue()
+        {
+            // Arrange
+
+            IList<string> list1 = null;
+            IList<string> list2 = new List<string>() { "a", "b", "c" };
+
+            // Act
+
+            bool result = list1.ContainsAll(list2);
+
+            // Assert
+
+            Assert.False(result);
+        }
+
+        [Fact()]
+        public void ContainsAll_WithNullRefEnumerable_ShouldReturnTrue()
+        {
+            // Arrange
+
+            IList<string> list1 = new List<string>() { "a", "b", "c" };
+            IList<string> list2 = null;
+            // Act
+
+            bool result = list1.ContainsAll(list2);
+
+            // Assert
+
+            Assert.False(result);
+        }
+
+        [Fact()]
         public void ContainsAny_WithEnumerableAndSomeOfOtherElements_ShouldReturnTrue()
         {
             // Arrange
@@ -205,6 +429,40 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             Assert.True(result);
+        }
+
+        [Fact()]
+        public void ContainsAny_WithNullSourceEnumerable_ShouldReturnFalse()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable list1 = null;
+            System.Collections.IEnumerable list2 = new List<string>() { "x", "y", "c" };
+
+            // Act
+
+            bool result = list1.ContainsAny(list2);
+
+            // Assert
+
+            Assert.False(result);
+        }
+
+        [Fact()]
+        public void ContainsAny_WithNullRefEnumerable_ShouldReturnFalse()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable list1 = new List<string>() { "x", "y", "c" };
+            System.Collections.IEnumerable list2 = null;
+
+            // Act
+
+            bool result = list1.ContainsAny(list2);
+
+            // Assert
+
+            Assert.False(result);
         }
 
         [Fact()]
@@ -231,6 +489,40 @@ namespace Nzr.ToolBox.Core.Tests
 
             IList<string> list1 = new List<string>() { "a", "b", "c" };
             IList<string> list2 = new List<string>() { "A", "B" };
+
+            // Act
+
+            bool result = list1.ContainsAny(list2);
+
+            // Assert
+
+            Assert.False(result);
+        }
+
+        [Fact()]
+        public void ContainsAny_WithNullSourceGenericEnumerable_ShouldReturnFalse()
+        {
+            // Arrange
+
+            IList<string> list1 = null;
+            IList<string> list2 = new List<string>() { "A", "B" };
+
+            // Act
+
+            bool result = list1.ContainsAny(list2);
+
+            // Assert
+
+            Assert.False(result);
+        }
+
+        [Fact()]
+        public void ContainsAny_WithNullRefGenericEnumerable_ShouldReturnFalse()
+        {
+            // Arrange
+
+            IList<string> list1 = new List<string>() { "A", "B" };
+            IList<string> list2 = null;
 
             // Act
 
@@ -327,6 +619,22 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             Assert.Equal("b", result);
+        }
+
+        [Fact]
+        public void Get_WithNullEnumerabl_ShouldReturnNull()
+        {
+            // Arrange
+
+            System.Collections.IEnumerable enumerable = null;
+
+            // Act
+
+            object result = enumerable.Get(1);
+
+            // Assert
+
+            Assert.Null(result);
         }
 
         [Fact]
@@ -482,6 +790,22 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact]
+        public void IndexOf_WithNullArray_ShouldReturnMinusOne()
+        {
+            // Arrange
+
+            byte[] b = null;
+
+            // Act
+
+            int bResult = b.IndexOf(2);
+
+            // Assert
+
+            Assert.Equal(-1, bResult);
+        }
+
+        [Fact]
         public void IndexOf_WithNonExistingItem_ShouldReturnMinusOne()
         {
             // Arrange
@@ -582,6 +906,22 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             Assert.Equal("c", result);
+        }
+
+        [Fact]
+        public void GetKey_WithNullDictionary_ShouldReturnDefault()
+        {
+            // Arrange
+
+            IDictionary<string, string> dictionary = null;
+
+            // Act
+
+            string result = dictionary.GetKey<string, string>("d");
+
+            // Assert
+
+            Assert.Null(result);
         }
     }
 }

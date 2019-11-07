@@ -212,7 +212,7 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact]
-        public void AnyNull_WithOneNull_ShouldReturnTrue()
+        public void IsAnyNull_WithOneNull_ShouldReturnTrue()
         {
             // Arrange
 
@@ -222,7 +222,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool anyNull = AnyNull(a, b, c);
+            bool anyNull = IsAnyNull(a, b, c);
 
             // Assert
 
@@ -230,7 +230,7 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact]
-        public void AnyNull_WithAllNonNull_ShouldReturnFalse()
+        public void IsAnyNull_WithAllNonNull_ShouldReturnFalse()
         {
             // Arrange
 
@@ -240,7 +240,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool anyNull = AnyNull(a, b, c);
+            bool anyNull = IsAnyNull(a, b, c);
 
             // Assert
 
@@ -248,7 +248,7 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact]
-        public void AnyNonNull_WithOneNonNull_ShouldReturnTrue()
+        public void IsAnyNonNull_WithOneNonNull_ShouldReturnTrue()
         {
             // Arrange
 
@@ -258,7 +258,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool isAnyNonNull = AnyNonNull(a, b, c);
+            bool isAnyNonNull = IsAnyNonNull(a, b, c);
 
             // Assert
 
@@ -266,7 +266,7 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact]
-        public void AnyNonNull_WithAllNull_ShouldReturnFalse()
+        public void IsAnyNonNull_WithAllNull_ShouldReturnFalse()
         {
             // Arrange
 
@@ -276,7 +276,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool isAnyNonNull = AnyNonNull(a, b, c);
+            bool isAnyNonNull = IsAnyNonNull(a, b, c);
 
             // Assert
 

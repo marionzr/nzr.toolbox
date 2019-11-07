@@ -13,7 +13,7 @@ This is a all-in-one version of Nzr.ToolBox.Core, so you just need one import.</
     <PackageReleaseNotes>Check the release notes at https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/README.md</PackageReleaseNotes>
     <PackageTags>Extension Extension-Methods Utils Utility</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

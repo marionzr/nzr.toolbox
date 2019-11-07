@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<assemblies timestamp="11/05/2019 22:49:17">
-  <assembly name="C:\workspace\personal\Nzr.ToolBox\dotnet\Nzr.ToolBox.Core.Tests\bin\Debug\netcoreapp2.2\Nzr.ToolBox.Core.Tests.dll" run-date="2019-11-05" run-time="22:49:17" total="231" passed="231" failed="0" skipped="0" time="2.012" errors="0">
+<assemblies timestamp="11/07/2019 10:02:19">
+  <assembly name="C:\workspace\personal\Nzr.ToolBox\dotnet\Nzr.ToolBox.Core.Tests\bin\Debug\netcoreapp2.2\Nzr.ToolBox.Core.Tests.dll" run-date="2019-11-07" run-time="10:02:19" total="250" passed="250" failed="0" skipped="0" time="1.817" errors="0">
     <errors />
-    <collection total="39" passed="39" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.BooleanUtilsTests" time="0.088">
-      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.ToBool_WithPositiveString_ShouldReturnTrue(value: &quot;Si&quot;)" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="ToBool_WithPositiveString_ShouldReturnTrue" time="0.0330000" result="Pass">
+    <collection total="39" passed="39" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.BooleanUtilsTests" time="0.069">
+      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.ToBool_WithPositiveString_ShouldReturnTrue(value: &quot;Si&quot;)" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="ToBool_WithPositiveString_ShouldReturnTrue" time="0.0190000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.ToBool_WithPositiveString_ShouldReturnTrue(value: &quot;1&quot;)" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="ToBool_WithPositiveString_ShouldReturnTrue" time="0.0010000" result="Pass">
@@ -33,10 +33,10 @@
       <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.IsAnyTrue_WithAllFalseValues_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="IsAnyTrue_WithAllFalseValues_ShouldReturnFalse" time="0.0040000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.IsTrue_WithTrueValue_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="IsTrue_WithTrueValue_ShouldReturnTrue" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.IsTrue_WithTrueValue_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="IsTrue_WithTrueValue_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.ToBool_WithZeroOrNegative_ShouldReturnFalse(b: -1, s: -2, i: -3, l: -4, f: -5, d: -6, m: -7)" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="ToBool_WithZeroOrNegative_ShouldReturnFalse" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.ToBool_WithZeroOrNegative_ShouldReturnFalse(b: -1, s: -2, i: -3, l: -4, f: -5, d: -6, m: -7)" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="ToBool_WithZeroOrNegative_ShouldReturnFalse" time="0.0080000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.ToBool_WithZeroOrNegative_ShouldReturnFalse(b: 0, s: 0, i: 0, l: 0, f: 0, d: 0, m: 0)" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="ToBool_WithZeroOrNegative_ShouldReturnFalse" time="0.0010000" result="Pass">
@@ -78,13 +78,13 @@
       <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.Describe_WihNullValueAndWithDefaultNullString_ShouldReturnYes" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="Describe_WihNullValueAndWithDefaultNullString_ShouldReturnYes" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.IsAnyFalse_WithAllTrueValues_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="IsAnyFalse_WithAllTrueValues_ShouldReturnFalse" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.IsAnyFalse_WithAllTrueValues_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="IsAnyFalse_WithAllTrueValues_ShouldReturnFalse" time="0.0030000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.Describe_WihNullValueAndWitCustomNullString_ShouldReturnCustomString" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="Describe_WihNullValueAndWitCustomNullString_ShouldReturnCustomString" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.IsAllFalse_WithOneTrueValue_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="IsAllFalse_WithOneTrueValue_ShouldReturnFalse" time="0.0130000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.IsAllFalse_WithOneTrueValue_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="IsAllFalse_WithOneTrueValue_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.BooleanUtilsTests.Describe_WihFalseValueAndWithDefaultFlaseString_ShouldReturnYes" type="Nzr.ToolBox.Core.Tests.BooleanUtilsTests" method="Describe_WihFalseValueAndWithDefaultFlaseString_ShouldReturnYes" time="0.0010000" result="Pass">
@@ -121,14 +121,17 @@
         <traits />
       </test>
     </collection>
-    <collection total="30" passed="30" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.CollectionUtilsTests" time="0.099">
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithEnumerableAndSomeOfOtherElements_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithEnumerableAndSomeOfOtherElements_ShouldReturnTrue" time="0.0320000" result="Pass">
+    <collection total="49" passed="49" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.CollectionUtilsTests" time="0.116">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithEnumerableAndSomeOfOtherElements_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithEnumerableAndSomeOfOtherElements_ShouldReturnTrue" time="0.0190000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IndexOf_WithNonExistingItem_ShouldReturnMinusOne" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IndexOf_WithNonExistingItem_ShouldReturnMinusOne" time="0.0110000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IndexOf_WithNonExistingItem_ShouldReturnMinusOne" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IndexOf_WithNonExistingItem_ShouldReturnMinusOne" time="0.0100000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.GetKey_WithNullValueForKvpAndInput_ShouldReturnKey" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="GetKey_WithNullValueForKvpAndInput_ShouldReturnKey" time="0.0040000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithNullEnumerables_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithNullEnumerables_ShouldReturnTrue" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.GetKey_WithNullValueForKvpAndInput_ShouldReturnKey" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="GetKey_WithNullValueForKvpAndInput_ShouldReturnKey" time="0.0170000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IsEmpty_WithNonEmpty_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IsEmpty_WithNonEmpty_ShouldReturnFalse" time="0.0010000" result="Pass">
@@ -137,13 +140,19 @@
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IsEmpty_WithNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IsEmpty_WithNull_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithListShouldExecuteAction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithListShouldExecuteAction" time="0.0080000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Add_WithNullCollectionSourceAndListAsArgument_ShouldNotAddAllElements" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Add_WithNullCollectionSourceAndListAsArgument_ShouldNotAddAllElements" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithGenericListShouldExecuteAction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithGenericListShouldExecuteAction" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithNullSourceGenericEnumerable_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithNullSourceGenericEnumerable_ShouldReturnFalse" time="0.0020000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithNullEnumerable_ShouldNotExecuteFunction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithNullEnumerable_ShouldNotExecuteFunction" time="0.0020000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.EmptyIfNull_WithNonNullGenericEnumerable_ShouldTheEnumerable" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="EmptyIfNull_WithNonNullGenericEnumerable_ShouldTheEnumerable" time="0.0020000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithNullSourceEnumerable_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithNullSourceEnumerable_ShouldReturnTrue" time="0.0020000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IsNotEmpty_WithNonEmpty_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IsNotEmpty_WithNonEmpty_ShouldReturnTrue" time="0.0010000" result="Pass">
@@ -155,49 +164,82 @@
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IsEmpty_WithEmpty_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IsEmpty_WithEmpty_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.EmptyIfNull_WithNonNullEnumerable_ShouldTheEnumerable" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="EmptyIfNull_WithNonNullEnumerable_ShouldTheEnumerable" time="0.0080000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.EmptyIfNull_WithNonNullEnumerable_ShouldTheEnumerable" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="EmptyIfNull_WithNonNullEnumerable_ShouldTheEnumerable" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithEnumerableAndNonOfOtherElements_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithEnumerableAndNonOfOtherElements_ShouldReturnFalse" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithNullRefEnumerable_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithNullRefEnumerable_ShouldReturnTrue" time="0.0020000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithEnumerableAndNonOfOtherElements_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithEnumerableAndNonOfOtherElements_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithGenericList_ShouldExecuteFunction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithGenericList_ShouldExecuteFunction" time="0.0020000" result="Pass">
         <traits />
       </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithNullSourceEnumerable_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithNullSourceEnumerable_ShouldReturnFalse" time="0.0010000" result="Pass">
+        <traits />
+      </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithEnumerableAndDiffSize_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithEnumerableAndDiffSize_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Add_WithListAsArgument_ShouldAddAllElements" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Add_WithListAsArgument_ShouldAddAllElements" time="0.0030000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Get_WithNullEnumerabl_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Get_WithNullEnumerabl_ShouldReturnNull" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithNullSourceAndRefGenericEnumerable_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithNullSourceAndRefGenericEnumerable_ShouldReturnTrue" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Add_WithListAsArgument_ShouldAddAllElements" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Add_WithListAsArgument_ShouldAddAllElements" time="0.0020000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.GetKey_WithNullDictionary_ShouldReturnDefault" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="GetKey_WithNullDictionary_ShouldReturnDefault" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithList_ShouldExecuteAction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithList_ShouldExecuteAction" time="0.0130000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IsNotEmpty_WithNull_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IsNotEmpty_WithNull_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithList_ShouldExecuteFunction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithList_ShouldExecuteFunction" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithNullSourceEnumerable_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithNullSourceEnumerable_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Add_ShouldAddAllElements" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Add_ShouldAddAllElements" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Add_ShouldAddAllElements" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Add_ShouldAddAllElements" time="0.0020000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithNullRefEnumerable_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithNullRefEnumerable_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.GetKey_WithMappedInput_ShouldReturnKey" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="GetKey_WithMappedInput_ShouldReturnKey" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithGenericEnumerableAndDiffSize_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithGenericEnumerableAndDiffSize_ShouldReturnFalse" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithGenericEnumerableAndDiffSize_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithGenericEnumerableAndDiffSize_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithGenericEnumerableAndDiffElements_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithGenericEnumerableAndDiffElements_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IndexOf_WithNullArray_ShouldReturnMinusOne" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IndexOf_WithNullArray_ShouldReturnMinusOne" time="0.0010000" result="Pass">
+        <traits />
+      </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithEnumerableAndSameElements_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithEnumerableAndSameElements_ShouldReturnTrue" time="0.0020000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.EmptyIfNull_WithNullEnumerable_ShouldNewEnumerable" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="EmptyIfNull_WithNullEnumerable_ShouldNewEnumerable" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAll_WithNullRefEnumerable_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAll_WithNullRefEnumerable_ShouldReturnFalse" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.EmptyIfNull_WithNullEnumerable_ShouldNewEnumerable" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="EmptyIfNull_WithNullEnumerable_ShouldNewEnumerable" time="0.0030000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithNullList_ShouldNotExecuteAction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithNullList_ShouldNotExecuteAction" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Get_WithGenericEnumerableWithExistingIndex_ShouldReturnValue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Get_WithGenericEnumerableWithExistingIndex_ShouldReturnValue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Get_WithEnumerableWithExistingIndex_ShouldReturnValue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Get_WithEnumerableWithExistingIndex_ShouldReturnValue" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Get_WithEnumerableWithExistingIndex_ShouldReturnValue" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Get_WithEnumerableWithExistingIndex_ShouldReturnValue" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithGenericList_ShouldExecuteAction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithGenericList_ShouldExecuteAction" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.IsNotEmpty_WithEmpty_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="IsNotEmpty_WithEmpty_ShouldReturnFalse" time="0.0010000" result="Pass">
@@ -206,24 +248,39 @@
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.EmptyIfNull_WithNullGenericEnumerable_ShouldNewEnumerable" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="EmptyIfNull_WithNullGenericEnumerable_ShouldNewEnumerable" time="0.0010000" result="Pass">
         <traits />
       </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithEnumerable_ShouldExecuteFunction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithEnumerable_ShouldExecuteFunction" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithNull_ShouldNotExecuteAction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithNull_ShouldNotExecuteAction" time="0.0010000" result="Pass">
+        <traits />
+      </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.GetKey_WithNullInput_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="GetKey_WithNullInput_ShouldReturnNull" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.Add_WithNullCollection_ShouldNotAddAllElements" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="Add_WithNullCollection_ShouldNotAddAllElements" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ForEach_WithNull_ShouldNotExecuteFunction" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ForEach_WithNull_ShouldNotExecuteFunction" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.GetKey_WithNotMappedInput_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="GetKey_WithNotMappedInput_ShouldReturnNull" time="0.0010000" result="Pass">
         <traits />
       </test>
+      <test name="Nzr.ToolBox.Core.Tests.CollectionUtilsTests.ContainsAny_WithNullRefGenericEnumerable_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.CollectionUtilsTests" method="ContainsAny_WithNullRefGenericEnumerable_ShouldReturnFalse" time="0.0010000" result="Pass">
+        <traits />
+      </test>
     </collection>
-    <collection total="7" passed="7" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" time="0.055">
-      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.FromEpoch_WithEpoch_ShouldReturnDateTime" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="FromEpoch_WithEpoch_ShouldReturnDateTime" time="0.0340000" result="Pass">
+    <collection total="7" passed="7" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" time="0.035">
+      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.FromEpoch_WithEpoch_ShouldReturnDateTime" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="FromEpoch_WithEpoch_ShouldReturnDateTime" time="0.0200000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.Equals_WithMillisOfDiffAndWithTolerance_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="Equals_WithMillisOfDiffAndWithTolerance_ShouldReturnTrue" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.Equals_WithMillisOfDiffAndWithTolerance_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="Equals_WithMillisOfDiffAndWithTolerance_ShouldReturnTrue" time="0.0020000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.IsSameDay_WithDatesWithSameDay_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="IsSameDay_WithDatesWithSameDay_ShouldReturnTrue" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.IsSameDay_WithDatesWithSameDay_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="IsSameDay_WithDatesWithSameDay_ShouldReturnTrue" time="0.0060000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.ToEpoch_WithDateTime_ShouldReturnEpochTime" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="ToEpoch_WithDateTime_ShouldReturnEpochTime" time="0.0160000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.ToEpoch_WithDateTime_ShouldReturnEpochTime" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="ToEpoch_WithDateTime_ShouldReturnEpochTime" time="0.0040000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest.IsSameDay_WithCurrentDayAndNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.DateTimeUtilsTest" method="IsSameDay_WithCurrentDayAndNull_ShouldReturnTrue" time="0.0010000" result="Pass">
@@ -236,72 +293,72 @@
         <traits />
       </test>
     </collection>
-    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.EnumUtilsTest" time="0.038">
-      <test name="Nzr.ToolBox.Core.Tests.EnumUtilsTest.GetEnumNames_ShouldReturnEnumNamesAsList" type="Nzr.ToolBox.Core.Tests.EnumUtilsTest" method="GetEnumNames_ShouldReturnEnumNamesAsList" time="0.0380000" result="Pass">
+    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.EnumUtilsTest" time="0.012">
+      <test name="Nzr.ToolBox.Core.Tests.EnumUtilsTest.GetEnumNames_ShouldReturnEnumNamesAsList" type="Nzr.ToolBox.Core.Tests.EnumUtilsTest" method="GetEnumNames_ShouldReturnEnumNamesAsList" time="0.0120000" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="9" passed="9" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.NumberUtilsTest" time="0.130">
-      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.ToBinary_WithDecimalWithoutPrefix_ShouldReturnBinaryNumbersOnly" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="ToBinary_WithDecimalWithoutPrefix_ShouldReturnBinaryNumbersOnly" time="0.0320000" result="Pass">
+    <collection total="9" passed="9" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.NumberUtilsTest" time="0.085">
+      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.ToBinary_WithDecimalWithoutPrefix_ShouldReturnBinaryNumbersOnly" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="ToBinary_WithDecimalWithoutPrefix_ShouldReturnBinaryNumbersOnly" time="0.0190000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.ToHexadecimal_WithNumberWithoutPrefix_ShouldReturnBinaryNumbersOnly" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="ToHexadecimal_WithNumberWithoutPrefix_ShouldReturnBinaryNumbersOnly" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.ToHexadecimal_WithNumberWithoutPrefix_ShouldReturnBinaryNumbersOnly" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="ToHexadecimal_WithNumberWithoutPrefix_ShouldReturnBinaryNumbersOnly" time="0.0020000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Abst_ShouldReturnAbsoluteValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Abst_ShouldReturnAbsoluteValues" time="0.0600000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Abst_ShouldReturnAbsoluteValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Abst_ShouldReturnAbsoluteValues" time="0.0340000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Sum_ShouldReturnSummedValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Sum_ShouldReturnSummedValues" time="0.0080000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Sum_ShouldReturnSummedValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Sum_ShouldReturnSummedValues" time="0.0070000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.ToBinary_WithNumberWithPrefix_ShouldReturnBinaryWithPrefix" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="ToBinary_WithNumberWithPrefix_ShouldReturnBinaryWithPrefix" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Max_ShouldReturnMaxValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Max_ShouldReturnMaxValues" time="0.0080000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Max_ShouldReturnMaxValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Max_ShouldReturnMaxValues" time="0.0090000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.ToHexadecimal_WithNumberWithPrefix_ShouldReturnBinaryWithPrefix" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="ToHexadecimal_WithNumberWithPrefix_ShouldReturnBinaryWithPrefix" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Min_ShouldReturnMinValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Min_ShouldReturnMinValues" time="0.0130000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Min_ShouldReturnMinValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Min_ShouldReturnMinValues" time="0.0060000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.NumberUtilsTest.Average_ShouldReturnAverageValues" type="Nzr.ToolBox.Core.Tests.NumberUtilsTest" method="Average_ShouldReturnAverageValues" time="0.0060000" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="22" passed="22" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.ObjectUtilsTest" time="0.663">
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.FirstNonNull_WithAnyNonNull_ShouldReturnFirstNonNull" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="FirstNonNull_WithAnyNonNull_ShouldReturnFirstNonNull" time="0.0330000" result="Pass">
+    <collection total="22" passed="22" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.ObjectUtilsTest" time="0.623">
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.FirstNonNull_WithAnyNonNull_ShouldReturnFirstNonNull" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="FirstNonNull_WithAnyNonNull_ShouldReturnFirstNonNull" time="0.0200000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.AnyNull_WithOneNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="AnyNull_WithOneNull_ShouldReturnTrue" time="0.0040000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNull_WithNullValue_ShouldExecuteNullAction" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNull_WithNullValue_ShouldExecuteNullAction" time="0.4060000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.AnyNonNull_WithOneNonNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="AnyNonNull_WithOneNonNull_ShouldReturnTrue" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IsAnyNonNull_WithOneNonNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IsAnyNonNull_WithOneNonNull_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNull_WithNullValue_ShouldExecuteNullAction" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNull_WithNullValue_ShouldExecuteNullAction" time="0.4530000" result="Pass">
-        <traits />
-      </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNotNull_WithNonNullValue_ShouldNotThrowException" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNotNull_WithNonNullValue_ShouldNotThrowException" time="0.0080000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNotNull_WithNonNullValue_ShouldNotThrowException" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNotNull_WithNonNullValue_ShouldNotThrowException" time="0.0130000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNotNull_WithNullValue_ShouldThrowException" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNotNull_WithNullValue_ShouldThrowException" time="0.0030000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.LastNonNull_WithAnyNonNull_ShouldReturnLastNonNull" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="LastNonNull_WithAnyNonNull_ShouldReturnLastNonNull" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.LastNonNull_WithAnyNonNull_ShouldReturnLastNonNull" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="LastNonNull_WithAnyNonNull_ShouldReturnLastNonNull" time="0.0030000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNotNull_WithNonNullValue_ShouldExecuteNotNullAction" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNotNull_WithNonNullValue_ShouldExecuteNotNullAction" time="0.0020000" result="Pass">
-        <traits />
-      </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.AnyNull_WithAllNonNull_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="AnyNull_WithAllNonNull_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.LastNonNull_WithAllNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="LastNonNull_WithAllNull_ShouldReturnNull" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.RequireNonNull_WithNullWithoutCustomMessage_ShouldThrowExcetpion" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="RequireNonNull_WithNullWithoutCustomMessage_ShouldThrowExcetpion" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IsAnyNull_WithAllNonNull_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IsAnyNull_WithAllNonNull_ShouldReturnFalse" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IsAnyNonNull_WithAllNull_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IsAnyNonNull_WithAllNull_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.RequireNonNull_WithNonNull_ShouldNotThrowExcetpion" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="RequireNonNull_WithNonNull_ShouldNotThrowExcetpion" time="0.0010000" result="Pass">
@@ -319,10 +376,13 @@
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNull_WithNotNullValue_ShouldExecuteNotNullAction" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNull_WithNotNullValue_ShouldExecuteNotNullAction" time="0.0020000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNotNull_WithNullValue_ShouldExecuteNullAction" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNotNull_WithNullValue_ShouldExecuteNullAction" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IsAnyNull_WithOneNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IsAnyNull_WithOneNull_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.ToDynamic_WithEntity_ShouldReturnDynamic" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="ToDynamic_WithEntity_ShouldReturnDynamic" time="0.1420000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IfNotNull_WithNullValue_ShouldExecuteNullAction" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IfNotNull_WithNullValue_ShouldExecuteNullAction" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.ToDynamic_WithEntity_ShouldReturnDynamic" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="ToDynamic_WithEntity_ShouldReturnDynamic" time="0.1600000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IsAllNonNull_WithAllNonNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IsAllNonNull_WithAllNonNull_ShouldReturnTrue" time="0.0010000" result="Pass">
@@ -331,60 +391,57 @@
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IsAllNull_WithAllNull_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IsAllNull_WithAllNull_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.AnyNonNull_WithAllNull_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="AnyNonNull_WithAllNull_ShouldReturnFalse" time="0.0010000" result="Pass">
-        <traits />
-      </test>
       <test name="Nzr.ToolBox.Core.Tests.ObjectUtilsTest.IsAllNull_WithOneNonNull_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.ObjectUtilsTest" method="IsAllNull_WithOneNonNull_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="22" passed="22" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.RandomUtilsTest" time="0.695">
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomByte_ShouldReturnUniqueValues(iterations: 255, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomByte_ShouldReturnUniqueValues" time="0.0400000" result="Pass">
+    <collection total="22" passed="22" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.RandomUtilsTest" time="0.661">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomByte_ShouldReturnUniqueValues(iterations: 255, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomByte_ShouldReturnUniqueValues" time="0.0200000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomByte_ShouldReturnUniqueValues(iterations: 255, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomByte_ShouldReturnUniqueValues" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomString_WithLetterOnly_ShouldReturnAlphaString" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomString_WithLetterOnly_ShouldReturnAlphaString" time="0.0080000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomString_WithLetterOnly_ShouldReturnAlphaString" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomString_WithLetterOnly_ShouldReturnAlphaString" time="0.0060000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomBoolean_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomBoolean_ShouldReturnUniqueValues" time="0.0600000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomBoolean_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomBoolean_ShouldReturnUniqueValues" time="0.0560000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomBoolean_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomBoolean_ShouldReturnUniqueValues" time="0.0500000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomBoolean_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomBoolean_ShouldReturnUniqueValues" time="0.0490000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDouble_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDouble_ShouldReturnUniqueValues" time="0.0430000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDouble_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDouble_ShouldReturnUniqueValues" time="0.0330000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDouble_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDouble_ShouldReturnUniqueValues" time="0.0470000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDouble_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDouble_ShouldReturnUniqueValues" time="0.0460000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomString_WithNumbersOnly_ShouldReturnNumericString" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomString_WithNumbersOnly_ShouldReturnNumericString" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomLong_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomLong_ShouldReturnUniqueValues" time="0.0360000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomLong_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomLong_ShouldReturnUniqueValues" time="0.0410000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomLong_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomLong_ShouldReturnUniqueValues" time="0.0390000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomLong_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomLong_ShouldReturnUniqueValues" time="0.0500000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDecimal_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDecimal_ShouldReturnUniqueValues" time="0.0600000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDecimal_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDecimal_ShouldReturnUniqueValues" time="0.0440000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDecimal_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDecimal_ShouldReturnUniqueValues" time="0.0350000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomDecimal_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomDecimal_ShouldReturnUniqueValues" time="0.0310000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomShort_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomShort_ShouldReturnUniqueValues" time="0.0450000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomShort_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomShort_ShouldReturnUniqueValues" time="0.0490000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomShort_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomShort_ShouldReturnUniqueValues" time="0.0310000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomShort_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomShort_ShouldReturnUniqueValues" time="0.0220000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomFloat_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomFloat_ShouldReturnUniqueValues" time="0.0290000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomFloat_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomFloat_ShouldReturnUniqueValues" time="0.0340000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomFloat_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomFloat_ShouldReturnUniqueValues" time="0.0390000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomFloat_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomFloat_ShouldReturnUniqueValues" time="0.0490000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomString_WithDefaultOptions_ShouldReturnString" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomString_WithDefaultOptions_ShouldReturnString" time="0.0010000" result="Pass">
@@ -396,32 +453,32 @@
       <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomString_WithSymbolsOnly_ShouldReturnSymbolOnlyString" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomString_WithSymbolsOnly_ShouldReturnSymbolOnlyString" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomInt_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomInt_ShouldReturnUniqueValues" time="0.0460000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomInt_ShouldReturnUniqueValues(iterations: 10000, seed: 1)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomInt_ShouldReturnUniqueValues" time="0.0430000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomInt_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomInt_ShouldReturnUniqueValues" time="0.0250000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomInt_ShouldReturnUniqueValues(iterations: 10000, seed: null)" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomInt_ShouldReturnUniqueValues" time="0.0260000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.RandomUtilsTest.RandomString_WithoutAnyChar_ShouldThrowException" type="Nzr.ToolBox.Core.Tests.RandomUtilsTest" method="RandomString_WithoutAnyChar_ShouldThrowException" time="0.0010000" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="4" passed="4" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" time="0.107">
-      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.GetValue_WithPropertyPath_ShouldReturnNestedValues" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="GetValue_WithPropertyPath_ShouldReturnNestedValues" time="0.0770000" result="Pass">
+    <collection total="4" passed="4" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" time="0.078">
+      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.GetValue_WithPropertyPath_ShouldReturnNestedValues" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="GetValue_WithPropertyPath_ShouldReturnNestedValues" time="0.0580000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.GetValue_WithPropertyPathToList_ShouldThrowException" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="GetValue_WithPropertyPathToList_ShouldThrowException" time="0.0130000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.GetValue_WithPropertyPathToList_ShouldThrowException" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="GetValue_WithPropertyPathToList_ShouldThrowException" time="0.0040000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.GetPropertyNames_WithEntity_ShouldReturnPropertyNames" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="GetPropertyNames_WithEntity_ShouldReturnPropertyNames" time="0.0100000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.GetPropertyNames_WithEntity_ShouldReturnPropertyNames" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="GetPropertyNames_WithEntity_ShouldReturnPropertyNames" time="0.0110000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.ExecuteForEachProperty_ShouldExecuteAction" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="ExecuteForEachProperty_ShouldExecuteAction" time="0.0070000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest.ExecuteForEachProperty_ShouldExecuteAction" type="Nzr.ToolBox.Core.Tests.ReflectionUtilsTest" method="ExecuteForEachProperty_ShouldExecuteAction" time="0.0050000" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="97" passed="97" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.StringUtilsTest" time="0.137">
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsBlank_WithNullString_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsBlank_WithNullString_ShouldReturnTrue" time="0.0010000" result="Pass">
+    <collection total="97" passed="97" failed="0" skipped="0" name="Test collection for Nzr.ToolBox.Core.Tests.StringUtilsTest" time="0.138">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsBlank_WithNullString_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsBlank_WithNullString_ShouldReturnTrue" time="0.0190000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.DefaultIfBlank_WitBlankString_ShouldReturnDefault" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="DefaultIfBlank_WitBlankString_ShouldReturnDefault" time="0.0010000" result="Pass">
@@ -430,7 +487,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotBlank_WithBlankString_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotBlank_WithBlankString_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.RemoveEnd_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="RemoveEnd_WithNull_ShouldReturnNull" time="0.0040000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.RemoveEnd_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="RemoveEnd_WithNull_ShouldReturnNull" time="0.0030000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Suffix_WithNonExistingSuffix_ShouldAddSuffix" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Suffix_WithNonExistingSuffix_ShouldAddSuffix" time="0.0010000" result="Pass">
@@ -454,10 +511,10 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNumber_WithNull_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNumber_WithNull_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Remove_WithNullString_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Remove_WithNullString_ShouldReturnNull" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Remove_WithNullString_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Remove_WithNullString_ShouldReturnNull" time="0.0020000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAny_WithOrdinalIgnoreCaseNullStringWithNullAsSubstrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAny_WithOrdinalIgnoreCaseNullStringWithNullAsSubstrings_ShouldReturnTrue" time="0.0130000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAny_WithOrdinalIgnoreCaseNullStringWithNullAsSubstrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAny_WithOrdinalIgnoreCaseNullStringWithNullAsSubstrings_ShouldReturnTrue" time="0.0020000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotEmpty_WithNullString_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotEmpty_WithNullString_ShouldReturnFalse" time="0.0010000" result="Pass">
@@ -469,13 +526,13 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.RemoveEnd_WithExistingStrings_ShouldReturnCleanedString" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="RemoveEnd_WithExistingStrings_ShouldReturnCleanedString" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAny_WithStringContainingOneOfSubstring_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAny_WithStringContainingOneOfSubstring_ShouldReturnTrue" time="0.0040000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAny_WithStringContainingOneOfSubstring_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAny_WithStringContainingOneOfSubstring_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotEmpty_WithBlankString_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotEmpty_WithBlankString_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.DescribeIfNone_WithRegularString_ShouldReturnString" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="DescribeIfNone_WithRegularString_ShouldReturnString" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.DescribeIfNone_WithRegularString_ShouldReturnString" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="DescribeIfNone_WithRegularString_ShouldReturnString" time="0.0040000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.DefaultIfBlank_WitNonBlankString_ShouldReturnString" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="DefaultIfBlank_WitNonBlankString_ShouldReturnString" time="0.0010000" result="Pass">
@@ -487,10 +544,10 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsAnyBlank_WithNullStrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsAnyBlank_WithNullStrings_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Capitalize_WithNonCapitalized_ShouldReturnCapitalized" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Capitalize_WithNonCapitalized_ShouldReturnCapitalized" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Capitalize_WithNonCapitalized_ShouldReturnCapitalized" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Capitalize_WithNonCapitalized_ShouldReturnCapitalized" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Repeat_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Repeat_WithNull_ShouldReturnNull" time="0.0020000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Repeat_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Repeat_WithNull_ShouldReturnNull" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Prefix_WithNonExistingPrefix_ShouldAddPrefix" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Prefix_WithNonExistingPrefix_ShouldAddPrefix" time="0.0010000" result="Pass">
@@ -499,7 +556,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Suffix_WithNullString_ShouldReturnSuffix" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Suffix_WithNullString_ShouldReturnSuffix" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Truncate_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Truncate_WithNull_ShouldReturnNull" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Truncate_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Truncate_WithNull_ShouldReturnNull" time="0.0020000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Remove_WithNonNullString_ShouldRemoveGiveStrings" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Remove_WithNonNullString_ShouldRemoveGiveStrings" time="0.0010000" result="Pass">
@@ -508,7 +565,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Suffix_WithExistingSuffix_ShouldNotAddSuffix" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Suffix_WithExistingSuffix_ShouldNotAddSuffix" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAll_WithStringNotContainigAllSubstrings_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAll_WithStringNotContainigAllSubstrings_ShouldReturnFalse" time="0.0060000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAll_WithStringNotContainigAllSubstrings_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAll_WithStringNotContainigAllSubstrings_ShouldReturnFalse" time="0.0020000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Suffix_WithExistingSuffixAndOverride_ShouldAddSuffix" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Suffix_WithExistingSuffixAndOverride_ShouldAddSuffix" time="0.0010000" result="Pass">
@@ -517,7 +574,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Prefix_WithNullString_ShouldReturnPrefix" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Prefix_WithNullString_ShouldReturnPrefix" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Append_WithString_ShouldReturnStringWithAppendedValues" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Append_WithString_ShouldReturnStringWithAppendedValues" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Append_WithString_ShouldReturnStringWithAppendedValues" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Append_WithString_ShouldReturnStringWithAppendedValues" time="0.0040000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Reverse_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Reverse_WithNull_ShouldReturnNull" time="0.0010000" result="Pass">
@@ -544,7 +601,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Format_WithNullString_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Format_WithNullString_ShouldReturnNull" time="0.0020000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAll_WithStringContainigAllSubstrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAll_WithStringContainigAllSubstrings_ShouldReturnTrue" time="0.0080000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAll_WithStringContainigAllSubstrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAll_WithStringContainigAllSubstrings_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNumber_WithNumeric_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNumber_WithNumeric_ShouldReturnTrue" time="0.0010000" result="Pass">
@@ -577,7 +634,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ReplaceNonNumeric_WithNull_ShouldReturnNull" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ReplaceNonNumeric_WithNull_ShouldReturnNull" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.RemoveDiacritics_WithString_ShouldReturnStringWihtouDiacritics" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="RemoveDiacritics_WithString_ShouldReturnStringWihtouDiacritics" time="0.0030000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.RemoveDiacritics_WithString_ShouldReturnStringWihtouDiacritics" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="RemoveDiacritics_WithString_ShouldReturnStringWihtouDiacritics" time="0.0040000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsAllEmpty_WithNullStrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsAllEmpty_WithNullStrings_ShouldReturnTrue" time="0.0010000" result="Pass">
@@ -610,7 +667,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotBlank_WithEmptyString_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotBlank_WithEmptyString_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Replace_WithNullString_ShouldReturnDefault" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Replace_WithNullString_ShouldReturnDefault" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Replace_WithNullString_ShouldReturnDefault" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Replace_WithNullString_ShouldReturnDefault" time="0.0020000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.Truncate_WithStringShorterThanLimit_ShouldReturnString" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="Truncate_WithStringShorterThanLimit_ShouldReturnString" time="0.0010000" result="Pass">
@@ -622,7 +679,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsEmpty_WithBlankString_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsEmpty_WithBlankString_ShouldReturnFalse" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsAllEmpty_WithNullOrEmptyStrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsAllEmpty_WithNullOrEmptyStrings_ShouldReturnTrue" time="0.0010000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsAllEmpty_WithNullOrEmptyStrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsAllEmpty_WithNullOrEmptyStrings_ShouldReturnTrue" time="0.0040000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotEmpty_WithEmptyString_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotEmpty_WithEmptyString_ShouldReturnFalse" time="0.0010000" result="Pass">
@@ -694,7 +751,7 @@
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.ContainsAll_WithNullStringContainigAllNullSubstrings_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="ContainsAll_WithNullStringContainigAllNullSubstrings_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotNumber_WithAlhphanumeric_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotNumber_WithAlhphanumeric_ShouldReturnTrue" time="0.0030000" result="Pass">
+      <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotNumber_WithAlhphanumeric_ShouldReturnTrue" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotNumber_WithAlhphanumeric_ShouldReturnTrue" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Nzr.ToolBox.Core.Tests.StringUtilsTest.IsNotBlank_WithNullString_ShouldReturnFalse" type="Nzr.ToolBox.Core.Tests.StringUtilsTest" method="IsNotBlank_WithNullString_ShouldReturnFalse" time="0.0010000" result="Pass">

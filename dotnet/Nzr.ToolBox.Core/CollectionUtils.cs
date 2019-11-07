@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 
 namespace Nzr.ToolBox.Core
@@ -22,6 +21,11 @@ namespace Nzr.ToolBox.Core
         /// <param name="action">Action to be executed for each element.</param>
         public static void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action)
         {
+            if (enumerable == null)
+            {
+                return;
+            }
+
             foreach (T item in enumerable)
             {
                 action.Invoke(item);
@@ -35,6 +39,11 @@ namespace Nzr.ToolBox.Core
         /// <param name="action">Action to be executed for each element.</param>
         public static void ForEach(this System.Collections.IEnumerable enumerable, Action<object> action)
         {
+            if (enumerable == null)
+            {
+                return;
+            }
+
             foreach (object item in enumerable)
             {
                 action.Invoke(item);
@@ -49,6 +58,11 @@ namespace Nzr.ToolBox.Core
         /// <param name="function">Function to be executed for each element.</param>
         public static void ForEach<T>(this IEnumerable<T> enumerable, Func<T, bool> function)
         {
+            if (enumerable == null)
+            {
+                return;
+            }
+
             foreach (T item in enumerable)
             {
                 if (!function.Invoke(item))
@@ -65,6 +79,11 @@ namespace Nzr.ToolBox.Core
         /// <param name="function">Function to be executed for each element.</param>
         public static void ForEach(this System.Collections.IEnumerable enumerable, Func<object, bool> function)
         {
+            if (enumerable == null)
+            {
+                return;
+            }
+
             foreach (object item in enumerable)
             {
                 if (!function.Invoke(item))
@@ -82,6 +101,11 @@ namespace Nzr.ToolBox.Core
         /// <param name="items">Items to be added (Except nulls).</param>
         public static void AddElements<T>(this ICollection<T> collection, params T[] items)
         {
+            if (collection == null)
+            {
+                return;
+            }
+
             foreach (T item in items)
             {
                 collection.Add(item);
@@ -96,6 +120,11 @@ namespace Nzr.ToolBox.Core
         /// <param name="enumerable">IEnumerable with items to be added.</param>
         public static void AddEnumerable<T>(this ICollection<T> collection, IEnumerable<T> enumerable)
         {
+            if (collection == null)
+            {
+                return;
+            }
+
             foreach (T item in enumerable)
             {
                 collection.Add(item);
@@ -110,6 +139,15 @@ namespace Nzr.ToolBox.Core
         /// <returns>True if all elements in IEnumerable another are also in the IEnumerable enumerable.</returns>
         public static bool ContainsAll(this System.Collections.IEnumerable enumerable, System.Collections.IEnumerable another)
         {
+            if (enumerable == null && another == null)
+            {
+                return true;
+            }
+            else if (enumerable == null || another == null)
+            {
+                return false;
+            }
+
             bool found = true;
 
             another.ForEach(e1 =>
@@ -141,7 +179,15 @@ namespace Nzr.ToolBox.Core
         /// <returns>True if all elements in IEnumerable another are also in the IEnumerable enumerable.</returns>
         public static bool ContainsAll<T>(this IEnumerable<T> enumerable, IEnumerable<T> another)
         {
-            if (enumerable.Count() < another.Count())
+            if (enumerable == null && another == null)
+            {
+                return true;
+            }
+            else if (enumerable == null || another == null)
+            {
+                return false;
+            }
+            else if (enumerable.Count() < another.Count())
             {
                 return false;
             }
@@ -159,6 +205,11 @@ namespace Nzr.ToolBox.Core
         /// <returns>True if at least one element in IEnumerable another is also in the IEnumerable enumerable.</returns>
         public static bool ContainsAny(this System.Collections.IEnumerable enumerable, System.Collections.IEnumerable another)
         {
+            if (enumerable == null || another == null)
+            {
+                return false;
+            }
+
             bool found = false;
 
             another.ForEach(e1 =>
@@ -188,6 +239,11 @@ namespace Nzr.ToolBox.Core
         /// <returns>True if at least one element in IEnumerable another is also in the IEnumerable enumerable.</returns>
         public static bool ContainsAny<T>(this IEnumerable<T> enumerable, IEnumerable<T> another)
         {
+            if (enumerable == null || another == null)
+            {
+                return false;
+            }
+
             T itemNotFound = another.FirstOrDefault(e1 => enumerable.Contains(e1));
 
             return itemNotFound != null;
@@ -253,6 +309,11 @@ namespace Nzr.ToolBox.Core
         /// <returns>The element at index</returns>
         public static object Get(this System.Collections.IEnumerable enumerable, int index)
         {
+            if (enumerable == null)
+            {
+                return null;
+            }
+
             int count = 0;
             object itemFound = null;
 
@@ -309,7 +370,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this byte[] array, byte value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this byte[] array, byte value, int start = 0) => IndexOf<byte>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -320,7 +381,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this short[] array, short value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this short[] array, short value, int start = 0) => IndexOf<short>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -331,7 +392,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this int[] array, int value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this int[] array, int value, int start = 0) => IndexOf<int>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -342,7 +403,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this long[] array, long value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this long[] array, long value, int start = 0) => IndexOf<long>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -353,7 +414,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this float[] array, float value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this float[] array, float value, int start = 0) => IndexOf<float>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -364,7 +425,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this double[] array, double value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this double[] array, double value, int start = 0) => IndexOf<double>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -375,7 +436,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this decimal[] array, decimal value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this decimal[] array, decimal value, int start = 0) => IndexOf<decimal>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -386,7 +447,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf(this string[] array, string value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf(this string[] array, string value, int start = 0) => IndexOf<string>(array, value, start);
 
         /// <summary>
         /// Searches for the specified object and returns the index of its first occurrence
@@ -397,7 +458,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
         /// <returns>The index of the first occurrence of value in array, if found; otherwise, the
         /// lower bound of the array minus 1</returns>
-        public static int IndexOf<T>(this T[] array, T value, int start = 0) => Array.IndexOf(array, value, start);
+        public static int IndexOf<T>(this T[] array, T value, int start = 0) => array != null ? Array.IndexOf(array, value, start) : -1;
 
         /// <summary>
         /// Gets the Dictionary Key by value.
@@ -410,6 +471,11 @@ namespace Nzr.ToolBox.Core
         /// <returns>The key, if found.</returns>
         public static K GetKey<K, V>(this IDictionary<K, V> dictionary, V value)
         {
+            if (dictionary == null)
+            {
+                return default;
+            }
+
             object key = null;
 
             dictionary.ForEach(kvp =>

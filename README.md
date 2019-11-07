@@ -47,7 +47,10 @@ Added the following group of utilities and extension methods:
 * ReflectionUtils
 * StringUtils
 
+#### v1.1.0
+Added null check for some extension methods.
+
 ## Know Issues
 
-There are no known issues so far. The tests were written as a how-to guide but also to cover almost 100% of the code (currently 99.5% (635 of 638) line covered and 99.2% (248 of 250) branch covered).
+There are no known issues so far. The tests were written as a how-to guide but also to cover almost 100% of the code (currently 99.5% (680 of 683) line covered and 99.3% (290 of 292) branch covered).
 
