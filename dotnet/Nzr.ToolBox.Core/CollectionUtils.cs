@@ -461,6 +461,79 @@ namespace Nzr.ToolBox.Core
         public static int IndexOf<T>(this T[] array, T value, int start = 0) => array != null ? Array.IndexOf(array, value, start) : -1;
 
         /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this byte[] array, byte value) => array.IndexOf<byte>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this short[] array, short value) => array.IndexOf<short>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this int[] array, int value) => array.IndexOf<int>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this long[] array, long value) => array.IndexOf<long>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this float[] array, float value) => array.IndexOf<float>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this double[] array, double value) => array.IndexOf<double>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this decimal[] array, decimal value) => array.IndexOf<decimal>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains(this string[] array, string value) => array.IndexOf<string>(value) > -1;
+
+        /// <summary>
+        /// Checks whether an element value is in the array.
+        /// </summary>
+        /// <typeparam name="T">Type of the values in the array.</typeparam>
+        /// <param name="array">The item to locate in array.</param>
+        /// <param name="value">The one-dimensional array to search.</param>
+        /// <returns>True if item is found in the array; otherwise, false</returns>
+        public static bool Contains<T>(this T[] array, T value) => array.IndexOf<T>(value) > -1;
+
+        /// <summary>
         /// Gets the Dictionary Key by value.
         /// Note that only the first key is returned.
         /// </summary>

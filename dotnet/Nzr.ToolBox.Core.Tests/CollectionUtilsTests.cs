@@ -790,6 +790,45 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact]
+        public void Contains_WithExistingItem_ShouldReturnTrue()
+        {
+            // Arrange
+
+            byte[] b = new byte[] { 1, 2, 3 };
+            short[] s = new short[] { 1, 2, 3 };
+            int[] i = new int[] { 1, 2, 3 };
+            long[] l = new long[] { 1, 2, 3 };
+            float[] f = new float[] { 1.0F, 2.0F, 3.0F };
+            double[] d = new double[] { 1.0D, 2.0D, 3.0D };
+            decimal[] m = new decimal[] { 1.0M, 2.0M, 3.0M };
+            string[] str = new string[] { "1", "2", "3" };
+
+            // Act
+
+            bool bResult = b.Contains(2);
+            bool sResult = s.Contains(2);
+            bool iResult = i.Contains(2);
+            bool lResult = l.Contains(2);
+            bool fResult = f.Contains(2.0F);
+            bool dResult = d.Contains(2.0D);
+            bool mResult = m.Contains(2.0M);
+            bool strResult = str.Contains("2");
+            bool tStrResult = str.Contains<string>("2");
+
+            // Assert
+
+            Assert.True(bResult);
+            Assert.True(sResult);
+            Assert.True(iResult);
+            Assert.True(lResult);
+            Assert.True(fResult);
+            Assert.True(dResult);
+            Assert.True(mResult);
+            Assert.True(strResult);
+            Assert.True(tStrResult);
+        }
+
+        [Fact]
         public void IndexOf_WithNullArray_ShouldReturnMinusOne()
         {
             // Arrange
@@ -803,6 +842,22 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             Assert.Equal(-1, bResult);
+        }
+
+        [Fact]
+        public void Contains_WithNullArray_ShouldReturnFalse()
+        {
+            // Arrange
+
+            byte[] b = null;
+
+            // Act
+
+            bool bResult = b.Contains(2);
+
+            // Assert
+
+            Assert.False(bResult);
         }
 
         [Fact]
@@ -842,6 +897,45 @@ namespace Nzr.ToolBox.Core.Tests
             Assert.Equal(-1, mResult);
             Assert.Equal(-1, strResult);
             Assert.Equal(-1, tStrResult);
+        }
+
+        [Fact]
+        public void Contains_WithNonExistingItem_ShouldReturnFalse()
+        {
+            // Arrange
+
+            byte[] b = new byte[] { 1, 2, 3 };
+            short[] s = new short[] { 1, 2, 3 };
+            int[] i = new int[] { 1, 2, 3 };
+            long[] l = new long[] { 1, 2, 3 };
+            float[] f = new float[] { 1.0F, 2.0F, 3.0F };
+            double[] d = new double[] { 1.0D, 2.0D, 3.0D };
+            decimal[] m = new decimal[] { 1.0M, 2.0M, 3.0M };
+            string[] str = new string[] { "1", "2", "3" };
+
+            // Act
+
+            bool bResult = b.Contains(4);
+            bool sResult = s.Contains(4);
+            bool iResult = i.Contains(4);
+            bool lResult = l.Contains(4);
+            bool fResult = f.Contains(4.0F);
+            bool dResult = d.Contains(4.0D);
+            bool mResult = m.Contains(4.0M);
+            bool strResult = str.Contains("4");
+            bool tStrResult = str.Contains<string>("4");
+
+            // Assert
+
+            Assert.False(bResult);
+            Assert.False(sResult);
+            Assert.False(iResult);
+            Assert.False(lResult);
+            Assert.False(fResult);
+            Assert.False(dResult);
+            Assert.False(mResult);
+            Assert.False(strResult);
+            Assert.False(tStrResult);
         }
 
         [Fact]

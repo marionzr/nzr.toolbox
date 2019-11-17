@@ -349,5 +349,57 @@ namespace Nzr.ToolBox.Core
             string result = Convert.ToString(value, 16).ToUpper();
             return include0x ? "0x" + result : result;
         }
+
+        /// <summary>
+        /// Returns a string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth.
+        /// </summary>
+        /// <param name="value">The byte instance to be converted to string, then left padded.</param>
+        /// <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+        /// <param name="padding">The padding character</param>
+        /// <returns>A string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth</returns>
+        public static string PadLeft(this byte value, int maxWidth, char padding) => PadLeft((short)value, maxWidth, padding);
+
+        /// <summary>
+        /// Returns a string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth.
+        /// </summary>
+        /// <param name="value">The byte instance to be converted to string, then left padded.</param>
+        /// <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+        /// <param name="padding">The padding character</param>
+        /// <returns>A string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth</returns>
+        public static string PadLeft(this short value, int maxWidth, char padding) => PadLeft((int)value, maxWidth, padding);
+
+        /// <summary>
+        /// Returns a string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth.
+        /// </summary>
+        /// <param name="value">The byte instance to be converted to string, then left padded.</param>
+        /// <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+        /// <param name="padding">The padding character</param>
+        /// <returns>A string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth</returns>
+        public static string PadLeft(this int value, int maxWidth, char padding) => PadLeft((long)value, maxWidth, padding);
+
+        /// <summary>
+        /// Returns a string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth.
+        /// </summary>
+        /// <param name="value">The byte instance to be converted to string, then left padded.</param>
+        /// <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+        /// <param name="padding">The padding character</param>
+        /// <returns>A string that representing the numeric value, but right-aligned and padded
+        /// on the left with the required amount of padding characters as needed to create have a
+        /// string with the given maxWidth</returns>
+        public static string PadLeft(this long value, int maxWidth, char padding) => value.ToString().PadLeft(maxWidth, padding);
     }
 }

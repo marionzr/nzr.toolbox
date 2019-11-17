@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CoverageSession>
-  <Summary numSequencePoints="683" visitedSequencePoints="680" numBranchPoints="322" visitedBranchPoints="317" sequenceCoverage="99.56" branchCoverage="98.44" maxCyclomaticComplexity="409" minCyclomaticComplexity="409" visitedClasses="12" numClasses="17" visitedMethods="173" numMethods="173" />
+  <Summary numSequencePoints="696" visitedSequencePoints="693" numBranchPoints="322" visitedBranchPoints="317" sequenceCoverage="99.56" branchCoverage="98.44" maxCyclomaticComplexity="422" minCyclomaticComplexity="422" visitedClasses="12" numClasses="17" visitedMethods="186" numMethods="186" />
   <Modules>
-    <Module hash="9AE2D215-EF75-455B-BA61-CC9C8150CB32">
+    <Module hash="A42ADF27-8CAC-4AEF-80DE-18111423A4F3">
       <ModulePath>Nzr.ToolBox.Core.Single.dll</ModulePath>
-      <ModuleTime>2019-11-07T01:02:34</ModuleTime>
+      <ModuleTime>2019-11-17T08:03:07</ModuleTime>
       <ModuleName>Nzr.ToolBox.Core.Single</ModuleName>
       <Files>
         <File uid="1" fullPath="C:\workspace\personal\Nzr.ToolBox\dotnet\Nzr.ToolBox.Core\BooleanUtils.cs" />
@@ -245,7 +245,7 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="193" visitedSequencePoints="193" numBranchPoints="76" visitedBranchPoints="76" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="10" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="30" numMethods="30" />
+          <Summary numSequencePoints="202" visitedSequencePoints="202" numBranchPoints="76" visitedBranchPoints="76" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="10" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="39" numMethods="39" />
           <FullName>Nzr.ToolBox.Core.ToolBox</FullName>
           <Methods>
             <Method cyclomaticComplexity="4" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
@@ -796,13 +796,112 @@
               <Name>System.Int32 Nzr.ToolBox.Core.ToolBox::IndexOf(T[],T,System.Int32)</Name>
               <FileRef uid="2" />
               <SequencePoints>
-                <SequencePoint vc="19" uspid="461" ordinal="0" sl="461" sc="1" el="461" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="38" uspid="461" ordinal="0" sl="461" sc="1" el="461" ec="2" bec="0" bev="0" fileid="2" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="1" uspid="461" ordinal="0" path="0" offset="1" offsetend="3" sl="461" fileid="2" />
-                <BranchPoint vc="18" uspid="461" ordinal="1" path="1" offset="1" offsetend="6" sl="461" fileid="2" />
+                <BranchPoint vc="2" uspid="461" ordinal="0" path="0" offset="1" offsetend="3" sl="461" fileid="2" />
+                <BranchPoint vc="36" uspid="461" ordinal="1" path="1" offset="1" offsetend="6" sl="461" fileid="2" />
               </BranchPoints>
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="28" offset="28" sc="0" sl="461" ec="1" el="461" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.Byte[],System.Byte)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="469" ordinal="0" sl="469" sc="1" el="469" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="29" offset="29" sc="0" sl="469" ec="1" el="469" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.Int16[],System.Int16)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="477" ordinal="0" sl="477" sc="1" el="477" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="30" offset="30" sc="0" sl="477" ec="1" el="477" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.Int32[],System.Int32)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="485" ordinal="0" sl="485" sc="1" el="485" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="31" offset="31" sc="0" sl="485" ec="1" el="485" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.Int64[],System.Int64)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="493" ordinal="0" sl="493" sc="1" el="493" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="32" offset="32" sc="0" sl="493" ec="1" el="493" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.Single[],System.Single)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="501" ordinal="0" sl="501" sc="1" el="501" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="33" offset="33" sc="0" sl="501" ec="1" el="501" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.Double[],System.Double)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="509" ordinal="0" sl="509" sc="1" el="509" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="34" offset="34" sc="0" sl="509" ec="1" el="509" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.Decimal[],System.Decimal)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="517" ordinal="0" sl="517" sc="1" el="517" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="35" offset="35" sc="0" sl="517" ec="1" el="517" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(System.String[],System.String)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="525" ordinal="0" sl="525" sc="1" el="525" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="36" offset="36" sc="0" sl="525" ec="1" el="525" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean Nzr.ToolBox.Core.ToolBox::Contains(T[],T)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="534" ordinal="0" sl="534" sc="1" el="534" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="37" offset="37" sc="0" sl="534" ec="1" el="534" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
             </Method>
             <Method cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
               <Summary numSequencePoints="20" visitedSequencePoints="20" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
@@ -810,32 +909,32 @@
               <Name>K Nzr.ToolBox.Core.ToolBox::GetKey(System.Collections.Generic.IDictionary`2&lt;K,V&gt;,V)</Name>
               <FileRef uid="2" />
               <SequencePoints>
-                <SequencePoint vc="5" uspid="473" ordinal="0" sl="473" sc="1" el="473" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="474" ordinal="1" sl="474" sc="1" el="474" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="1" uspid="475" ordinal="2" sl="475" sc="1" el="475" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="1" uspid="476" ordinal="3" sl="476" sc="1" el="476" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="4" uspid="479" ordinal="4" sl="479" sc="1" el="479" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="4" uspid="481" ordinal="5" sl="481" sc="1" el="481" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="12" uspid="482" ordinal="6" sl="482" sc="1" el="482" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="12" uspid="483" ordinal="7" sl="483" sc="1" el="483" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="484" ordinal="8" sl="484" sc="1" el="484" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="485" ordinal="9" sl="485" sc="1" el="485" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="486" ordinal="10" sl="486" sc="1" el="486" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="11" uspid="487" ordinal="11" sl="487" sc="1" el="487" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="488" ordinal="12" sl="488" sc="1" el="488" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="489" ordinal="13" sl="489" sc="1" el="489" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="490" ordinal="14" sl="490" sc="1" el="490" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="4" uspid="491" ordinal="15" sl="491" sc="1" el="491" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="12" uspid="492" ordinal="16" sl="492" sc="1" el="492" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="12" uspid="493" ordinal="17" sl="493" sc="1" el="493" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="4" uspid="495" ordinal="18" sl="495" sc="1" el="495" ec="2" bec="0" bev="0" fileid="2" />
-                <SequencePoint vc="5" uspid="496" ordinal="19" sl="496" sc="1" el="496" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="546" ordinal="0" sl="546" sc="1" el="546" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="547" ordinal="1" sl="547" sc="1" el="547" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="1" uspid="548" ordinal="2" sl="548" sc="1" el="548" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="1" uspid="549" ordinal="3" sl="549" sc="1" el="549" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="4" uspid="552" ordinal="4" sl="552" sc="1" el="552" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="4" uspid="554" ordinal="5" sl="554" sc="1" el="554" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="555" ordinal="6" sl="555" sc="1" el="555" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="556" ordinal="7" sl="556" sc="1" el="556" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="557" ordinal="8" sl="557" sc="1" el="557" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="558" ordinal="9" sl="558" sc="1" el="558" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="559" ordinal="10" sl="559" sc="1" el="559" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="11" uspid="560" ordinal="11" sl="560" sc="1" el="560" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="561" ordinal="12" sl="561" sc="1" el="561" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="562" ordinal="13" sl="562" sc="1" el="562" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="563" ordinal="14" sl="563" sc="1" el="563" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="4" uspid="564" ordinal="15" sl="564" sc="1" el="564" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="565" ordinal="16" sl="565" sc="1" el="565" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="566" ordinal="17" sl="566" sc="1" el="566" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="4" uspid="568" ordinal="18" sl="568" sc="1" el="568" ec="2" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="5" uspid="569" ordinal="19" sl="569" sc="1" el="569" ec="2" bec="0" bev="0" fileid="2" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="1" uspid="474" ordinal="0" path="0" offset="20" offsetend="22" sl="474" fileid="2" />
-                <BranchPoint vc="4" uspid="474" ordinal="1" path="1" offset="20" offsetend="35" sl="474" fileid="2" />
+                <BranchPoint vc="1" uspid="547" ordinal="0" path="0" offset="20" offsetend="22" sl="547" fileid="2" />
+                <BranchPoint vc="4" uspid="547" ordinal="1" path="1" offset="20" offsetend="35" sl="547" fileid="2" />
               </BranchPoints>
-              <MethodPoint vc="20" uspid="0" p8:type="SequencePoint" ordinal="29" offset="29" sc="0" sl="473" ec="1" el="496" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+              <MethodPoint vc="20" uspid="0" p8:type="SequencePoint" ordinal="38" offset="38" sc="0" sl="546" ec="1" el="569" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
             </Method>
           </Methods>
         </Class>
@@ -856,7 +955,7 @@
         </Class>
         <Class>
           <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="8" visitedBranchPoints="7" sequenceCoverage="100" branchCoverage="87.5" maxCyclomaticComplexity="8" minCyclomaticComplexity="8" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="0" />
-          <FullName>Nzr.ToolBox.Core.ToolBox/&lt;&gt;c__DisplayClass46_0`2</FullName>
+          <FullName>Nzr.ToolBox.Core.ToolBox/&lt;&gt;c__DisplayClass55_0`2</FullName>
           <Methods />
         </Class>
         <Class>
@@ -954,7 +1053,7 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="69" visitedSequencePoints="69" numBranchPoints="4" visitedBranchPoints="4" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="43" numMethods="43" />
+          <Summary numSequencePoints="73" visitedSequencePoints="73" numBranchPoints="4" visitedBranchPoints="4" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="47" numMethods="47" />
           <FullName>Nzr.ToolBox.Core.ToolBox</FullName>
           <Methods>
             <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
@@ -1461,6 +1560,50 @@
                 <BranchPoint vc="4" uspid="350" ordinal="1" path="1" offset="16" offsetend="21" sl="350" fileid="5" />
               </BranchPoints>
               <MethodPoint vc="4" uspid="0" p8:type="SequencePoint" ordinal="42" offset="42" sc="0" sl="348" ec="1" el="351" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String Nzr.ToolBox.Core.ToolBox::PadLeft(System.Byte,System.Int32,System.Char)</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="364" ordinal="0" sl="364" sc="1" el="364" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="43" offset="43" sc="0" sl="364" ec="1" el="364" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String Nzr.ToolBox.Core.ToolBox::PadLeft(System.Int16,System.Int32,System.Char)</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="377" ordinal="0" sl="377" sc="1" el="377" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="44" offset="44" sc="0" sl="377" ec="1" el="377" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String Nzr.ToolBox.Core.ToolBox::PadLeft(System.Int32,System.Int32,System.Char)</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="390" ordinal="0" sl="390" sc="1" el="390" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="45" offset="45" sc="0" sl="390" ec="1" el="390" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String Nzr.ToolBox.Core.ToolBox::PadLeft(System.Int64,System.Int32,System.Char)</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="403" ordinal="0" sl="403" sc="1" el="403" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="46" offset="46" sc="0" sl="403" ec="1" el="403" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
             </Method>
           </Methods>
         </Class>
@@ -2164,7 +2307,7 @@
         </Class>
         <Class>
           <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="8" visitedBranchPoints="8" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="8" minCyclomaticComplexity="8" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="0" />
-          <FullName>Nzr.ToolBox.Core.ToolBox/&lt;&gt;c__DisplayClass134_0</FullName>
+          <FullName>Nzr.ToolBox.Core.ToolBox/&lt;&gt;c__DisplayClass147_0</FullName>
           <Methods />
         </Class>
         <Class>

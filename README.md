@@ -50,7 +50,12 @@ Added the following group of utilities and extension methods:
 #### v1.1.0
 Added null check for some extension methods.
 
+#### v1.2.0
+Added new extensions:
+* NumberUtils: PadLeft extension for numeric values.
+* CollectionUtils: Contains extension for Arrays
+
 ## Know Issues
 
-There are no known issues so far. The tests were written as a how-to guide but also to cover almost 100% of the code (currently 99.5% (680 of 683) line covered and 99.3% (290 of 292) branch covered).
+There are no known issues so far. The tests were written as a how-to guide but also to cover almost 100% of the code (currently 99.5% (693 of 696) line covered and 99.3% (290 of 292) branch covered).
 

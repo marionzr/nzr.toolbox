@@ -237,5 +237,37 @@ namespace Nzr.ToolBox.Core.Tests
             Assert.Equal("0x63", intHexadecimal);
             Assert.Equal("0x63", longHexadecimal);
         }
+
+        [Fact]
+        public void PadLeft_WithNumersOfSameSize_ShouldNotAppendChars()
+        {
+            // Arrange
+
+            byte b1 = 101;
+
+            // Act
+
+            string result1 = b1.PadLeft(3, '_');
+
+            // Asssert
+
+            Assert.Equal("101", result1);
+        }
+
+        [Fact]
+        public void PadLeft_WithNumersOFLowerLength_ShouldAppendChars()
+        {
+            // Arrange
+
+            byte b1 = 101;
+
+            // Act
+
+            string result1 = b1.PadLeft(5, '_');
+
+            // Assert
+
+            Assert.Equal("__101", result1);
+        }
     }
 }
