@@ -11,7 +11,7 @@
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <Copyright>Copyright 2019</Copyright>
     <Description>A collection of utility classes and extension methods that allow developers to have a social life.</Description>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

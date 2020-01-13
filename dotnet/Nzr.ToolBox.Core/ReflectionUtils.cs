@@ -61,14 +61,12 @@ namespace Nzr.ToolBox.Core
                 object value = property.GetValue(entity, null);
                 action.Invoke(new Reflect(entity, property, value));
 
-                if (value == null)
+                if (value == null || IsPrimitive(value.GetType()))
                 {
                     continue;
                 }
 
-                Type propertyType = property.PropertyType;
-
-                if (propertyType.IsArray || typeof(System.Collections.IEnumerable).IsAssignableFrom(property.PropertyType))
+                if (IsCollection(property.PropertyType))
                 {
                     System.Collections.IEnumerable e = (System.Collections.IEnumerable)value;
 
@@ -162,7 +160,7 @@ namespace Nzr.ToolBox.Core
             List<string> properties = propertyPath.Split(".".ToCharArray()).ToList();
             propertyInfo = entity.GetType().GetProperty(properties.First());
 
-            if (propertyInfo.PropertyType.IsArray || typeof(System.Collections.IEnumerable).IsAssignableFrom(propertyInfo.PropertyType))
+            if (IsCollection(propertyInfo.PropertyType))
             {
                 throw new NotSupportedException("GetValue doesn't support lists. First, get the list then invoke the GetValue again on each item.");
             }
@@ -178,7 +176,7 @@ namespace Nzr.ToolBox.Core
         {
             type = FixType(type);
 
-            return type.IsPrimitive || type == typeof(string) || type.FullName.StartsWith("System.");
+            return type.IsPrimitive || type == typeof(string) || (type.FullName.StartsWith("System.") && !IsCollection(type));
         }
 
         private static Type FixType(Type type)
@@ -190,5 +188,7 @@ namespace Nzr.ToolBox.Core
 
             return type;
         }
+
+        private static bool IsCollection(Type type) => type.IsArray || typeof(System.Collections.IEnumerable).IsAssignableFrom(type);
     }
 }

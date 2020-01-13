@@ -122,5 +122,118 @@ namespace Nzr.ToolBox.Core.Tests
 
             Assert.True(result);
         }
+
+        [Fact]
+        public void Subtract_WithOneYear_ShouldReturnLastYear()
+        {
+            // Arrange
+
+            DateTime now = DateTime.Now;
+
+            // Act
+
+            DateTime dateTime = now.SubtractYears(1);
+
+            // Assert
+
+            Assert.Equal(365, (now - dateTime).TotalDays);
+        }
+
+        [Fact]
+        public void Subtract_WithOneMonth_ShouldReturnLastMonth()
+        {
+            // Arrange
+
+            DateTime now = DateTime.Now;
+
+            // Act
+
+            DateTime dateTime = now.SubtractMonths(1);
+
+            // Assert
+
+            Assert.True((now - dateTime).TotalDays >= 28);
+        }
+
+        [Fact]
+        public void Subtract_WithOneDay_ShouldReturnYesterday()
+        {
+            // Arrange
+
+            DateTime now = DateTime.Now;
+
+            // Act
+
+            DateTime dateTime = now.SubtractDays(1);
+
+            // Assert
+
+            Assert.Equal(1, (now - dateTime).TotalDays);
+        }
+
+        [Fact]
+        public void Subtract_WithOneHour_ShouldReturnPastHour()
+        {
+            // Arrange
+
+            DateTime now = DateTime.Now;
+
+            // Act
+
+            DateTime dateTime = now.SubtractHours(1);
+
+            // Assert
+
+            Assert.Equal(1, (now - dateTime).TotalHours);
+        }
+
+        [Fact]
+        public void Subtract_WithOneMinute_ShouldReturnPastMinute()
+        {
+            // Arrange
+
+            DateTime now = DateTime.Now;
+
+            // Act
+
+            DateTime dateTime = now.SubtractMinutes(1);
+
+            // Assert
+
+            Assert.Equal(1, (now - dateTime).TotalMinutes);
+        }
+
+        [Fact]
+        public void Subtract_WithOneSecond_ShouldReturnPastSecond()
+        {
+            // Arrange
+
+            DateTime now = DateTime.Now;
+
+            // Act
+
+            DateTime dateTime = now.SubtractSeconds(1);
+
+            // Assert
+
+            Assert.Equal(1, (now - dateTime).TotalSeconds);
+        }
+
+        [Fact]
+        public void Subtract_WithOneMilis_ShouldReturnPastMilis()
+        {
+            // Arrange
+
+            DateTime now = DateTime.Now;
+
+            // Act
+
+            DateTime dateTime = now.SubtractMilliseconds(1);
+
+            // Assert
+
+            Assert.Equal(1, (now - dateTime).TotalMilliseconds);
+        }
+
     }
 }

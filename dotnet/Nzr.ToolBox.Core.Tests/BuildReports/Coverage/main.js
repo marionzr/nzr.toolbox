@@ -224,7 +224,7 @@ var assemblies = [
   {
     "name": "Nzr.ToolBox.Core.Single",
     "classes": [
-      { "name": "Nzr.ToolBox.Core.ToolBox", "rp": "Nzr.ToolBox.Core.Single_ToolBox.htm", "cl": 693, "ucl": 3, "cal": 696, "tl": 2789, "ct": "LineCoverage", "mc": "-", "cb": 290, "tb": 292, "lch": [], "bch": [], "hc": [] },
+      { "name": "Nzr.ToolBox.Core.ToolBox", "rp": "Nzr.ToolBox.Core.Single_ToolBox.htm", "cl": 718, "ucl": 3, "cal": 721, "tl": 2916, "ct": "LineCoverage", "mc": "-", "cb": 305, "tb": 306, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 

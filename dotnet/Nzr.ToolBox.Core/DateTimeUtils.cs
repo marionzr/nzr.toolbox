@@ -47,5 +47,97 @@ namespace Nzr.ToolBox.Core
         /// <param name="toleranceInMs"></param>
         /// <returns></returns>
         public static bool Equals(this DateTime dateTime1, DateTime dateTime2, int toleranceInMs) => Math.Abs((dateTime1 - dateTime2).TotalMilliseconds) <= toleranceInMs;
+
+        /// <summary>
+        /// Returns a new System.DateTime that subtracts the specified number of days from the value
+        /// of this instance.
+        /// </summary>
+        /// <param name="dateTime">The DateTime instance.</param>
+        /// <param name="value">A number of whole and fractional days. The value parameter can be negative or positive.</param>
+        ///
+        /// <returns>An object whose value is the sum of the date and time represented by this instance and the number of days represented by value.</returns>
+        public static DateTime SubtractDays(this DateTime dateTime, double value) => dateTime.AddDays(value * -1);
+
+        /// <summary>
+        /// Returns a new System.DateTime that subtracts the specified number of hours from the
+        /// value of this instance.
+        /// </summary>
+        /// Parameters:
+        ///   value:
+        /// A number of whole and fractional hours. The value parameter can be negative or
+        /// positive.
+        ///
+        /// <returns>
+        /// An object whose value is the sum of the date and time represented by this instance
+        /// and the number of hours represented by value.</returns>
+        public static DateTime SubtractHours(this DateTime dateTime, double value) => dateTime.AddHours(value * -1);
+
+        /// <summary>
+        /// Returns a new System.DateTime that subtracts the specified number of milliseconds
+        /// from the value of this instance.
+        /// </summary>
+        /// Parameters:
+        ///   value:
+        /// A number of whole and fractional milliseconds. The value parameter can be negative
+        /// or positive. Note that this value is rounded to the nearest integer.
+        ///
+        /// <returns>
+        /// An object whose value is the sum of the date and time represented by this instance
+        /// and the number of milliseconds represented by value.</returns>
+        public static DateTime SubtractMilliseconds(this DateTime dateTime, double value) => dateTime.AddMilliseconds(value * -1);
+
+        /// <summary>
+        /// Returns a new System.DateTime that subtracts the specified number of minutes from the
+        /// value of this instance.
+        /// </summary>
+        /// Parameters:
+        ///   value:
+        /// A number of whole and fractional minutes. The value parameter can be negative
+        /// or positive.
+        ///
+        /// <returns>
+        /// An object whose value is the sum of the date and time represented by this instance
+        /// and the number of minutes represented by value.</returns>
+        public static DateTime SubtractMinutes(this DateTime dateTime, double value) => dateTime.AddMinutes(value * -1);
+
+        /// <summary>
+        /// Returns a new System.DateTime that subtracts the specified number of months from the
+        /// value of this instance.
+        /// </summary>
+        /// Parameters:
+        ///   value:
+        /// A number of months. The months parameter can be negative or positive.
+        ///
+        /// <returns>
+        /// An object whose value is the sum of the date and time represented by this instance
+        /// and months.</returns>
+        public static DateTime SubtractMonths(this DateTime dateTime, int value) => dateTime.AddMonths(value * -1);
+
+        /// <summary>
+        /// Returns a new System.DateTime that subtracts the specified number of seconds from the
+        /// value of this instance.
+        /// </summary>
+        /// Parameters:
+        ///   value:
+        /// A number of whole and fractional seconds. The value parameter can be negative
+        /// or positive.
+        ///
+        /// <returns>
+        /// An object whose value is the sum of the date and time represented by this instance
+        /// and the number of seconds represented by value.</returns>
+        public static DateTime SubtractSeconds(this DateTime dateTime, double value) => dateTime.AddSeconds(value * -1);
+
+        /// <summary>
+        /// Returns a new System.DateTime that subtracts the specified number of years from the
+        /// value of this instance.
+        /// </summary>
+        /// Parameters:
+        ///   value:
+        /// A number of years. The value parameter can be negative or positive.
+        ///
+        /// <returns>
+        /// An object whose value is the sum of the date and time represented by this instance
+        /// and the number of years represented by value.</returns>
+        public static DateTime SubtractYears(this DateTime dateTime, int value) => dateTime.AddYears(value * -1);
     }
 }

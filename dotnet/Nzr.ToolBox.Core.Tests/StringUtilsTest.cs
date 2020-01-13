@@ -1216,7 +1216,7 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "Ciências da Computação";
+            string a = "Ciências da Computação - CIÊNCIAS DA COMPUTAÇÃO";
 
             // Act
 
@@ -1224,7 +1224,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Assert
 
-            Assert.Equal("Ciencias da Computacao", result);
+            Assert.Equal("Ciencias da Computacao - CIENCIAS DA COMPUTACAO", result);
         }
 
         [Fact()]
@@ -1548,6 +1548,76 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             Assert.Equal("Fast, simple, convention-based (but configurable) and extensible Micro-Orm: Nzr.Orm", result);
+        }
+
+        [Fact]
+        public void Equal_WithIgnoreDiacriticsOptionsAndWithNullValues_ShouldReturnTrue()
+        {
+            // Arrange
+
+            string a = null;
+            string b = null;
+
+            // Act
+
+            bool result = a.Equals(b, true);
+
+            // Assert
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void Equal_WithIgnoreDiacriticsOptionAndWithOneNullValues_ShouldReturnFalse()
+        {
+            // Arrange
+
+            string a = null;
+            string b = "A";
+
+            // Act
+
+            bool result1 = a.Equals(b, true);
+            bool result2 = b.Equals(a, true);
+
+            // Assert
+
+            Assert.False(result1);
+            Assert.False(result2);
+        }
+
+        [Fact]
+        public void Equal_WithIgnoreDiacriticsOptionTrueAndSimilarWords_ShouldReturnTrue()
+        {
+            // Arrange
+
+            string a = "CIÊNCIA";
+            string b = "CIENCIA";
+
+            // Act
+
+            bool result = a.Equals(b, true);
+
+            // Assert
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void Equal_WithIgnoreDiacriticsOptionFalseAndSimilarWords_ShouldReturnFalse()
+        {
+            // Arrange
+
+            string a = "CIÊNCIA";
+            string b = "CIENCIA";
+
+            // Act
+
+            bool result = a.Equals(b, false);
+
+            // Assert
+
+            Assert.False(result);
         }
     }
 }

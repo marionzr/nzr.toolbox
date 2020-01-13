@@ -55,7 +55,15 @@ Added new extensions:
 * NumberUtils: PadLeft extension for numeric values.
 * CollectionUtils: Contains extension for Arrays
 
+#### v1.3.0
+Added new extensions:
+* Equals: Compare string ignoring diacritics
+
+Fixed bugs:
+https://github.com/marionzr/Nzr.ToolBox/issues/1
+https://github.com/marionzr/Nzr.ToolBox/issues/2
+
 ## Know Issues
 
-There are no known issues so far. The tests were written as a how-to guide but also to cover almost 100% of the code (currently 99.5% (693 of 696) line covered and 99.3% (290 of 292) branch covered).
+There are no known issues so far. The tests were written as a how-to guide but also to cover almost 100% of the code (currently 99.5% (718 of 721) line covered and 99.6% (305 of 306) branch covered).
 

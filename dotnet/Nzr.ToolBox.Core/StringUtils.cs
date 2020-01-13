@@ -421,6 +421,12 @@ namespace Nzr.ToolBox.Core
             {'o', new char[] { 'ó', 'ò', 'ô', 'õ', 'ö'} },
             {'u', new char[] { 'ú', 'ù', 'û', 'ü' } },
             {'c', new char[] { 'ç' } },
+            {'A', new char[] { 'Á', 'À', 'Â', 'Ã', 'Ä' } },
+            {'E', new char[] { 'É', 'È', 'Ê', 'Ë' } },
+            {'I', new char[] { 'Í', 'Ì', 'Î', 'Ï' } },
+            {'O', new char[] { 'Ó', 'Ò', 'Ô', 'Õ', 'Ö'} },
+            {'U', new char[] { 'Ú', 'Ù', 'Û', 'Ü' } },
+            {'C', new char[] { 'Ç' } }
         };
 
         /// <summary>
@@ -562,6 +568,35 @@ namespace Nzr.ToolBox.Core
             args.ForEach(arg => sb.Append(arg));
 
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Determines whether this string and a specified System.String object have the
+        /// same value. A parameter specifies the culture, case, and sort rules used in the
+        /// comparison.
+        ///
+        /// </summary>
+        /// <param name="value">The source instance string to compare.</param>
+        /// <param name="other">The string to compare to this instance.</param>
+        /// <param name="ignoreDiacritics">If true, will remove the diacritics from strings before compare them.</param>
+        /// <param name="stringComparison">comparisonType is not a System.StringComparison value.</param>
+        /// <returns>True if the value of the value parameter is the same as this string; otherwise, false</returns>
+        public static bool Equals(this string value, string other, bool ignoreDiacritics, StringComparison stringComparison = StringComparison.Ordinal)
+        {
+            if ((value == null && other != null) || (value != null && other == null))
+            {
+                return false;
+            }
+            else if (value == null)
+            {
+                return true; //both are null.
+            }
+            else if (ignoreDiacritics)
+            {
+                return value.RemoveDiacritics().Equals(other.RemoveDiacritics(), stringComparison);
+            }
+
+            return value.Equals(other, stringComparison);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace Nzr.ToolBox.Core.Tests
                         P5 = new List<B<C>>(),
                         P6 = new C()
                         {
+                            X10 = DateTime.Now,
                         }
                     }
                 }
@@ -48,9 +49,9 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Assert
 
-            Assert.Equal(9, propertyValues.Count);
+            Assert.Equal(10, propertyValues.Count);
             Assert.Equal("P1", propertyValues.OrderBy(i => i.Item1).First().Item1);
-            Assert.Equal("P9", propertyValues.OrderBy(i => i.Item1).Last().Item1);
+            Assert.Equal("X10", propertyValues.OrderBy(i => i.Item1).Last().Item1);
         }
 
         [Fact]
@@ -67,7 +68,7 @@ namespace Nzr.ToolBox.Core.Tests
             Assert.Equal(3, propertyNames.Count);
             Assert.Equal(4, propertyNames["A"].Count);
             Assert.Equal(2, propertyNames["B<C>"].Count);
-            Assert.Equal(3, propertyNames["C"].Count);
+            Assert.Equal(4, propertyNames["C"].Count);
         }
 
         [Fact]
@@ -128,6 +129,7 @@ namespace Nzr.ToolBox.Core.Tests
             public int? P7 { get; set; }
             public int P8 { get; set; }
             public int?[] P9 { get; set; }
+            public DateTime X10 { get; set; }
         }
     }
 }
