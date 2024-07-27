@@ -11,6 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BuildReports\**" />
+    <EmbeddedResource Remove="BuildReports\**" />
+    <None Remove="BuildReports\**" />
+  </ItemGroup>
+
+  <ItemGroup>
 
 	<PackageReference Include="coverlet.msbuild" Version="6.0.2">
       <PrivateAssets>all</PrivateAssets>
