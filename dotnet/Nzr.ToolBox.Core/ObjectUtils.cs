@@ -18,14 +18,14 @@ namespace Nzr.ToolBox.Core
         /// <summary>
         /// If a value is not null, performs the action with the value, otherwise does nothing.
         /// </summary>
-        /// <typeparam name="T">Type of the value.</typeparam>
+        /// <typeparam name="T?">Type of the value.</typeparam>
         /// <param name="value">The value to be checked.</param>
         /// <param name="action">Action to be executed in case the value is not null.</param>
         /// <param name="ifNullAction">Action to be executed in case the value is null (optional).</param>
         /// <returns>Null (internal class).</returns>
-        public static Null IfNotNull<T>(this T value, Action<T> action, Action ifNullAction = null)
+        public static Null? IfNotNull<T>(this T? value, Action<T> action, Action? ifNullAction = null)
         {
-            if (value != null)
+            if (value is not null)
             {
                 action.Invoke(value);
                 return null;
@@ -46,9 +46,9 @@ namespace Nzr.ToolBox.Core
         /// <param name="action">Action to be executed in case the value is null.</param>
         /// <param name="ifNotNullAction">Action to be executed in case the value is not null (optional)</param>
         /// <returns>Null (internal class).</returns>
-        public static NotNull<T> IfNull<T>(this T value, Action action, Action<T> ifNotNullAction = null)
+        public static NotNull<T>? IfNull<T>(this T? value, Action action, Action<T>? ifNotNullAction = null)
         {
-            if (value == null)
+            if (value is null)
             {
                 action.Invoke();
                 return null;
@@ -66,7 +66,7 @@ namespace Nzr.ToolBox.Core
         /// </summary>
         /// <param name="null">InternalUse</param>
         /// <param name="action">Action to be executed in case the value is null.</param>
-        public static void Else(this Null @null, Action action)
+        public static void Else(this Null? @null, Action action)
         {
             if (@null != null)
             {
@@ -79,7 +79,7 @@ namespace Nzr.ToolBox.Core
         /// </summary>
         /// <param name="notnull">Internal use.</param>
         /// <param name="action">Action to be executed in case the value is null.</param>
-        public static void Else<T>(this NotNull<T> notnull, Action<T> action)
+        public static void Else<T>(this NotNull<T>? notnull, Action<T> action)
         {
             if (notnull != null)
             {
@@ -95,7 +95,7 @@ namespace Nzr.ToolBox.Core
         /// </summary>
         /// <param name="null">Internal use.</param>
         /// <param name="exceptionMessage">Action to be executed in case the value is null.</param>
-        public static void ElseThrow(this Null @null, string exceptionMessage = null)
+        public static void ElseThrow(this Null? @null, string? exceptionMessage = null)
         {
             if (@null != null)
             {
@@ -113,23 +113,25 @@ namespace Nzr.ToolBox.Core
         /// <summary>
         /// Internal use.
         /// </summary>
-        public class Null
+        public sealed class Null
         {
+            /// <summary>
+            /// For internal use.
+            /// </summary>
+            public Null() { }
         }
 
         /// <summary>
         /// Internal use.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public class NotNull<T>
+        /// <remarks>
+        /// For internal use.
+        /// </remarks>
+        /// <param name="value"></param>
+        public class NotNull<T>(T value)
         {
-            internal T Value { get; }
-
-            /// <summary>
-            /// Internal Use
-            /// </summary>
-            /// <param name="value"></param>
-            public NotNull(T value) => Value = value;
+            internal T Value { get; } = value;
         }
 
         /// <summary>
@@ -137,28 +139,28 @@ namespace Nzr.ToolBox.Core
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True is all values are not null.</returns>
-        public static bool IsAllNonNull(params object[] values) => !values.Any(o => o == null);
+        public static bool IsAllNonNull(params object?[] values) => !Array.Exists(values, o => o == null);
 
         /// <summary>
         /// Checks if all values are not nulls.
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True is all values are not null.</returns>
-        public static bool IsAllNull(params object[] values) => !values.Any(o => o != null);
+        public static bool IsAllNull(params object?[] values) => !Array.Exists(values, o => o != null);
 
         /// <summary>
         /// Checks if any value is null.
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True is at least one value is null.</returns>
-        public static bool IsAnyNull(params object[] values) => values.Any(o => o == null);
+        public static bool IsAnyNull(params object?[] values) => Array.Exists(values, o => o == null);
 
         /// <summary>
         /// Checks if any value is not null.
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True is at least one value is not null.</returns>
-        public static bool IsAnyNonNull(params object[] values) => values.Any(o => o != null);
+        public static bool IsAnyNonNull(params object?[] values) => Array.Exists(values, o => o != null);
 
         /// <summary>
         /// Returns the first value which is not null.
@@ -166,7 +168,7 @@ namespace Nzr.ToolBox.Core
         /// <typeparam name="T">Type of the values</typeparam>
         /// <param name="values">Values to be checked.</param>
         /// <returns>First value not null, if found, otherwise null</returns>
-        public static T FirstNonNull<T>(params T[] values) => values.FirstOrDefault(v => v != null);
+        public static T? FirstNonNull<T>(params T?[] values) => values != null ? Array.Find(values, v => v is not null) : default;
 
         /// <summary>
         /// Returns the last value which is not null.
@@ -174,14 +176,14 @@ namespace Nzr.ToolBox.Core
         /// <typeparam name="T">Type of the values</typeparam>
         /// <param name="values">Values to be checked.</param>
         /// <returns>Last value not null, if found, otherwise null</returns>
-        public static T LastNonNull<T>(params T[] values) => values.Reverse().FirstOrDefault(v => v != null);
+        public static T? LastNonNull<T>(params T?[] values) => values.Reverse().FirstOrDefault(v => v is not null);
 
         /// <summary>
         /// Checks that the value is not null.
         /// </summary>
         /// <param name="value">Value to be checked.</param>
         /// <param name="exceptionMessage">A message used in the ArgumentNullException, in case of null value. (Optional)</param>
-        public static void RequireNonNull(this object value, string exceptionMessage = null)
+        public static void RequireNonNull(this object? value, string? exceptionMessage = null)
         {
             if (value == null)
             {
@@ -201,9 +203,9 @@ namespace Nzr.ToolBox.Core
         /// </summary>
         /// <param name="value">Value to be converted.</param>
         /// <returns>Dynamic ExpandoObject.</returns>
-        public static dynamic ToDynamic(this object value)
+        public static dynamic? ToDynamic(this object value)
         {
-            IDictionary<string, object> expando = new ExpandoObject();
+            IDictionary<string, object?> expando = new ExpandoObject();
 
             foreach (PropertyDescriptor property in TypeDescriptor.GetProperties(value.GetType()))
             {

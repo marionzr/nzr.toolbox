@@ -15,7 +15,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string random = RandomString(10);
+            var random = RandomString(10);
 
             // Assert
 
@@ -29,13 +29,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string random = RandomString(20, numbers: null, symbols: null);
+            var random = RandomString(20, numbers: null, symbols: null);
 
             // Assert
 
             Assert.Equal(20, random.Length);
-            Assert.False(random.Any(c => RANDOM_NUMBER.Contains(c)));
-            Assert.False(random.Any(c => RANDOM_SYMBOLS.Contains(c)));
+            Assert.DoesNotContain(random, c => RANDOM_NUMBER.Contains(c));
+            Assert.DoesNotContain(random, c => RANDOM_SYMBOLS.Contains(c));
         }
 
         [Fact]
@@ -45,13 +45,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string random = RandomString(30, letters: null, symbols: null);
+            var random = RandomString(30, letters: null, symbols: null);
 
             // Assert
 
             Assert.Equal(30, random.Length);
-            Assert.False(random.Any(c => RANDOM_LETTERS.Contains(c)));
-            Assert.False(random.Any(c => RANDOM_SYMBOLS.Contains(c)));
+            Assert.DoesNotContain(random, c => RANDOM_LETTERS.Contains(c));
+            Assert.DoesNotContain(random, c => RANDOM_SYMBOLS.Contains(c));
         }
 
         [Fact]
@@ -61,13 +61,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string random = RandomString(40, letters: null, numbers: null);
+            var random = RandomString(40, letters: null, numbers: null);
 
             // Assert
 
             Assert.Equal(40, random.Length);
-            Assert.False(random.Any(c => RANDOM_LETTERS.Contains(c)));
-            Assert.False(random.Any(c => RANDOM_NUMBER.Contains(c)));
+            Assert.DoesNotContain(random, c => RANDOM_LETTERS.Contains(c));
+            Assert.DoesNotContain(random, c => RANDOM_NUMBER.Contains(c));
         }
 
         [Fact]
@@ -77,14 +77,14 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string random = RandomString(50000, letters: "AB", numbers: "12", symbols: "!?");
+            var random = RandomString(50000, letters: "AB", numbers: "12", symbols: "!?");
 
             // Assert
 
             Assert.Equal(50000, random.Length);
-            Assert.False(random.Any(c => RANDOM_LETTERS.Replace("AB", string.Empty).Contains(c)));
-            Assert.False(random.Any(c => RANDOM_NUMBER.Replace("12", string.Empty).Contains(c)));
-            Assert.False(random.Any(c => RANDOM_SYMBOLS.Replace("!?", string.Empty).Contains(c)));
+            Assert.DoesNotContain(random, c => RANDOM_LETTERS.Replace("AB", string.Empty).Contains(c));
+            Assert.DoesNotContain(random, c => RANDOM_NUMBER.Replace("12", string.Empty).Contains(c));
+            Assert.DoesNotContain(random, c => RANDOM_SYMBOLS.Replace("!?", string.Empty).Contains(c));
         }
 
         [Fact]
@@ -94,7 +94,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            ArgumentException ex = Assert.Throws<ArgumentException>(
+            var ex = Assert.Throws<ArgumentException>(
                 () => RandomString(40, letters: null, numbers: null, symbols: null));
 
             // Assert
@@ -109,14 +109,14 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<byte> results = new List<byte>();
+            var results = new List<byte>();
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                byte result = RandomByte(seed: seed);
+                var result = RandomByte(seed: seed);
                 results.Add(result);
             }
 
@@ -132,14 +132,14 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<short> results = new List<short>();
+            List<short> results = [];
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                short result = RandomShort(seed: seed);
+                var result = RandomShort(seed: seed);
                 results.Add(result);
             }
 
@@ -155,14 +155,14 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<int> results = new List<int>();
+            var results = new List<int>();
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                int result = RandomInt(seed: seed);
+                var result = RandomInt(seed: seed);
                 results.Add(result);
             }
 
@@ -178,14 +178,14 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<long> results = new List<long>();
+            var results = new List<long>();
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                long result = RandomLong(seed: seed);
+                var result = RandomLong(seed: seed);
                 results.Add(result);
             }
 
@@ -201,14 +201,14 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<float> results = new List<float>();
+            var results = new List<float>();
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                float result = RandomFloat(seed: seed);
+                var result = RandomFloat(seed: seed);
                 results.Add(result);
             }
 
@@ -224,14 +224,14 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<double> results = new List<double>();
+            var results = new List<double>();
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                double result = RandomDouble(seed: seed);
+                var result = RandomDouble(seed: seed);
                 results.Add(result);
             }
 
@@ -247,14 +247,14 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<decimal> results = new List<decimal>();
+            var results = new List<decimal>();
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                decimal result = RandomDecimal(seed: seed);
+                var result = RandomDecimal(seed: seed);
                 results.Add(result);
             }
 
@@ -270,20 +270,20 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<bool> results = new List<bool>();
+            var results = new List<bool>();
 
             // Act
 
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 seed = seed == null ? (int?)null : Guid.NewGuid().GetHashCode();
-                bool result = RandomBoolean(seed: seed);
+                var result = RandomBoolean(seed: seed);
                 results.Add(result);
             }
 
             // Assert
 
-            Assert.True(results.GroupBy(b => b).Count() == 2);
+            Assert.Equal(2, results.GroupBy(b => b).Count());
         }
     }
 }

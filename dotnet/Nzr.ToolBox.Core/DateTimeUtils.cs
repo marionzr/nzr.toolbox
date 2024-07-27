@@ -35,7 +35,7 @@ namespace Nzr.ToolBox.Core
         /// <returns></returns>
         public static bool IsSameDay(this DateTime dateTime1, DateTime? dateTime2 = null)
         {
-            DateTime dateTime = dateTime2 ?? DateTime.Now;
+            var dateTime = dateTime2 ?? DateTime.Now;
             return dateTime1.Year == dateTime.Year && dateTime1.Month == dateTime.Month && dateTime1.Day == dateTime.Day;
         }
 

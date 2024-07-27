@@ -13,11 +13,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            string withSuffix = s.Suffix("nzr");
+            var withSuffix = s.Suffix("nzr");
 
             // Assert
 
@@ -29,11 +29,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "owner";
+            var s = "owner";
 
             // Act
 
-            string withSuffix = s.Suffix(".nzr");
+            var withSuffix = s.Suffix(".nzr");
 
             // Assert
 
@@ -45,11 +45,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "owner.nzr";
+            var s = "owner.nzr";
 
             // Act
 
-            string withSuffix = s.Suffix(".nzr");
+            var withSuffix = s.Suffix(".nzr");
 
             // Assert
 
@@ -61,11 +61,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "owner.nzr";
+            var s = "owner.nzr";
 
             // Act
 
-            string withSuffix = s.Suffix(".nzr", false);
+            var withSuffix = s.Suffix(".nzr", false);
 
             // Assert
 
@@ -77,11 +77,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            string withSuffix = s.Prefix("owner");
+            var withSuffix = s.Prefix("owner");
 
             // Assert
 
@@ -93,11 +93,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "nzr";
+            var s = "nzr";
 
             // Act
 
-            string result = s.Prefix("owner.");
+            var result = s.Prefix("owner.");
 
             // Assert
 
@@ -109,11 +109,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "owner.nzr";
+            var s = "owner.nzr";
 
             // Act
 
-            string result = s.Prefix("owner.");
+            var result = s.Prefix("owner.");
 
             // Assert
 
@@ -125,11 +125,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "owner.nzr";
+            var s = "owner.nzr";
 
             // Act
 
-            string result = s.Prefix("owner.", false);
+            var result = s.Prefix("owner.", false);
 
             // Assert
 
@@ -141,11 +141,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string phrase = null;
+            string? phrase = null;
 
             // Act
 
-            string result = phrase.Capitalize();
+            var result = phrase.Capitalize();
 
             // Assert
 
@@ -157,12 +157,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string phrase = "the placid shores of the Ipiranga heard, the resounding shout of a heroic folk. " +
+            var phrase = "the placid shores of the Ipiranga heard, the resounding shout of a heroic folk. " +
                 "And the sun of Liberty in shining beams, shone in the homeland's sky at that instant";
 
             // Act
 
-            string result = phrase.Capitalize();
+            var result = phrase.Capitalize();
 
             // Assert
 
@@ -175,11 +175,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string word = null;
+            string? word = null;
 
             // Act
 
-            string result = word.RemoveEnd("Orm.", "Attribute");
+            var result = word.RemoveEnd("Orm.", "Attribute");
 
             // Assert
 
@@ -191,11 +191,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string word = "Nzr.Orm.Attribute.Attribute";
+            var word = "Nzr.Orm.Attribute.Attribute";
 
             // Act
 
-            string result = word.RemoveEnd("Orm.", "Attribute", "another");
+            var result = word.RemoveEnd("Orm.", "Attribute", "another");
 
             // Assert
 
@@ -208,11 +208,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string word = "Nzr.Orm.Attribute";
+            var word = "Nzr.Orm.Attribute";
 
             // Act
 
-            string result = word.RemoveEnd(StringComparison.Ordinal, "orm.", "attribute", "another");
+            var result = word.RemoveEnd(StringComparison.Ordinal, "orm.", "attribute", "another");
 
             // Assert
 
@@ -224,11 +224,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string word = null;
+            string? word = null;
 
             // Act
 
-            string result = word.RemoveStart("Nzr.", "Attribute");
+            var result = word.RemoveStart("Nzr.", "Attribute");
 
             // Assert
 
@@ -240,11 +240,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string word = "Nzr.Nzr.Orm.Attribute";
+            var word = "Nzr.Nzr.Orm.Attribute";
 
             // Act
 
-            string result = word.RemoveStart("Nzr.", "Attribute", "another");
+            var result = word.RemoveStart("Nzr.", "Attribute", "another");
 
             // Assert
 
@@ -257,11 +257,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string word = "Nzr.Nzr.Orm.Attribute";
+            var word = "Nzr.Nzr.Orm.Attribute";
 
             // Act
 
-            string result = word.RemoveStart(StringComparison.Ordinal, "nzr.", "orm.", "another");
+            var result = word.RemoveStart(StringComparison.Ordinal, "nzr.", "orm.", "another");
 
             // Assert
 
@@ -273,11 +273,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            bool result = s.IsEmpty();
+            var result = s.IsEmpty();
 
             // Assert
 
@@ -289,11 +289,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = string.Empty;
+            var s = string.Empty;
 
             // Act
 
-            bool result = s.IsEmpty();
+            var result = s.IsEmpty();
 
             // Assert
 
@@ -305,11 +305,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = " ";
+            var s = " ";
 
             // Act
 
-            bool result = s.IsEmpty();
+            var result = s.IsEmpty();
 
             // Assert
 
@@ -322,11 +322,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            bool result = s.IsNotEmpty();
+            var result = s.IsNotEmpty();
 
             // Assert
 
@@ -338,11 +338,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = string.Empty;
+            var s = string.Empty;
 
             // Act
 
-            bool result = s.IsNotEmpty();
+            var result = s.IsNotEmpty();
 
             // Assert
 
@@ -354,11 +354,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = " ";
+            var s = " ";
 
             // Act
 
-            bool result = s.IsNotEmpty();
+            var result = s.IsNotEmpty();
 
             // Assert
 
@@ -370,11 +370,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            bool result = s.IsBlank();
+            var result = s.IsBlank();
 
             // Assert
 
@@ -386,11 +386,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = string.Empty;
+            var s = string.Empty;
 
             // Act
 
-            bool result = s.IsBlank();
+            var result = s.IsBlank();
 
             // Assert
 
@@ -402,11 +402,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = " ";
+            var s = " ";
 
             // Act
 
-            bool result = s.IsBlank();
+            var result = s.IsBlank();
 
             // Assert
 
@@ -418,11 +418,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = ".";
+            var s = ".";
 
             // Act
 
-            bool result = s.IsBlank();
+            var result = s.IsBlank();
 
             // Assert
 
@@ -434,11 +434,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            bool result = s.IsNotBlank();
+            var result = s.IsNotBlank();
 
             // Assert
 
@@ -450,11 +450,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = string.Empty;
+            var s = string.Empty;
 
             // Act
 
-            bool result = s.IsNotBlank();
+            var result = s.IsNotBlank();
 
             // Assert
 
@@ -466,11 +466,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = " ";
+            var s = " ";
 
             // Act
 
-            bool result = s.IsNotBlank();
+            var result = s.IsNotBlank();
 
             // Assert
 
@@ -483,11 +483,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = ".";
+            var s = ".";
 
             // Act
 
-            bool result = s.IsNotBlank();
+            var result = s.IsNotBlank();
 
             // Assert
 
@@ -499,11 +499,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            string result = a.Replace("a", "b", "(null)");
+            var result = a.Replace("a", "b", "(null)");
 
             // Assert
 
@@ -515,11 +515,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "aabc";
+            var a = "aabc";
 
             // Act
 
-            string result = a.Replace("a", "b", "(null)");
+            var result = a.Replace("a", "b", "(null)");
 
             // Assert
 
@@ -531,11 +531,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsAny("a", "c", "z");
+            var result = a.ContainsAny("a", "c", "z");
 
             // Assert
 
@@ -547,11 +547,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsAny("x", "y", "z");
+            var result = a.ContainsAny("x", "y", "z");
 
             // Assert
 
@@ -563,11 +563,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsAny("A", "C", "z");
+            var result = a.ContainsAny("A", "C", "z");
 
             // Assert
 
@@ -579,11 +579,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsAny(StringComparison.OrdinalIgnoreCase, "x", "y", "z");
+            var result = a.ContainsAny(StringComparison.OrdinalIgnoreCase, "x", "y", "z");
 
             // Assert
 
@@ -595,11 +595,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            bool result = a.ContainsAny(StringComparison.OrdinalIgnoreCase, "x", "y", "z");
+            var result = a.ContainsAny(StringComparison.OrdinalIgnoreCase, "x", "y", "z");
 
             // Assert
 
@@ -611,11 +611,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            bool result = a.ContainsAny(StringComparison.OrdinalIgnoreCase, null, null);
+            var result = a.ContainsAny(StringComparison.OrdinalIgnoreCase, null, null);
 
             // Assert
 
@@ -627,11 +627,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsNone("a", "c", "z");
+            var result = a.ContainsNone("a", "c", "z");
 
             // Assert
 
@@ -643,11 +643,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsNone("x", "y", "z");
+            var result = a.ContainsNone("x", "y", "z");
 
             // Assert
 
@@ -659,11 +659,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsNone("A", "C", "z");
+            var result = a.ContainsNone("A", "C", "z");
 
             // Assert
 
@@ -675,11 +675,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            bool result = a.ContainsNone(StringComparison.OrdinalIgnoreCase, "x", "y", "z");
+            var result = a.ContainsNone(StringComparison.OrdinalIgnoreCase, "x", "y", "z");
 
             // Assert
 
@@ -691,11 +691,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abc";
+            var a = "abc";
 
             // Act
 
-            bool result = a.ContainsAll("a", "b", "c");
+            var result = a.ContainsAll("a", "b", "c");
 
             // Assert
 
@@ -707,11 +707,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abc";
+            var a = "abc";
 
             // Act
 
-            bool result = a.ContainsAll("a", "b", "c", "d");
+            var result = a.ContainsAll("a", "b", "c", "d");
 
             // Assert
 
@@ -723,11 +723,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            bool result = a.ContainsAll(null, null);
+            var result = a.ContainsAll(null, null);
 
             // Assert
 
@@ -739,11 +739,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            bool result = a.ContainsAll(null, "a");
+            var result = a.ContainsAll(null, "a");
 
             // Assert
 
@@ -755,11 +755,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            string result = s.DefaultIfEmpty("default");
+            var result = s.DefaultIfEmpty("default");
 
             // Assert
 
@@ -771,11 +771,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = string.Empty;
+            var s = string.Empty;
 
             // Act
 
-            string result = s.DefaultIfEmpty("default");
+            var result = s.DefaultIfEmpty("default");
 
             // Assert
 
@@ -787,11 +787,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = " ";
+            var s = " ";
 
             // Act
 
-            string result = s.DefaultIfEmpty("default");
+            var result = s.DefaultIfEmpty("default");
 
             // Assert
 
@@ -803,11 +803,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            string result = s.DefaultIfBlank("default");
+            var result = s.DefaultIfBlank("default");
 
             // Assert
 
@@ -819,11 +819,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = string.Empty;
+            var s = string.Empty;
 
             // Act
 
-            string result = s.DefaultIfBlank("default");
+            var result = s.DefaultIfBlank("default");
 
             // Assert
 
@@ -835,11 +835,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = " ";
+            var s = " ";
 
             // Act
 
-            string result = s.DefaultIfBlank("default");
+            var result = s.DefaultIfBlank("default");
 
             // Assert
 
@@ -851,11 +851,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = ".";
+            var s = ".";
 
             // Act
 
-            string result = s.DefaultIfBlank("default");
+            var result = s.DefaultIfBlank("default");
 
             // Assert
 
@@ -869,7 +869,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result = GetFirstNonEmpty("", null, "a", "", "b");
+            var result = GetFirstNonEmpty("", null, "a", "", "b");
 
             // Assert
 
@@ -883,7 +883,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result = GetFirstNonEmpty("", null, "", "", null);
+            var result = GetFirstNonEmpty("", null, "", "", null);
 
             // Assert
 
@@ -897,7 +897,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result = GetFirstNonBlank("", null, "a", " ", "b");
+            var result = GetFirstNonBlank("", null, "a", " ", "b");
 
             // Assert
 
@@ -911,7 +911,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result = GetFirstNonBlank("", null, " ", "a", null);
+            var result = GetFirstNonBlank("", null, " ", "a", null);
 
             // Assert
 
@@ -926,7 +926,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAllEmpty(null, null);
+            var result = IsAllEmpty(null, null);
 
             // Assert
 
@@ -941,7 +941,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAllEmpty(null, string.Empty);
+            var result = IsAllEmpty(null, string.Empty);
 
             // Assert
 
@@ -956,7 +956,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAllEmpty(null, string.Empty, "a");
+            var result = IsAllEmpty(null, string.Empty, "a");
 
             // Assert
 
@@ -971,7 +971,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAllBlank(null, null);
+            var result = IsAllBlank(null, null);
 
             // Assert
 
@@ -986,7 +986,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAllBlank(null, string.Empty, " ");
+            var result = IsAllBlank(null, string.Empty, " ");
 
             // Assert
 
@@ -1001,7 +1001,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAllBlank(null, string.Empty);
+            var result = IsAllBlank(null, string.Empty);
 
             // Assert
 
@@ -1013,10 +1013,9 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-
             // Act
 
-            bool result = IsAnyEmpty(null, "a");
+            var result = IsAnyEmpty(null, null);
 
             // Assert
 
@@ -1031,7 +1030,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAnyEmpty(null, string.Empty, "a");
+            var result = IsAnyEmpty(null, string.Empty, "a");
 
             // Assert
 
@@ -1046,7 +1045,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAnyEmpty(null, "a");
+            var result = IsAnyEmpty(null, "a");
 
             // Assert
 
@@ -1062,7 +1061,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAnyBlank(null, "a");
+            var result = IsAnyBlank(null, "a");
 
             // Assert
 
@@ -1077,7 +1076,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAnyBlank(null, string.Empty, "a");
+            var result = IsAnyBlank(null, string.Empty, "a");
 
             // Assert
 
@@ -1092,7 +1091,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = IsAnyBlank(null, " ");
+            var result = IsAnyBlank(null, " ");
 
             // Assert
 
@@ -1104,11 +1103,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abcd";
+            var a = "abcd";
 
             // Act
 
-            string result = a.Remove("bc");
+            var result = a.Remove("bc");
 
             // Assert
 
@@ -1120,11 +1119,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            string result = a.Remove("bc");
+            var result = a.Remove("bc");
 
             // Assert
 
@@ -1136,11 +1135,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            string result = a.Repeat(3);
+            var result = a.Repeat(3);
 
             // Assert
 
@@ -1152,11 +1151,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abc";
+            var a = "abc";
 
             // Act
 
-            string result = a.Repeat(3);
+            var result = a.Repeat(3);
 
             // Assert
 
@@ -1168,11 +1167,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            string result = a.Reverse();
+            var result = a.Reverse();
 
             // Assert
 
@@ -1184,11 +1183,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "abc";
+            var a = "abc";
 
             // Act
 
-            string result = a.Reverse();
+            var result = a.Reverse();
 
             // Assert
 
@@ -1200,11 +1199,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            string result = a.RemoveDiacritics();
+            var result = a.RemoveDiacritics();
 
             // Assert
 
@@ -1216,11 +1215,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "Ciências da Computação - CIÊNCIAS DA COMPUTAÇÃO";
+            var a = "Ciências da Computação - CIÊNCIAS DA COMPUTAÇÃO";
 
             // Act
 
-            string result = a.RemoveDiacritics();
+            var result = a.RemoveDiacritics();
 
             // Assert
 
@@ -1232,11 +1231,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            string result = a.Truncate(5);
+            var result = a.Truncate(5);
 
             // Assert
 
@@ -1248,11 +1247,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "0123456789";
+            var a = "0123456789";
 
             // Act
 
-            string result = a.Truncate(5);
+            var result = a.Truncate(5);
 
             // Assert
 
@@ -1264,11 +1263,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "0123456789";
+            var a = "0123456789";
 
             // Act
 
-            string result = a.Truncate(14);
+            var result = a.Truncate(14);
 
             // Assert
 
@@ -1280,11 +1279,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            string result = s.ReplaceNonNumeric();
+            var result = s.ReplaceNonNumeric();
 
             // Assert
 
@@ -1296,11 +1295,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "+55(31)9 8765-4321";
+            var s = "+55(31)9 8765-4321";
 
             // Act
 
-            string result = s.ReplaceNonNumeric();
+            var result = s.ReplaceNonNumeric();
 
             // Assert
 
@@ -1312,11 +1311,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            bool result = s.IsNumber();
+            var result = s.IsNumber();
 
             // Assert
 
@@ -1328,11 +1327,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "a12345";
+            var s = "a12345";
 
             // Act
 
-            bool result = s.IsNumber();
+            var result = s.IsNumber();
 
             // Assert
 
@@ -1344,11 +1343,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "0000123";
+            var s = "0000123";
 
             // Act
 
-            bool result = s.IsNumber();
+            var result = s.IsNumber();
 
             // Assert
 
@@ -1360,11 +1359,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            bool result = s.IsNotNumber();
+            var result = s.IsNotNumber();
 
             // Assert
 
@@ -1376,11 +1375,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "a12345";
+            var s = "a12345";
 
             // Act
 
-            bool result = s.IsNotNumber();
+            var result = s.IsNotNumber();
 
             // Assert
 
@@ -1392,11 +1391,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "0000123";
+            var s = "0000123";
 
             // Act
 
-            bool result = s.IsNotNumber();
+            var result = s.IsNotNumber();
 
             // Assert
 
@@ -1408,11 +1407,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
+            string? a = null;
 
             // Act
 
-            string result = a.DescribeIfNone();
+            var result = a.DescribeIfNone();
 
             // Assert
 
@@ -1424,11 +1423,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = string.Empty;
+            var a = string.Empty;
 
             // Act
 
-            string result = a.DescribeIfNone();
+            var result = a.DescribeIfNone();
 
             // Assert
 
@@ -1440,11 +1439,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = " ";
+            var a = " ";
 
             // Act
 
-            string result = a.DescribeIfNone();
+            var result = a.DescribeIfNone();
 
             // Assert
 
@@ -1456,11 +1455,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "Nzr.Orm";
+            var a = "Nzr.Orm";
 
             // Act
 
-            string result = a.DescribeIfNone();
+            var result = a.DescribeIfNone();
 
             // Assert
 
@@ -1472,13 +1471,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            CultureInfo culture = Thread.CurrentThread.CurrentCulture;
-            string s = null;
+            var culture = Thread.CurrentThread.CurrentCulture;
+            string? s = null;
 
             // Act
 
-            string result1 = s.Format("1", "2");
-            string result2 = s.Format(culture, "1", "2");
+            var result1 = s.Format("1", "2");
+            var result2 = s.Format(culture, "1", "2");
 
             // Act
 
@@ -1490,15 +1489,15 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "Value is {0}";
+            var s = "Value is {0}";
 
             // Act
 
-            string result = s.Format(1.99);
+            var result = s.Format(1.99);
 
             // Act
 
-            Assert.Equal($"Value is {1.99.ToString()}", result);
+            Assert.Equal($"Value is {1.99}", result);
         }
 
         [Fact]
@@ -1506,12 +1505,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            CultureInfo culture = new CultureInfo("pt-br");
-            string s = "Value is {0}";
+            var culture = new CultureInfo("pt-br");
+            var s = "Value is {0}";
 
             // Act
 
-            string result = s.Format(culture, 1.99);
+            var result = s.Format(culture, 1.99);
 
             // Act
 
@@ -1523,11 +1522,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
 
-            string result = s.Append("Nzr", ".", "Orm");
+            var result = s.Append("Nzr", ".", "Orm");
 
             // Assert
 
@@ -1539,11 +1538,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "Fast, simple, convention-based (but configurable) and extensible Micro-Orm: ";
+            var s = "Fast, simple, convention-based (but configurable) and extensible Micro-Orm: ";
 
             // Act
 
-            string result = s.Append("Nzr", ".", "Orm");
+            var result = s.Append("Nzr", ".", "Orm");
 
             // Assert
 
@@ -1555,12 +1554,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
-            string b = null;
+            string? a = null;
+            string? b = null;
 
             // Act
 
-            bool result = a.Equals(b, true);
+            var result = a.Equals(b, true);
 
             // Assert
 
@@ -1572,13 +1571,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
-            string b = "A";
+            string? a = null;
+            var b = "A";
 
             // Act
 
-            bool result1 = a.Equals(b, true);
-            bool result2 = b.Equals(a, true);
+            var result1 = a.Equals(b, true);
+            var result2 = b.Equals(a, true);
 
             // Assert
 
@@ -1591,12 +1590,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "CIÊNCIA";
-            string b = "CIENCIA";
+            var a = "CIÊNCIA";
+            var b = "CIENCIA";
 
             // Act
 
-            bool result = a.Equals(b, true);
+            var result = a.Equals(b, true);
 
             // Assert
 
@@ -1608,12 +1607,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = "CIÊNCIA";
-            string b = "CIENCIA";
+            var a = "CIÊNCIA";
+            var b = "CIENCIA";
 
             // Act
 
-            bool result = a.Equals(b, false);
+            var result = a.Equals(b, false);
 
             // Assert
 

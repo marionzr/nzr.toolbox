@@ -117,7 +117,7 @@ namespace Nzr.ToolBox.Core
         /// <returns>The average of the values.</returns>
         public static double Average(params byte[] values)
         {
-            int sum = 0;
+            var sum = 0;
             values.ForEach(v => sum += v);
             return sum / (double)values.Length;
         }
@@ -181,7 +181,7 @@ namespace Nzr.ToolBox.Core
         /// <returns>The sum of the value.</returns>
         public static int Sum(params byte[] values)
         {
-            int sum = 0;
+            var sum = 0;
             values.ForEach(v => sum += v);
             return sum;
         }
@@ -193,7 +193,7 @@ namespace Nzr.ToolBox.Core
         /// <returns>The sum of the value.</returns>
         public static int Sum(params short[] values)
         {
-            int sum = 0;
+            var sum = 0;
             values.ForEach(v => sum += v);
             return sum;
         }
@@ -309,7 +309,7 @@ namespace Nzr.ToolBox.Core
         /// <returns>Value in binary format.</returns>
         public static string ToBinary(this long value, bool include0b = false)
         {
-            string result = Convert.ToString(value, 2);
+            var result = Convert.ToString(value, 2);
             return include0b ? "0b" + result : result;
         }
 
@@ -346,7 +346,7 @@ namespace Nzr.ToolBox.Core
         /// <returns>Value in hexadecimal format.</returns>
         public static string ToHexadecimal(this long value, bool include0x = true)
         {
-            string result = Convert.ToString(value, 16).ToUpper();
+            var result = Convert.ToString(value, 16).ToUpper();
             return include0x ? "0x" + result : result;
         }
 

@@ -1,20 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>Nzr.ToolBox.Core</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+	<RootNamespace>Nzr.ToolBox.Core</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A collection of utility classes and extension methods that allow developers to have a social life.
 This is a all-in-one version of Nzr.ToolBox.Core, so you just need one import.</Description>
     <Copyright>Copyright 2019</Copyright>
+	<PackageId>Nzr.ToolBox.Core.Single</PackageId>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/marionzr/Nzr.ToolBox</PackageProjectUrl>
     <RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
     <PackageReleaseNotes>Check the release notes at https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/README.md</PackageReleaseNotes>
     <PackageTags>Extension Extension-Methods Utils Utility</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>1.3.0</Version>
-    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <Version>1.4.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -43,7 +45,7 @@ This is a all-in-one version of Nzr.ToolBox.Core, so you just need one import.</
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Collections.Immutable" Version="1.6.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>

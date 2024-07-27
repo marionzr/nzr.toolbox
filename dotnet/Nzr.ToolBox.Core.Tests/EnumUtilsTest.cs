@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Xunit;
+﻿using Xunit;
 using static Nzr.ToolBox.Core.ToolBox;
 
 namespace Nzr.ToolBox.Core.Tests
@@ -13,7 +12,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            IList<string> result = GetEnumNames<Fruits>();
+            var result = GetEnumNames<Fruits>();
 
             // Assert
 

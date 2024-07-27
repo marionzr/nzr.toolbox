@@ -417,6 +417,6 @@
             public const string mmss = "mm:ss";
         }
 
-        internal static readonly string[] YES = new string[] { "Y", "Yes", "S", "Sim", "Si", "Ja", "Oui", "1", "true" };
+        internal static readonly string[] YES = ["Y", "Yes", "S", "Sim", "Si", "Ja", "Oui", "1", "true"];
     }
 }
