@@ -13,21 +13,18 @@ namespace Nzr.ToolBox.Core.Tests
         {
             a = new A()
             {
-                P3 = new List<string>()
-                {
-                    "a"
-                },
-                P4 = new List<B<C>>()
-                {
+                P3 = ["a"],
+                P4 =
+                [
                     new B<C>()
                     {
-                        P5 = new List<B<C>>(),
+                        P5 = [],
                         P6 = new C()
                         {
                             X10 = DateTime.Now,
                         }
                     }
-                }
+                ]
             };
 
             a.P4.Add(null);
@@ -39,13 +36,13 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             a.P2 = "nzr";
-            a.P4[0].P6.P7 = 100;
-            a.P4[0].P6.P9 = new int?[] { 1, 2, 3 };
-            IList<Tuple<string, object>> propertyValues = new List<Tuple<string, object>>();
+            a.P4![0]!.P6!.P7 = 100;
+            a.P4![0]!.P6!.P9 = [1, 2, 3];
+            var propertyValues = new List<Tuple<string, object?>>();
 
             // Act
 
-            a.ExecuteForEachProperty(r => propertyValues.Add(new Tuple<string, object>(r.Property.Name, r.Value)));
+            a.ExecuteForEachProperty(r => propertyValues.Add(new Tuple<string, object?>(r.Property.Name, r.Value)));
 
             // Assert
 
@@ -61,7 +58,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            IDictionary<string, IList<string>> propertyNames = a.GetPropertyNames();
+            var propertyNames = a.GetPropertyNames();
 
             // Assert
 
@@ -76,22 +73,22 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
             a.P2 = "nzr";
-            a.P4[0].P6.P7 = 100;
-            a.P4[0].P6.P9 = new int?[] { 1, 2, 3 };
+            a.P4![0]!.P6!.P7 = 100;
+            a.P4[0]!.P6!.P9 = [1, 2, 3];
 
             // Act
 
-            string aP2 = (string)a.GetValue("P2");
-            IList<B<C>> aP4 = a.GetValue<IList<B<C>>>("P4");
-            int bP2P1 = aP4[0].GetValue<int>("P6.P7");
-            int?[] arr = aP4[0].GetValue<int?[]>("P6.P9");
+            var aP2 = (string)a.GetValue("P2")!;
+            var aP4 = a.GetValue<IList<B<C>>>("P4")!;
+            var bP2P1 = aP4[0].GetValue<int>("P6.P7");
+            var arr = aP4[0].GetValue<int?[]>("P6.P9");
 
             // Assert
 
             Assert.Equal("nzr", aP2);
             Assert.Equal(2, aP4.Count);
             Assert.Equal(100, bP2P1);
-            Assert.Equal(new int?[] { 1, 2, 3 }, arr);
+            Assert.Equal([1, 2, 3], arr);
         }
 
         [Fact]
@@ -102,7 +99,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            NotSupportedException ex = Assert.Throws<NotSupportedException>(() => a.GetValue<string>("P2.P4.P6"));
+            var ex = Assert.Throws<NotSupportedException>(() => a.GetValue<string>("P2.P4.P6"));
 
             // Assert
 
@@ -113,22 +110,22 @@ namespace Nzr.ToolBox.Core.Tests
         public class A
         {
             public int P1 { get; set; }
-            public string P2 { get; set; }
-            public List<string> P3 { get; set; }
-            public List<B<C>> P4 { get; set; }
+            public string? P2 { get; set; }
+            public List<string>? P3 { get; set; }
+            public List<B<C>?>? P4 { get; set; }
         }
 
         public class B<T>
         {
-            public List<B<T>> P5 { get; set; }
-            public T P6 { get; set; }
+            public List<B<T>>? P5 { get; set; }
+            public T? P6 { get; set; }
         }
 
         public class C
         {
             public int? P7 { get; set; }
             public int P8 { get; set; }
-            public int?[] P9 { get; set; }
+            public int?[]? P9 { get; set; }
             public DateTime X10 { get; set; }
         }
     }

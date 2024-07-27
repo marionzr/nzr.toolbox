@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29306.81
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nzr.ToolBox.Core", "Nzr.ToolBox.Core\Nzr.ToolBox.Core.csproj", "{C10A7851-E913-441B-88F0-62119684DA82}"
 EndProject

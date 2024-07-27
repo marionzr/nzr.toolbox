@@ -12,9 +12,9 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "CRF";
-            Action<string> actionNotNull = Substitute.For<Action<string>>();
-            Action actionNull = Substitute.For<Action>();
+            var s = "CRF";
+            var actionNotNull = Substitute.For<Action<string>>();
+            var actionNull = Substitute.For<Action>();
 
             // Act
 
@@ -31,9 +31,9 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
-            Action<string> actionNotNull = Substitute.For<Action<string>>();
-            Action actionNull = Substitute.For<Action>();
+            string? s = null;
+            var actionNotNull = Substitute.For<Action<string>>();
+            var actionNull = Substitute.For<Action>();
 
             // Act
             s.IfNotNull(i => actionNotNull(i), () => actionNull());
@@ -41,7 +41,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Assert
 
-            actionNotNull.DidNotReceive().Invoke(s);
+            actionNotNull.DidNotReceive().Invoke(s!);
             actionNull.Received(2).Invoke();
         }
 
@@ -50,18 +50,18 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
-            Action<string> actionNotNull1 = Substitute.For<Action<string>>();
-            Action<string> actionNotNull2 = Substitute.For<Action<string>>();
+            string? s = null;
+            var actionNotNull1 = Substitute.For<Action<string>>();
+            var actionNotNull2 = Substitute.For<Action<string>>();
 
             // Act
-            ArgumentException ex1 = Assert.Throws<ArgumentException>(() => s.IfNotNull(i => actionNotNull1(i)).ElseThrow());
-            ArgumentException ex2 = Assert.Throws<ArgumentException>(() => s.IfNotNull(i => actionNotNull2(i)).ElseThrow("Null is a mess."));
+            var ex1 = Assert.Throws<ArgumentException>(() => s.IfNotNull(i => actionNotNull1(i)).ElseThrow());
+            var ex2 = Assert.Throws<ArgumentException>(() => s.IfNotNull(i => actionNotNull2(i)).ElseThrow("Null is a mess."));
 
             // Assert
 
-            actionNotNull1.DidNotReceive().Invoke(s);
-            actionNotNull2.DidNotReceive().Invoke(s);
+            actionNotNull1.DidNotReceive().Invoke(s!);
+            actionNotNull2.DidNotReceive().Invoke(s!);
             Assert.Equal("Value cannot be null.", ex1.Message);
             Assert.Equal("Null is a mess.", ex2.Message);
         }
@@ -71,9 +71,9 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "a";
-            Action<string> actionNotNull1 = Substitute.For<Action<string>>();
-            Action<string> actionNotNull2 = Substitute.For<Action<string>>();
+            var s = "a";
+            var actionNotNull1 = Substitute.For<Action<string>>();
+            var actionNotNull2 = Substitute.For<Action<string>>();
 
             // Act
             s.IfNotNull(i => actionNotNull1(i)).ElseThrow();
@@ -90,9 +90,9 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
-            Action actionNull = Substitute.For<Action>();
-            Action<string> actionNotNull = Substitute.For<Action<string>>();
+            string? s = null;
+            var actionNull = Substitute.For<Action>();
+            var actionNotNull = Substitute.For<Action<string>>();
 
             // Act
 
@@ -101,7 +101,7 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
 
             actionNull.Received(1).Invoke();
-            actionNotNull.DidNotReceive().Invoke(s);
+            actionNotNull.DidNotReceive().Invoke(s!);
         }
 
         [Fact]
@@ -109,9 +109,9 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = "CRF";
-            Action actionNull = Substitute.For<Action>();
-            Action<string> actionNotNull = Substitute.For<Action<string>>();
+            var s = "CRF";
+            var actionNull = Substitute.For<Action>();
+            var actionNotNull = Substitute.For<Action<string>>();
 
             // Act
 
@@ -129,10 +129,10 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            A a = new A() { P1 = new B() { P2 = new C() { P3 = 101 } } };
+            var a = new A() { P1 = new B() { P2 = new C() { P3 = 101 } } };
 
             // Act
-            dynamic dynamicA = a.ToDynamic();
+            dynamic dynamicA = a.ToDynamic()!;
 
             // Arrange
 
@@ -144,13 +144,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = null;
+            object? a = null;
+            string? b = null;
             int? c = null;
 
             // Act
 
-            bool isAllNull = IsAllNull(a, b, c);
+            var isAllNull = IsAllNull(a, b, c);
 
             // Assert
 
@@ -162,13 +162,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = "b";
+            object? a = null;
+            var b = "b";
             int? c = null;
 
             // Act
 
-            bool isAllNull = IsAllNull(a, b, c);
+            var isAllNull = IsAllNull(a, b, c);
 
             // Assert
 
@@ -181,12 +181,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             object a = 1;
-            string b = "2";
+            var b = "2";
             int? c = 3;
 
             // Act
 
-            bool isAllNonNull = IsAllNonNull(a, b, c);
+            var isAllNonNull = IsAllNonNull(a, b, c);
 
             // Assert
 
@@ -199,12 +199,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             object a = 1;
-            string b = "2";
+            var b = "2";
             int? c = null;
 
             // Act
 
-            bool isAllNonNull = IsAllNonNull(a, b, c);
+            var isAllNonNull = IsAllNonNull(a, b, c);
 
             // Assert
 
@@ -217,12 +217,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             object a = 1;
-            string b = "2";
+            var b = "2";
             int? c = null;
 
             // Act
 
-            bool anyNull = IsAnyNull(a, b, c);
+            var anyNull = IsAnyNull(a, b, c);
 
             // Assert
 
@@ -235,12 +235,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             object a = 1;
-            string b = "2";
+            var b = "2";
             int? c = 3;
 
             // Act
 
-            bool anyNull = IsAnyNull(a, b, c);
+            var anyNull = IsAnyNull(a, b, c);
 
             // Assert
 
@@ -252,13 +252,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = "2";
+            object? a = null;
+            var b = "2";
             int? c = null;
 
             // Act
 
-            bool isAnyNonNull = IsAnyNonNull(a, b, c);
+            var isAnyNonNull = IsAnyNonNull(a, b, c);
 
             // Assert
 
@@ -270,13 +270,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = null;
+            object? a = null;
+            string? b = null;
             int? c = null;
 
             // Act
 
-            bool isAnyNonNull = IsAnyNonNull(a, b, c);
+            var isAnyNonNull = IsAnyNonNull(a, b, c);
 
             // Assert
 
@@ -288,13 +288,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = null;
+            object? a = null;
+            string? b = null;
             int? c = null;
 
             // Act
 
-            object firstNonNull = FirstNonNull(a, b, c);
+            var firstNonNull = FirstNonNull(a, b, c);
 
             // Assert
 
@@ -306,13 +306,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = "b";
+            object? a = null;
+            var b = "b";
             int? c = 2;
 
             // Act
 
-            object firstNonNull = FirstNonNull(a, b, c);
+            var firstNonNull = FirstNonNull(a, b, c);
 
             // Assert
 
@@ -324,13 +324,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = null;
+            object? a = null;
+            string? b = null;
             int? c = null;
 
             // Act
 
-            object lastNonNull = LastNonNull(a, b, c);
+            var lastNonNull = LastNonNull(a, b, c);
 
             // Assert
 
@@ -342,13 +342,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            object a = null;
-            string b = "b";
+            object? a = null;
+            var b = "b";
             int? c = 2;
 
             // Act
 
-            object lastNonNull = LastNonNull(a, b, c);
+            var lastNonNull = LastNonNull(a, b, c);
 
             // Assert
 
@@ -360,10 +360,10 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
-            ArgumentException ex1 = Assert.Throws<ArgumentException>(() => s.RequireNonNull());
+            var ex1 = Assert.Throws<ArgumentException>(() => s.RequireNonNull());
 
             // Assert
 
@@ -375,10 +375,10 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string s = null;
+            string? s = null;
 
             // Act
-            ArgumentException ex1 = Assert.Throws<ArgumentException>(() => s.RequireNonNull("Id cannot be null."));
+            var ex1 = Assert.Throws<ArgumentException>(() => s.RequireNonNull("Id cannot be null."));
 
             // Assert
 
@@ -386,28 +386,28 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact]
+#pragma warning disable S2699 // Tests should include assertions
         public void RequireNonNull_WithNonNull_ShouldNotThrowExcetpion()
+#pragma warning restore S2699 // Tests should include assertions
         {
             // Arrange
 
-            string s = "a";
+            var s = "a";
 
             // Act
             s.RequireNonNull();
 
             // Assert
-
-
         }
 
         private class A
         {
-            public B P1 { get; set; }
+            public B? P1 { get; set; }
         }
 
         private class B
         {
-            public C P2 { get; set; }
+            public C? P2 { get; set; }
         }
 
         private class C

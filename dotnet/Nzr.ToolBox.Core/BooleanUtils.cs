@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System;
 namespace Nzr.ToolBox.Core
 {
     /// <summary>
@@ -73,9 +73,9 @@ namespace Nzr.ToolBox.Core
         /// <returns>True the string value is yes (or variations).</returns>
         public static bool ToBool(this string value) =>
 #if SINGLE
-            YES.Any(y => y.Equals(value, System.StringComparison.OrdinalIgnoreCase));
+            Array.Exists(YES, y => y.Equals(value, System.StringComparison.OrdinalIgnoreCase));
 #else
-            Constants.YES.Any(y => y.Equals(value, System.StringComparison.OrdinalIgnoreCase));
+            Array.Exists(Constants.YES, y => y.Equals(value, System.StringComparison.OrdinalIgnoreCase));
 #endif
 
         /// <summary>
@@ -114,9 +114,7 @@ namespace Nzr.ToolBox.Core
         /// <returns>Yes or no, based on the boolean value.</returns>
         public static string Describe(this bool? value, string yes = "yes", string no = "no", string @null = "null")
         {
-#pragma warning disable IDE0046 // Convert to conditional expression
             if (value.HasValue)
-#pragma warning restore IDE0046 // Convert to conditional expression
             {
                 return value.Value ? yes : no;
             }
@@ -131,27 +129,27 @@ namespace Nzr.ToolBox.Core
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True if all values are true, otherwise false.</returns>
-        public static bool IsAllTrue(params bool[] values) => !values.Any(b => !b);
+        public static bool IsAllTrue(params bool[] values) => !Array.Exists(values, b => !b);
 
         /// <summary>
         /// Checks if any value is true.
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True if any value is true, otherwise false.</returns>
-        public static bool IsAnyTrue(params bool[] values) => values.Any(b => b);
+        public static bool IsAnyTrue(params bool[] values) => Array.Exists(values, b => b);
 
         /// <summary>
         /// Checks if all values are true.
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True if all values are true, otherwise false.</returns>
-        public static bool IsAllFalse(params bool[] values) => !values.Any(b => b);
+        public static bool IsAllFalse(params bool[] values) => !Array.Exists(values, b => b);
 
         /// <summary>
         /// Checks if any value is false.
         /// </summary>
         /// <param name="values">Values to be checked.</param>
         /// <returns>True if any value is false, otherwise false.</returns>
-        public static bool IsAnyFalse(params bool[] values) => values.Any(b => !b);
+        public static bool IsAnyFalse(params bool[] values) => Array.Exists(values, b => !b);
     }
 }

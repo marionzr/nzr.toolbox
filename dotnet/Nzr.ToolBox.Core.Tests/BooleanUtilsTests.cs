@@ -15,13 +15,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool bREsult = b.ToBool();
-            bool sREsult = s.ToBool();
-            bool iREsult = i.ToBool();
-            bool lREsult = l.ToBool();
-            bool fREsult = f.ToBool();
-            bool dREsult = d.ToBool();
-            bool mREsult = m.ToBool();
+            var bREsult = b.ToBool();
+            var sREsult = s.ToBool();
+            var iREsult = i.ToBool();
+            var lREsult = l.ToBool();
+            var fREsult = f.ToBool();
+            var dREsult = d.ToBool();
+            var mREsult = m.ToBool();
 
             // Assert
 
@@ -43,13 +43,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool bREsult = b.ToBool();
-            bool sREsult = s.ToBool();
-            bool iREsult = i.ToBool();
-            bool lREsult = l.ToBool();
-            bool fREsult = f.ToBool();
-            bool dREsult = d.ToBool();
-            bool mREsult = m.ToBool();
+            var bREsult = b.ToBool();
+            var sREsult = s.ToBool();
+            var iREsult = i.ToBool();
+            var lREsult = l.ToBool();
+            var fREsult = f.ToBool();
+            var dREsult = d.ToBool();
+            var mREsult = m.ToBool();
 
             // Assert
 
@@ -78,7 +78,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = value.ToBool();
+            var result = value.ToBool();
 
             // Assert
 
@@ -98,7 +98,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = value.ToBool();
+            var result = value.ToBool();
 
             // Assert
 
@@ -115,7 +115,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = value.IsTrue();
+            var result = value.IsTrue();
 
             // Assert
 
@@ -131,7 +131,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = b.IsTrue();
+            var result = b.IsTrue();
 
             // Assert
 
@@ -148,7 +148,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = value.IsFalse();
+            var result = value.IsFalse();
 
             // Assert
 
@@ -164,7 +164,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = b.IsFalse();
+            var result = b.IsFalse();
 
             // Assert
 
@@ -177,12 +177,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             bool? value1 = true;
-            bool value2 = true;
+            var value2 = true;
 
             // Act
 
-            string result1 = value1.Describe();
-            string result2 = value2.Describe();
+            var result1 = value1.Describe();
+            var result2 = value2.Describe();
 
             // Assert
 
@@ -196,12 +196,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             bool? value1 = true;
-            bool value2 = true;
+            var value2 = true;
 
             // Act
 
-            string result1 = value1.Describe("sim", "não");
-            string result2 = value2.Describe("si", "no");
+            var result1 = value1.Describe("sim", "não");
+            var result2 = value2.Describe("si", "no");
 
             // Assert
 
@@ -215,12 +215,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             bool? value1 = false;
-            bool value2 = false;
+            var value2 = false;
 
             // Act
 
-            string result1 = value1.Describe();
-            string result2 = value2.Describe();
+            var result1 = value1.Describe();
+            var result2 = value2.Describe();
 
             // Assert
 
@@ -234,12 +234,12 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             bool? value1 = false;
-            bool value2 = false;
+            var value2 = false;
 
             // Act
 
-            string result1 = value1.Describe("sim", "não");
-            string result2 = value2.Describe("si", "no");
+            var result1 = value1.Describe("sim", "não");
+            var result2 = value2.Describe("si", "no");
 
             // Assert
 
@@ -256,7 +256,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result1 = value1.Describe();
+            var result1 = value1.Describe();
 
             // Assert
 
@@ -272,7 +272,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result1 = value1.Describe("sim", "não", "nulo");
+            var result1 = value1.Describe("sim", "não", "nulo");
 
             // Assert
 
@@ -284,13 +284,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = true;
-            bool b = true;
-            bool c = true;
+            var a = true;
+            var b = true;
+            var c = true;
 
             // Act
 
-            bool result = IsAllTrue(a, b, c);
+            var result = IsAllTrue(a, b, c);
 
             // Assert
 
@@ -302,13 +302,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = true;
-            bool b = true;
-            bool c = false;
+            var a = true;
+            var b = true;
+            var c = false;
 
             // Act
 
-            bool result = IsAllTrue(a, b, c);
+            var result = IsAllTrue(a, b, c);
 
             // Assert
 
@@ -320,13 +320,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = true;
-            bool b = false;
-            bool c = false;
+            var a = true;
+            var b = false;
+            var c = false;
 
             // Act
 
-            bool result = IsAnyTrue(a, b, c);
+            var result = IsAnyTrue(a, b, c);
 
             // Assert
 
@@ -338,13 +338,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = false;
-            bool b = false;
-            bool c = false;
+            var a = false;
+            var b = false;
+            var c = false;
 
             // Act
 
-            bool result = IsAnyTrue(a, b, c);
+            var result = IsAnyTrue(a, b, c);
 
             // Assert
 
@@ -356,13 +356,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = true;
-            bool b = false;
-            bool c = false;
+            var a = true;
+            var b = false;
+            var c = false;
 
             // Act
 
-            bool result = IsAnyFalse(a, b, c);
+            var result = IsAnyFalse(a, b, c);
 
             // Assert
 
@@ -374,13 +374,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = true;
-            bool b = true;
-            bool c = true;
+            var a = true;
+            var b = true;
+            var c = true;
 
             // Act
 
-            bool result = IsAnyFalse(a, b, c);
+            var result = IsAnyFalse(a, b, c);
 
             // Assert
 
@@ -392,13 +392,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = false;
-            bool b = false;
-            bool c = false;
+            var a = false;
+            var b = false;
+            var c = false;
 
             // Act
 
-            bool result = IsAllFalse(a, b, c);
+            var result = IsAllFalse(a, b, c);
 
             // Assert
 
@@ -410,13 +410,13 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            bool a = false;
-            bool b = true;
-            bool c = false;
+            var a = false;
+            var b = true;
+            var c = false;
 
             // Act
 
-            bool result = IsAllFalse(a, b, c);
+            var result = IsAllFalse(a, b, c);
 
             // Assert
 

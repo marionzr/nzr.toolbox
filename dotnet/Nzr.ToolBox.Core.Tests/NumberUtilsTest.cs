@@ -12,13 +12,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            byte maxByte = Max((byte)10, (byte)20, (byte)30);
-            short maxShort = Max((short)10, (short)20, (short)30);
-            int maxInt = Max(10, 20, 30);
-            long maxLong = Max(10L, 20L, 30L);
-            float maxFloat = Max(10F, 20F, 30F);
-            double maxDouble = Max(10D, 20D, 30D);
-            decimal maxDecimal = Max(10, 20, (decimal)30);
+            var maxByte = Max((byte)10, (byte)20, (byte)30);
+            var maxShort = Max((short)10, (short)20, (short)30);
+            var maxInt = Max(10, 20, 30);
+            var maxLong = Max(10L, 20L, 30L);
+            var maxFloat = Max(10F, 20F, 30F);
+            var maxDouble = Max(10D, 20D, 30D);
+            var maxDecimal = Max(10, 20, (decimal)30);
 
             // Assert
             Assert.Equal(30, maxByte);
@@ -37,13 +37,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            byte minByte = Min((byte)10, (byte)20, (byte)30);
-            short minShort = Min((short)10, (short)20, (short)30);
-            int minInt = Min(10, 20, 30);
-            long minLong = Min(10L, 20L, 30L);
-            float minFloat = Min(10F, 20F, 30F);
-            double minDouble = Min(10D, 20D, 30D);
-            decimal minDecimal = Min(10, 20, (decimal)30);
+            var minByte = Min((byte)10, (byte)20, (byte)30);
+            var minShort = Min((short)10, (short)20, (short)30);
+            var minInt = Min(10, 20, 30);
+            var minLong = Min(10L, 20L, 30L);
+            var minFloat = Min(10F, 20F, 30F);
+            var minDouble = Min(10D, 20D, 30D);
+            var minDecimal = Min(10, 20, (decimal)30);
 
             // Assert
             Assert.Equal(10, minByte);
@@ -62,13 +62,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            double avgByte = Average((byte)10, (byte)20, (byte)30);
-            double avgShort = Average((short)10, (short)20, (short)30);
-            double avgInt = Average(10, 20, 30);
-            double avgLong = Average(10L, 20L, 30L);
-            double avgFloat = Average(10F, 20F, 30F);
-            double avgDouble = Average(10D, 20D, 30D);
-            double avgDecimal = Average(10, 20, (decimal)30);
+            var avgByte = Average((byte)10, (byte)20, (byte)30);
+            var avgShort = Average((short)10, (short)20, (short)30);
+            var avgInt = Average(10, 20, 30);
+            var avgLong = Average(10L, 20L, 30L);
+            var avgFloat = Average(10F, 20F, 30F);
+            var avgDouble = Average(10D, 20D, 30D);
+            var avgDecimal = Average(10, 20, (decimal)30);
 
             // Assert
             Assert.Equal(20D, avgByte);
@@ -87,13 +87,13 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            int sumByte = Sum((byte)10, (byte)20, (byte)30);
-            int sumShort = Sum((short)10, (short)20, (short)30);
-            int sumInt = Sum(10, 20, 30);
-            long sumLong = Sum(10L, 20L, 30L);
+            var sumByte = Sum((byte)10, (byte)20, (byte)30);
+            var sumShort = Sum((short)10, (short)20, (short)30);
+            var sumInt = Sum(10, 20, 30);
+            var sumLong = Sum(10L, 20L, 30L);
             double sumFloat = Sum(10F, 20F, 30F);
-            double sumDouble = Sum(10D, 20D, 30D);
-            decimal sumDecimal = Sum(10, 20, (decimal)30);
+            var sumDouble = Sum(10D, 20D, 30D);
+            var sumDecimal = Sum(10, 20, (decimal)30);
 
             // Assert
             Assert.Equal(60, sumByte);
@@ -111,22 +111,22 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
             sbyte aByte = -10;
             short aShort = -20;
-            int aInt = -30;
+            var aInt = -30;
             long aLong = -40;
-            float aFloat = -50.0F;
-            double aDouble = -60.0;
-            decimal aDecimal = (decimal)-70.0;
+            var aFloat = -50.0F;
+            var aDouble = -60.0;
+            var aDecimal = (decimal)-70.0;
 
 
             // Act
 
-            short absByte = aByte.Abs();
-            short absShort = aShort.Abs();
-            int absInt = aInt.Abs();
-            long absLong = aLong.Abs();
-            float absFloat = aFloat.Abs();
-            double absDouble = aDouble.Abs();
-            decimal absDecimal = aDecimal.Abs();
+            var absByte = aByte.Abs();
+            var absShort = aShort.Abs();
+            var absInt = aInt.Abs();
+            var absLong = aLong.Abs();
+            var absFloat = aFloat.Abs();
+            var absDouble = aDouble.Abs();
+            var absDecimal = aDecimal.Abs();
 
             // Assert
             Assert.Equal(10, absByte);
@@ -145,15 +145,15 @@ namespace Nzr.ToolBox.Core.Tests
 
             byte aByte = 99;
             short aShort = 99;
-            int aInt = 99;
+            var aInt = 99;
             long aLong = 99;
 
             // Act
 
-            string byteBinary = aByte.ToBinary();
-            string shortBinary = aShort.ToBinary();
-            string intBinary = aInt.ToBinary();
-            string longBinary = aLong.ToBinary();
+            var byteBinary = aByte.ToBinary();
+            var shortBinary = aShort.ToBinary();
+            var intBinary = aInt.ToBinary();
+            var longBinary = aLong.ToBinary();
 
             // Arrange
 
@@ -170,15 +170,15 @@ namespace Nzr.ToolBox.Core.Tests
 
             byte aByte = 99;
             short aShort = 99;
-            int aInt = 99;
+            var aInt = 99;
             long aLong = 99;
 
             // Act
 
-            string byteBinary = aByte.ToBinary(true);
-            string shortBinary = aShort.ToBinary(true);
-            string intBinary = aInt.ToBinary(true);
-            string longBinary = aLong.ToBinary(true);
+            var byteBinary = aByte.ToBinary(true);
+            var shortBinary = aShort.ToBinary(true);
+            var intBinary = aInt.ToBinary(true);
+            var longBinary = aLong.ToBinary(true);
 
             // Arrange
 
@@ -195,15 +195,15 @@ namespace Nzr.ToolBox.Core.Tests
 
             byte aByte = 99;
             short aShort = 99;
-            int aInt = 99;
+            var aInt = 99;
             long aLong = 99;
 
             // Act
 
-            string byteHexadecimal = aByte.ToHexadecimal(false);
-            string shortHexadecimal = aShort.ToHexadecimal(false);
-            string intHexadecimal = aInt.ToHexadecimal(false);
-            string longHexadecimal = aLong.ToHexadecimal(false);
+            var byteHexadecimal = aByte.ToHexadecimal(false);
+            var shortHexadecimal = aShort.ToHexadecimal(false);
+            var intHexadecimal = aInt.ToHexadecimal(false);
+            var longHexadecimal = aLong.ToHexadecimal(false);
 
             // Arrange
 
@@ -220,15 +220,15 @@ namespace Nzr.ToolBox.Core.Tests
 
             byte aByte = 99;
             short aShort = 99;
-            int aInt = 99;
+            var aInt = 99;
             long aLong = 99;
 
             // Act
 
-            string byteHexadecimal = aByte.ToHexadecimal(true);
-            string shortHexadecimal = aShort.ToHexadecimal(true);
-            string intHexadecimal = aInt.ToHexadecimal(true);
-            string longHexadecimal = aLong.ToHexadecimal(true);
+            var byteHexadecimal = aByte.ToHexadecimal(true);
+            var shortHexadecimal = aShort.ToHexadecimal(true);
+            var intHexadecimal = aInt.ToHexadecimal(true);
+            var longHexadecimal = aLong.ToHexadecimal(true);
 
             // Arrange
 
@@ -247,7 +247,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result1 = b1.PadLeft(3, '_');
+            var result1 = b1.PadLeft(3, '_');
 
             // Asssert
 
@@ -263,7 +263,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result1 = b1.PadLeft(5, '_');
+            var result1 = b1.PadLeft(5, '_');
 
             // Assert
 

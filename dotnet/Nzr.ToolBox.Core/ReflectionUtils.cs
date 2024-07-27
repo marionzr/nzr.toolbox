@@ -32,9 +32,9 @@ namespace Nzr.ToolBox.Core
             /// <summary>
             /// The property value.
             /// </summary>
-            public object Value { get; }
+            public object? Value { get; }
 
-            internal Reflect(object entity, PropertyInfo property, object value)
+            internal Reflect(object entity, PropertyInfo property, object? value)
             {
                 Entity = entity;
                 Property = property;
@@ -50,15 +50,17 @@ namespace Nzr.ToolBox.Core
         /// <param name="bindingAttr">A bit-mask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.
         /// -or- Zero, to return null. (Optional, default BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)</param>
         public static void ExecuteForEachProperty(this object entity, Action<Reflect> action,
+#pragma warning disable S3011 // Reflection should not be used to increase accessibility of classes, methods, or fields
             BindingFlags bindingAttr = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+#pragma warning restore S3011 // Reflection should not be used to increase accessibility of classes, methods, or fields
         {
             entity.RequireNonNull();
 
-            IList<PropertyInfo> properties = entity.GetType().GetProperties(bindingAttr).ToList();
+            IList<PropertyInfo> properties = [.. entity.GetType().GetProperties(bindingAttr)];
 
-            foreach (PropertyInfo property in properties)
+            foreach (var property in properties)
             {
-                object value = property.GetValue(entity, null);
+                var value = property.GetValue(entity, null);
                 action.Invoke(new Reflect(entity, property, value));
 
                 if (value == null || IsPrimitive(value.GetType()))
@@ -68,9 +70,9 @@ namespace Nzr.ToolBox.Core
 
                 if (IsCollection(property.PropertyType))
                 {
-                    System.Collections.IEnumerable e = (System.Collections.IEnumerable)value;
+                    var e = (System.Collections.IEnumerable)value;
 
-                    foreach (object item in e)
+                    foreach (var item in e)
                     {
                         if (item != null && !IsPrimitive(item.GetType()))
                         {
@@ -92,33 +94,37 @@ namespace Nzr.ToolBox.Core
         /// <param name="bindingAttr">A bit-mask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.
         /// -or- Zero, to return null. (Optional, default BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)</param>
         /// <returns>IDictionary with entity name as key and properties names as value.</returns>
-        public static IDictionary<string, IList<string>> GetPropertyNames(this object entity, BindingFlags bindingAttr = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+        public static IDictionary<string, IList<string>> GetPropertyNames(this object entity, BindingFlags bindingAttr = BindingFlags.Instance | BindingFlags.Public |
+#pragma warning disable S3011 // Reflection should not be used to increase accessibility of classes, methods, or fields
+            BindingFlags.NonPublic)
+#pragma warning restore S3011 // Reflection should not be used to increase accessibility of classes, methods, or fields
         {
             entity.RequireNonNull();
 
-            IDictionary<string, IList<string>> dictionary = new Dictionary<string, IList<string>>();
+            var dictionary = new Dictionary<string, IList<string>>();
 
             entity.ExecuteForEachProperty(i =>
             {
-                Type entityType = i.Entity.GetType();
-                string entityName = entityType.Name;
+                var entityType = i.Entity.GetType();
+                var entityName = entityType.Name;
 
                 if (entityType.GenericTypeArguments.Length > 0)
                 {
-                    string args = string.Join(",", entityType.GenericTypeArguments.Select(a => a.Name).ToList());
-                    int indexOfGenericSymbol = entityName.IndexOf("`");
-                    entityName = entityName.Substring(0, indexOfGenericSymbol);
+                    var args = string.Join(",", entityType.GenericTypeArguments.Select(a => a.Name).ToList());
+                    var indexOfGenericSymbol = entityName.IndexOf('`');
+                    entityName = entityName[..indexOfGenericSymbol];
                     entityName = $"{entityName}<{args}>";
                 }
 
-                if (!dictionary.ContainsKey(entityName))
+                if (!dictionary.TryGetValue(entityName, out var value))
                 {
-                    dictionary.Add(entityName, new List<string>());
+                    value = ([]);
+                    dictionary.Add(entityName, value);
                 }
 
-                IList<string> propertyNames = dictionary[entityName];
+                var propertyNames = value;
 
-                string propertyName = i.Property.Name.Replace("`", string.Empty);
+                var propertyName = i.Property.Name.Replace("`", string.Empty);
 
                 if (!propertyNames.Contains(propertyName))
                 {
@@ -136,7 +142,7 @@ namespace Nzr.ToolBox.Core
         /// <param name="entity"></param>
         /// <param name="propertyPath">A string representing the property including the nested levels.</param>
         /// <returns></returns>
-        public static object GetValue(this object entity, string propertyPath) => GetValue<object>(entity, propertyPath);
+        public static object? GetValue(this object entity, string propertyPath) => GetValue<object>(entity, propertyPath);
 
         /// <summary>
         /// Gets a value from an object (including nested ones) by using the property path (Ex: A.B.C.Property1).
@@ -145,20 +151,20 @@ namespace Nzr.ToolBox.Core
         /// <param name="entity"></param>
         /// <param name="propertyPath">A string representing the property including the nested levels.</param>
         /// <returns></returns>
-        public static R GetValue<R>(this object entity, string propertyPath)
+        public static R? GetValue<R>(this object? entity, string propertyPath)
         {
             entity.RequireNonNull();
 
-            PropertyInfo propertyInfo;
+            PropertyInfo? propertyInfo;
 
-            if (!propertyPath.Contains("."))
+            if (!propertyPath.Contains('.'))
             {
-                propertyInfo = entity.GetType().GetProperty(propertyPath);
-                return (R)propertyInfo.GetValue(entity);
+                propertyInfo = entity!.GetType()?.GetProperty(propertyPath);
+                return (R?)propertyInfo?.GetValue(entity);
             }
 
-            List<string> properties = propertyPath.Split(".".ToCharArray()).ToList();
-            propertyInfo = entity.GetType().GetProperty(properties.First());
+            var properties = propertyPath.Split(".".ToCharArray()).ToList();
+            propertyInfo = entity!.GetType().GetProperty(properties[0])!;
 
             if (IsCollection(propertyInfo.PropertyType))
             {
@@ -167,7 +173,7 @@ namespace Nzr.ToolBox.Core
 
             properties.RemoveAt(0);
 
-            object value = propertyInfo.GetValue(entity);
+            var value = propertyInfo.GetValue(entity);
             propertyPath = string.Join(".", properties);
             return GetValue<R>(value, propertyPath);
         }
@@ -176,7 +182,7 @@ namespace Nzr.ToolBox.Core
         {
             type = FixType(type);
 
-            return type.IsPrimitive || type == typeof(string) || (type.FullName.StartsWith("System.") && !IsCollection(type));
+            return type.IsPrimitive || type == typeof(string) || (type.FullName!.StartsWith("System.") && !IsCollection(type));
         }
 
         private static Type FixType(Type type)

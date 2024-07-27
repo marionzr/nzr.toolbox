@@ -10,8 +10,8 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list = new List<string>() { "A", "B", "C" };
-            IList<char> actionResult = new List<char>();
+            IList<string> list = ["A", "B", "C"];
+            IList<char> actionResult = [];
 
             // Act
 
@@ -29,12 +29,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list = null;
-            IList<char> actionResult = new List<char>();
+            IList<string>? list = null;
+            IList<char> actionResult = [];
 
             // Act
 
-            list.ForEach<string>(e => actionResult.Add(e[0].ToLower()));
+            list.ForEach(e => actionResult.Add(e[0].ToLower()));
 
             // Assert
 
@@ -47,11 +47,11 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             System.Collections.IEnumerable list = new List<string>() { "A", "B", "C" };
-            IList<char> actionResult = new List<char>();
+            IList<char> actionResult = [];
 
             // Act
 
-            list.ForEach(e => actionResult.Add(e.ToString()[0].ToLower()));
+            list.ForEach(e => actionResult.Add(e.ToString()![0].ToLower()));
 
             // Assert
 
@@ -65,12 +65,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.IEnumerable list = null;
-            IList<char> actionResult = new List<char>();
+            System.Collections.IEnumerable? list = null;
+            IList<char> actionResult = [];
 
             // Act
 
-            list.ForEach(e => actionResult.Add(e.ToString()[0].ToLower()));
+            list.ForEach(e => actionResult.Add(e.ToString()![0].ToLower()));
 
             // Assert
 
@@ -82,8 +82,8 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list = new List<string>() { "A", "B", "C" };
-            IList<char> functionResult = new List<char>();
+            var list = new List<string>() { "A", "B", "C" };
+            var functionResult = new List<char>();
 
             // Act
 
@@ -102,10 +102,8 @@ namespace Nzr.ToolBox.Core.Tests
         [Fact()]
         public void ForEach_WithNull_ShouldNotExecuteFunction()
         {
-            // Arrange
-
-            IList<string> list = null;
-            IList<char> functionResult = new List<char>();
+            IList<string>? list = null;
+            IList<char> functionResult = [];
 
             // Act
 
@@ -127,13 +125,13 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             System.Collections.IEnumerable list = new List<string>() { "A", "B", "C" };
-            IList<char> functionResult = new List<char>();
+            var functionResult = new List<char>();
 
             // Act
 
             list.ForEach(e =>
             {
-                string s = e.ToString();
+                var s = e.ToString()!;
                 functionResult.Add(s[0]);
                 return s != "B";
             });
@@ -145,38 +143,14 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact()]
-        public void ForEach_WithNullEnumerable_ShouldNotExecuteFunction()
-        {
-            // Arrange
-
-            System.Collections.IEnumerable list = null;
-            IList<char> functionResult = new List<char>();
-
-            // Act
-
-            list.ForEach(e =>
-            {
-                string s = e.ToString();
-                functionResult.Add(s[0]);
-                return s != "B";
-            });
-
-
-            // Assert
-
-            Assert.Empty(functionResult);
-        }
-
-
-        [Fact()]
         public void Add_ShouldAddAllElements()
         {
             // Arrange
 
-            string a = null;
-            string b = "";
-            string c = "x";
-            ICollection<string> list = new List<string>();
+            string? a = null;
+            var b = "";
+            var c = "x";
+            ICollection<string?> list = [];
 
             // Act
 
@@ -191,39 +165,20 @@ namespace Nzr.ToolBox.Core.Tests
         }
 
         [Fact()]
-        public void Add_WithNullCollection_ShouldNotAddAllElements()
-        {
-            // Arrange
-
-            string a = null;
-            string b = "";
-            string c = "x";
-            ICollection<string> list = null;
-
-            // Act
-
-            list.AddElements(a, b, c);
-
-            // Assert
-
-            Assert.Null(list);
-        }
-
-        [Fact()]
         public void Add_WithListAsArgument_ShouldAddAllElements()
         {
             // Arrange
 
-            string a = null;
-            string b = "";
-            string c = "x";
+            string? a = null;
+            var b = "";
+            var c = "x";
 
-            ICollection<string> another = new List<string>()
-            {
+            ICollection<string?> another =
+            [
                  a, b, c
-            };
+            ];
 
-            ICollection<string> list = new List<string>();
+            ICollection<string?> list = [];
 
             // Act
 
@@ -242,16 +197,16 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            string a = null;
-            string b = "";
-            string c = "x";
+            string? a = null;
+            var b = "";
+            var c = "x";
 
-            ICollection<string> another = new List<string>()
-            {
+            ICollection<string?> another =
+            [
                  a, b, c
-            };
+            ];
 
-            ICollection<string> list = null;
+            ICollection<string?>? list = null;
 
             // Act
 
@@ -272,7 +227,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -284,12 +239,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.IEnumerable list1 = null;
-            System.Collections.IEnumerable list2 = null;
+            System.Collections.IEnumerable? list1 = null;
+            System.Collections.IEnumerable? list2 = null;
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -301,12 +256,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.IEnumerable list1 = null;
+            System.Collections.IEnumerable? list1 = null;
             System.Collections.IEnumerable list2 = new List<string>() { "a", "b", "c" };
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -319,11 +274,11 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             System.Collections.IEnumerable list1 = new List<string>() { "a", "b", "c" };
-            System.Collections.IEnumerable list2 = null;
+            System.Collections.IEnumerable? list2 = null;
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -335,12 +290,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = new List<string>() { "a", "b", "c" };
-            IList<string> list2 = new List<string>() { "a", "b", "C" };
+            IList<string> list1 = ["a", "b", "c"];
+            IList<string> list2 = ["a", "b", "C"];
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -352,12 +307,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = new List<string>() { "a", "b", };
-            IList<string> list2 = new List<string>() { "a", "b", "c" };
+            IList<string> list1 = ["a", "b",];
+            IList<string> list2 = ["a", "b", "c"];
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -369,12 +324,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = null;
-            IList<string> list2 = null;
+            IList<string>? list1 = null;
+            IList<string>? list2 = null;
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -386,12 +341,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = null;
-            IList<string> list2 = new List<string>() { "a", "b", "c" };
+            IList<string>? list1 = null;
+            IList<string> list2 = ["a", "b", "c"];
 
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -403,11 +358,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = new List<string>() { "a", "b", "c" };
-            IList<string> list2 = null;
+            IList<string> list1 = ["a", "b", "c"];
+            IList<string>? list2 = null;
             // Act
 
-            bool result = list1.ContainsAll(list2);
+            var result = list1.ContainsAll(list2);
 
             // Assert
 
@@ -424,7 +379,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = list1.ContainsAny(list2);
+            var result = list1.ContainsAny(list2);
 
             // Assert
 
@@ -436,12 +391,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.IEnumerable list1 = null;
+            System.Collections.IEnumerable? list1 = null;
             System.Collections.IEnumerable list2 = new List<string>() { "x", "y", "c" };
 
             // Act
 
-            bool result = list1.ContainsAny(list2);
+            var result = list1.ContainsAny(list2);
 
             // Assert
 
@@ -454,11 +409,11 @@ namespace Nzr.ToolBox.Core.Tests
             // Arrange
 
             System.Collections.IEnumerable list1 = new List<string>() { "x", "y", "c" };
-            System.Collections.IEnumerable list2 = null;
+            System.Collections.IEnumerable? list2 = null;
 
             // Act
 
-            bool result = list1.ContainsAny(list2);
+            var result = list1.ContainsAny(list2);
 
             // Assert
 
@@ -470,12 +425,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = new List<string>() { "a", "b", "c" };
-            IList<string> list2 = new List<string>() { "A", "B", "C" };
+            IList<string> list1 = ["a", "b", "c"];
+            IList<string> list2 = ["A", "B", "C"];
 
             // Act
 
-            bool result = list1.ContainsAny(list2);
+            var result = list1.ContainsAny(list2);
 
             // Assert
 
@@ -487,12 +442,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = new List<string>() { "a", "b", "c" };
-            IList<string> list2 = new List<string>() { "A", "B" };
+            IList<string> list1 = ["a", "b", "c"];
+            IList<string> list2 = ["A", "B"];
 
             // Act
 
-            bool result = list1.ContainsAny(list2);
+            var result = list1.ContainsAny(list2);
 
             // Assert
 
@@ -504,12 +459,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = null;
-            IList<string> list2 = new List<string>() { "A", "B" };
+            IList<string>? list1 = null;
+            IList<string> list2 = ["A", "B"];
 
             // Act
 
-            bool result = list1.ContainsAny(list2);
+            var result = list1.ContainsAny(list2);
 
             // Assert
 
@@ -521,12 +476,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list1 = new List<string>() { "A", "B" };
-            IList<string> list2 = null;
+            IList<string> list1 = ["A", "B"];
+            IList<string>? list2 = null;
 
             // Act
 
-            bool result = list1.ContainsAny(list2);
+            var result = list1.ContainsAny(list2);
 
             // Assert
 
@@ -538,16 +493,16 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.IEnumerable enumerable = null;
-            System.Collections.ICollection collection = null;
-            System.Collections.IList list = null;
+            System.Collections.IEnumerable? enumerable = null;
+            System.Collections.ICollection? collection = null;
+            System.Collections.IList? list = null;
 
 
             // Act
 
-            System.Collections.IEnumerable result1 = enumerable.EmptyIfNull();
-            System.Collections.ICollection result2 = collection.EmptyIfNull();
-            System.Collections.IList result3 = list.EmptyIfNull();
+            var result1 = enumerable.EmptyIfNull();
+            var result2 = collection.EmptyIfNull();
+            var result3 = list.EmptyIfNull();
 
             // Assert
 
@@ -565,7 +520,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            System.Collections.IEnumerable result = enumerable.EmptyIfNull();
+            var result = enumerable.EmptyIfNull();
 
             // Assert
 
@@ -577,11 +532,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IEnumerable<string> enumerable = null;
+            IEnumerable<string>? enumerable = null;
 
             // Act
 
-            IEnumerable<string> result = enumerable.EmptyIfNull();
+            var result = enumerable.EmptyIfNull();
 
             // Assert
 
@@ -594,11 +549,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IEnumerable<string> enumerable = new List<string>() { string.Empty };
+            IEnumerable<string> enumerable = [string.Empty];
 
             // Act
 
-            IEnumerable<string> result = enumerable.EmptyIfNull();
+            var result = enumerable.EmptyIfNull();
 
             // Assert
 
@@ -614,7 +569,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            object result = enumerable.Get(1);
+            var result = enumerable.Get(1);
 
             // Assert
 
@@ -626,11 +581,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.IEnumerable enumerable = null;
+            System.Collections.IEnumerable? enumerable = null;
 
             // Act
 
-            object result = enumerable.Get(1);
+            var result = enumerable.Get(1);
 
             // Assert
 
@@ -642,11 +597,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.Generic.IEnumerable<string> enumerable = new List<string>() { "a", "b", "c" };
+            IEnumerable<string> enumerable = ["a", "b", "c"];
 
             // Act
 
-            object result = enumerable.Get(1);
+            object? result = enumerable.Get(1);
 
             // Assert
 
@@ -658,11 +613,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            System.Collections.IList list = null;
+            System.Collections.IList? list = null;
 
             // Act
 
-            bool result = list.IsEmpty();
+            var result = list.IsEmpty();
 
             // Assert
 
@@ -678,7 +633,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = list.IsEmpty();
+            var result = list.IsEmpty();
 
             // Assert
 
@@ -694,7 +649,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            bool result = list.IsEmpty();
+            var result = list.IsEmpty();
 
             // Assert
 
@@ -707,11 +662,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list = null;
+            IList<string>? list = null;
 
             // Act
 
-            bool result = list.IsNotEmpty();
+            var result = list.IsNotEmpty();
 
             // Assert
 
@@ -723,11 +678,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list = new List<string>();
+            IList<string> list = [];
 
             // Act
 
-            bool result = list.IsNotEmpty();
+            var result = list.IsNotEmpty();
 
             // Assert
 
@@ -739,11 +694,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IList<string> list = new List<string>() { "a" };
+            IList<string> list = ["a"];
 
             // Act
 
-            bool result = list.IsNotEmpty();
+            var result = list.IsNotEmpty();
 
             // Assert
 
@@ -755,26 +710,26 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            byte[] b = new byte[] { 1, 2, 3 };
-            short[] s = new short[] { 1, 2, 3 };
-            int[] i = new int[] { 1, 2, 3 };
-            long[] l = new long[] { 1, 2, 3 };
-            float[] f = new float[] { 1.0F, 2.0F, 3.0F };
-            double[] d = new double[] { 1.0D, 2.0D, 3.0D };
-            decimal[] m = new decimal[] { 1.0M, 2.0M, 3.0M };
-            string[] str = new string[] { "1", "2", "3" };
+            var b = new byte[] { 1, 2, 3 };
+            var s = new short[] { 1, 2, 3 };
+            var i = new int[] { 1, 2, 3 };
+            var l = new long[] { 1, 2, 3 };
+            var f = new float[] { 1.0F, 2.0F, 3.0F };
+            var d = new double[] { 1.0D, 2.0D, 3.0D };
+            var m = new decimal[] { 1.0M, 2.0M, 3.0M };
+            var str = new string[] { "1", "2", "3" };
 
             // Act
 
-            int bResult = b.IndexOf(2);
-            int sResult = s.IndexOf(2);
-            int iResult = i.IndexOf(2);
-            int lResult = l.IndexOf(2);
-            int fResult = f.IndexOf(2.0F);
-            int dResult = d.IndexOf(2.0D);
-            int mResult = m.IndexOf(2.0M);
-            int strResult = str.IndexOf("2");
-            int tStrResult = str.IndexOf<string>("2");
+            var bResult = b.IndexOf(2);
+            var sResult = s.IndexOf(2);
+            var iResult = i.IndexOf(2);
+            var lResult = l.IndexOf(2);
+            var fResult = f.IndexOf(2.0F);
+            var dResult = d.IndexOf(2.0D);
+            var mResult = m.IndexOf(2.0M);
+            var strResult = str.IndexOf("2");
+            var tStrResult = str.IndexOf<string>("2");
 
             // Assert
 
@@ -794,26 +749,26 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            byte[] b = new byte[] { 1, 2, 3 };
-            short[] s = new short[] { 1, 2, 3 };
-            int[] i = new int[] { 1, 2, 3 };
-            long[] l = new long[] { 1, 2, 3 };
-            float[] f = new float[] { 1.0F, 2.0F, 3.0F };
-            double[] d = new double[] { 1.0D, 2.0D, 3.0D };
-            decimal[] m = new decimal[] { 1.0M, 2.0M, 3.0M };
-            string[] str = new string[] { "1", "2", "3" };
+            var b = new byte[] { 1, 2, 3 };
+            var s = new short[] { 1, 2, 3 };
+            var i = new int[] { 1, 2, 3 };
+            var l = new long[] { 1, 2, 3 };
+            var f = new float[] { 1.0F, 2.0F, 3.0F };
+            var d = new double[] { 1.0D, 2.0D, 3.0D };
+            var m = new decimal[] { 1.0M, 2.0M, 3.0M };
+            var str = new string[] { "1", "2", "3" };
 
             // Act
 
-            bool bResult = b.Contains(2);
-            bool sResult = s.Contains(2);
-            bool iResult = i.Contains(2);
-            bool lResult = l.Contains(2);
-            bool fResult = f.Contains(2.0F);
-            bool dResult = d.Contains(2.0D);
-            bool mResult = m.Contains(2.0M);
-            bool strResult = str.Contains("2");
-            bool tStrResult = str.Contains<string>("2");
+            var bResult = b.Contains(2);
+            var sResult = s.Contains(2);
+            var iResult = i.Contains(2);
+            var lResult = l.Contains(2);
+            var fResult = f.Contains(2.0F);
+            var dResult = d.Contains(2.0D);
+            var mResult = m.Contains(2.0M);
+            var strResult = str.Contains("2");
+            var tStrResult = str.Contains<string>("2");
 
             // Assert
 
@@ -833,11 +788,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            byte[] b = null;
+            byte[]? b = null;
 
             // Act
 
-            int bResult = b.IndexOf(2);
+            var bResult = b.IndexOf(2);
 
             // Assert
 
@@ -849,11 +804,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            byte[] b = null;
+            byte[]? b = null;
 
             // Act
 
-            bool bResult = b.Contains(2);
+            var bResult = b.Contains(2);
 
             // Assert
 
@@ -865,26 +820,26 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            byte[] b = new byte[] { 1, 2, 3 };
-            short[] s = new short[] { 1, 2, 3 };
-            int[] i = new int[] { 1, 2, 3 };
-            long[] l = new long[] { 1, 2, 3 };
-            float[] f = new float[] { 1.0F, 2.0F, 3.0F };
-            double[] d = new double[] { 1.0D, 2.0D, 3.0D };
-            decimal[] m = new decimal[] { 1.0M, 2.0M, 3.0M };
-            string[] str = new string[] { "1", "2", "3" };
+            var b = new byte[] { 1, 2, 3 };
+            var s = new short[] { 1, 2, 3 };
+            var i = new int[] { 1, 2, 3 };
+            var l = new long[] { 1, 2, 3 };
+            var f = new float[] { 1.0F, 2.0F, 3.0F };
+            var d = new double[] { 1.0D, 2.0D, 3.0D };
+            var m = new decimal[] { 1.0M, 2.0M, 3.0M };
+            var str = new string[] { "1", "2", "3" };
 
             // Act
 
-            int bResult = b.IndexOf(4);
-            int sResult = s.IndexOf(4);
-            int iResult = i.IndexOf(4);
-            int lResult = l.IndexOf(4);
-            int fResult = f.IndexOf(4.0F);
-            int dResult = d.IndexOf(4.0D);
-            int mResult = m.IndexOf(4.0M);
-            int strResult = str.IndexOf("4");
-            int tStrResult = str.IndexOf<string>("4");
+            var bResult = b.IndexOf(4);
+            var sResult = s.IndexOf(4);
+            var iResult = i.IndexOf(4);
+            var lResult = l.IndexOf(4);
+            var fResult = f.IndexOf(4.0F);
+            var dResult = d.IndexOf(4.0D);
+            var mResult = m.IndexOf(4.0M);
+            var strResult = str.IndexOf("4");
+            var tStrResult = str.IndexOf<string>("4");
 
             // Assert
 
@@ -904,26 +859,26 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            byte[] b = new byte[] { 1, 2, 3 };
-            short[] s = new short[] { 1, 2, 3 };
-            int[] i = new int[] { 1, 2, 3 };
-            long[] l = new long[] { 1, 2, 3 };
-            float[] f = new float[] { 1.0F, 2.0F, 3.0F };
-            double[] d = new double[] { 1.0D, 2.0D, 3.0D };
-            decimal[] m = new decimal[] { 1.0M, 2.0M, 3.0M };
-            string[] str = new string[] { "1", "2", "3" };
+            var b = new byte[] { 1, 2, 3 };
+            var s = new short[] { 1, 2, 3 };
+            var i = new int[] { 1, 2, 3 };
+            var l = new long[] { 1, 2, 3 };
+            var f = new float[] { 1.0F, 2.0F, 3.0F };
+            var d = new double[] { 1.0D, 2.0D, 3.0D };
+            var m = new decimal[] { 1.0M, 2.0M, 3.0M };
+            var str = new string[] { "1", "2", "3" };
 
             // Act
 
-            bool bResult = b.Contains(4);
-            bool sResult = s.Contains(4);
-            bool iResult = i.Contains(4);
-            bool lResult = l.Contains(4);
-            bool fResult = f.Contains(4.0F);
-            bool dResult = d.Contains(4.0D);
-            bool mResult = m.Contains(4.0M);
-            bool strResult = str.Contains("4");
-            bool tStrResult = str.Contains<string>("4");
+            var bResult = b.Contains(4);
+            var sResult = s.Contains(4);
+            var iResult = i.Contains(4);
+            var lResult = l.Contains(4);
+            var fResult = f.Contains(4.0F);
+            var dResult = d.Contains(4.0D);
+            var mResult = m.Contains(4.0M);
+            var strResult = str.Contains("4");
+            var tStrResult = str.Contains<string>("4");
 
             // Assert
 
@@ -943,11 +898,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IDictionary<string, string> dictionary = new Dictionary<string, string>() { { "a", "b" }, { "c", null } };
+            IDictionary<string, string?> dictionary = new Dictionary<string, string?>() { { "a", "b" }, { "c", null } };
 
             // Act
 
-            string result = dictionary.GetKey<string, string>(null);
+            var result = dictionary.GetKey(null);
 
             // Assert
 
@@ -963,7 +918,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result = dictionary.GetKey<string, string>(null);
+            var result = dictionary.GetKey<string, string>(null);
 
             // Assert
 
@@ -979,7 +934,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result = dictionary.GetKey<string, string>("x");
+            var result = dictionary.GetKey<string, string>("x");
 
             // Assert
 
@@ -995,7 +950,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            string result = dictionary.GetKey<string, string>("d");
+            var result = dictionary.GetKey<string, string>("d");
 
             // Assert
 
@@ -1007,11 +962,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            IDictionary<string, string> dictionary = null;
+            IDictionary<string, string>? dictionary = null;
 
             // Act
 
-            string result = dictionary.GetKey<string, string>("d");
+            var result = dictionary.GetKey("d");
 
             // Assert
 

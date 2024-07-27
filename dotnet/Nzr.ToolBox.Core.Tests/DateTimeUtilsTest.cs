@@ -12,7 +12,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            long epoch = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).ToEpoch();
+            var epoch = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).ToEpoch();
 
             // Assert
 
@@ -26,11 +26,11 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            DateTime dateTime = 1200000000L.FromEpoch();
+            var dateTime = 1200000000L.FromEpoch();
 
             // Assert
 
-            Assert.Equal(new DateTime(2008, 1, 10, 21, 20, 0), dateTime);
+            Assert.Equal(new DateTime(2008, 1, 10, 21, 20, 0, DateTimeKind.Local), dateTime);
         }
 
         [Fact]
@@ -38,11 +38,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime dateTime = new DateTime(DateTime.Now.Ticks);
+            var dateTime = new DateTime(DateTime.Now.Ticks, DateTimeKind.Local);
 
             // Act
 
-            bool result = dateTime.IsSameDay();
+            var result = dateTime.IsSameDay();
 
             // Assert
 
@@ -54,12 +54,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0);
-            DateTime dateTime2 = new DateTime(2019, 11, 12, 14, 35, 1);
+            var dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0, DateTimeKind.Local);
+            var dateTime2 = new DateTime(2019, 11, 12, 14, 35, 1, DateTimeKind.Local);
 
             // Act
 
-            bool result = dateTime1.IsSameDay(dateTime2);
+            var result = dateTime1.IsSameDay(dateTime2);
 
             // Assert
 
@@ -71,16 +71,16 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0);
-            DateTime dateTime2 = new DateTime(2019, 10, 11, 23, 59, 0);
-            DateTime dateTime3 = new DateTime(2019, 09, 10, 23, 59, 0);
-            DateTime dateTime4 = new DateTime(2018, 08, 09, 23, 59, 0);
+            var dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0, DateTimeKind.Local);
+            var dateTime2 = new DateTime(2019, 10, 11, 23, 59, 0, DateTimeKind.Local);
+            var dateTime3 = new DateTime(2019, 09, 10, 23, 59, 0, DateTimeKind.Local);
+            var dateTime4 = new DateTime(2018, 08, 09, 23, 59, 0, DateTimeKind.Local);
 
             // Act
 
-            bool result1 = dateTime1.IsSameDay(dateTime2);
-            bool result2 = dateTime2.IsSameDay(dateTime3);
-            bool result3 = dateTime3.IsSameDay(dateTime4);
+            var result1 = dateTime1.IsSameDay(dateTime2);
+            var result2 = dateTime2.IsSameDay(dateTime3);
+            var result3 = dateTime3.IsSameDay(dateTime4);
 
             // Assert
 
@@ -94,12 +94,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0, 1);
-            DateTime dateTime2 = new DateTime(2019, 11, 12, 23, 59, 0, 2);
+            var dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0, 1, DateTimeKind.Local);
+            var dateTime2 = new DateTime(2019, 11, 12, 23, 59, 0, 2, DateTimeKind.Local);
 
             // Act
 
-            bool result = dateTime1.Equals(dateTime2, 0);
+            var result = dateTime1.Equals(dateTime2, 0);
 
             // Assert
 
@@ -111,12 +111,12 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0, 1);
-            DateTime dateTime2 = new DateTime(2019, 11, 12, 23, 59, 0, 2);
+            var dateTime1 = new DateTime(2019, 11, 12, 23, 59, 0, 1, DateTimeKind.Local);
+            var dateTime2 = new DateTime(2019, 11, 12, 23, 59, 0, 2, DateTimeKind.Local);
 
             // Act
 
-            bool result = dateTime1.Equals(dateTime2, 2);
+            var result = dateTime1.Equals(dateTime2, 2);
 
             // Assert
 
@@ -128,15 +128,15 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
 
             // Act
 
-            DateTime dateTime = now.SubtractYears(1);
+            var dateTime = now.SubtractYears(1);
 
             // Assert
 
-            Assert.Equal(365, (now - dateTime).TotalDays);
+            Assert.Equal(dateTime.Year, now.Year - 1);
         }
 
         [Fact]
@@ -144,11 +144,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
 
             // Act
 
-            DateTime dateTime = now.SubtractMonths(1);
+            var dateTime = now.SubtractMonths(1);
 
             // Assert
 
@@ -160,11 +160,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
 
             // Act
 
-            DateTime dateTime = now.SubtractDays(1);
+            var dateTime = now.SubtractDays(1);
 
             // Assert
 
@@ -176,11 +176,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
 
             // Act
 
-            DateTime dateTime = now.SubtractHours(1);
+            var dateTime = now.SubtractHours(1);
 
             // Assert
 
@@ -192,11 +192,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
 
             // Act
 
-            DateTime dateTime = now.SubtractMinutes(1);
+            var dateTime = now.SubtractMinutes(1);
 
             // Assert
 
@@ -208,11 +208,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
 
             // Act
 
-            DateTime dateTime = now.SubtractSeconds(1);
+            var dateTime = now.SubtractSeconds(1);
 
             // Assert
 
@@ -224,11 +224,11 @@ namespace Nzr.ToolBox.Core.Tests
         {
             // Arrange
 
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
 
             // Act
 
-            DateTime dateTime = now.SubtractMilliseconds(1);
+            var dateTime = now.SubtractMilliseconds(1);
 
             // Assert
 
