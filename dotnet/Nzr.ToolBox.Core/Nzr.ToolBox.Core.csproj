@@ -1,43 +1,57 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-	<Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Check the release notes at https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/README.md</PackageReleaseNotes>
-    <NeutralLanguage>en-US</NeutralLanguage>
-	<PackageId>Nzr.ToolBox.Core</PackageId>
-    <PackageTags>Extension Extension-Methods Utils Utility</PackageTags>
-    <RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/marionzr/Nzr.ToolBox</PackageProjectUrl>
-    <PackageLicenseFile>License.txt</PackageLicenseFile>
-    <Copyright>Copyright 2019</Copyright>
-    <Description>A collection of utility classes and extension methods that allow developers to have a social life.</Description>
-    <Version>1.4.0</Version>
-    <AssemblyVersion>1.4.0.0</AssemblyVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Nzr.ToolBox.Core</RootNamespace>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>A collection of utility classes and extension methods that allow developers to have a social life.</Description>
+		<Copyright>Copyright 2019</Copyright>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
+		<Version>1.4.0</Version>
+		<AssemblyVersion>1.4.0.0</AssemblyVersion>
+		<PackageReleaseNotes>Check the release notes at https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/README.md</PackageReleaseNotes>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
-    <DocumentationFile>..\Docs\Nzr.ToolBox.Core.xml</DocumentationFile>
-  </PropertyGroup>
+		<!-- nuget -->
+		<PackageId>Nzr.ToolBox.Core</PackageId>
+		<PackageTags>Extension Extension-Methods Utils Utility C# .NET</PackageTags>
+		<RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/marionzr/Nzr.ToolBox</PackageProjectUrl>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>nzr.png</PackageIcon>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
-    <DocumentationFile>..\Docs\Nzr.ToolBox.Core.xml</DocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsAsErrors />
+		<DocumentationFile>..\Docs\Nzr.ToolBox.Core.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsAsErrors />
+		<DocumentationFile>..\Docs\Nzr.ToolBox.Core.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\..\License.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\License.txt">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\..\nzr.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md" Link="README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
