@@ -5,11 +5,14 @@ A collection of utility classes and extension methods that allow developers to h
 
 More examples about how to use it can be found at [Test Project](https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/dotnet/Nzr.ToolBox.Core.Tests)
 
-
 ## Usings
 
 Nzr.ToolBox is shipped in two compiled versions:
-1. Individual classes and extensions: Each utility class and the extensions methods were compiled in individual classes and
+
+### Individual classes and extensions
+https://www.nuget.org/packages/Nzr.ToolBox.Core/
+
+Each utility class and the extensions methods were compiled in individual classes and
 you need to import them individually, based on your needs.
 
 ```
@@ -24,7 +27,11 @@ using static Nzr.ToolBox.Core.ReflectionUtils;
 using static Nzr.ToolBox.Core.StringUtils;
 ```
 
-2. Combined all in one: All the classes were compiled as partial classes named ToolBox and you just need one import to get
+### Combined all in one
+
+https://www.nuget.org/packages/Nzr.ToolBox.Core.Single/
+
+All the classes were compiled as partial classes named ToolBox and you just need one import to get
 all extensions and utility classes.
 
 ```
