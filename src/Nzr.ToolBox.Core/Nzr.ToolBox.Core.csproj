@@ -18,8 +18,8 @@
 		<PackageTags>Extension Extension-Methods Utils Utility C# .NET</PackageTags>
 		<RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/marionzr/Nzr.ToolBox</PackageProjectUrl>
-		<PackageLicenseFile>License.txt</PackageLicenseFile>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>nzr.png</PackageIcon>
 	</PropertyGroup>
 
@@ -40,11 +40,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\..\License.txt">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
+		<None Include="..\..\LICENSE" Link="LICENSE">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
 		</None>
-		<None Include="..\..\nzr.png">
+		<None Include="..\..\assets\nzr.png">
 		  <Pack>True</Pack>
 		  <PackagePath>\</PackagePath>
 		</None>

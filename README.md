@@ -1,4 +1,7 @@
-﻿# Nzr.ToolBox   
+﻿![GitHub last commit](https://img.shields.io/github/last-commit/marionzr/nzr.toolbox)
+![NuGet Downloads (Single)](https://img.shields.io/nuget/dt/nzr.toolbox.core.single)
+
+# Nzr.ToolBox   
 A collection of utility classes and extension methods that allow developers to have a social life.
 
 # How to use

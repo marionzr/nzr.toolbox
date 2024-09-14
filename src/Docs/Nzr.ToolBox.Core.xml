@@ -1,0 +1,2107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nzr.ToolBox.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Nzr.ToolBox.Core.BooleanUtils">
+            <summary>
+            Utility and extensions methods for Boolean types.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.Byte)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.SByte)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.Int16)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.Int32)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.Int64)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.Single)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.Double)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.Decimal)">
+            <summary>
+            Returns true the value is greater than 0.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the value is greater than 0, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.ToBool(System.String)">
+            <summary>
+            Returns true the value is (Y, Yes, S, Sim, Si, Ja, Oui), otherwise false.
+            </summary>
+            <param name="value">Value to be converted to boolean.</param>
+            <returns>True the string value is yes (or variations).</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.IsTrue(System.Nullable{System.Boolean})">
+            <summary>
+            Safe checks if the value is not null and true.
+            </summary>
+            <param name="value">Value to be checked.</param>
+            <returns>True if the value is not null and true.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.IsFalse(System.Nullable{System.Boolean})">
+            <summary>
+            Safe checks if the value is not null and false.
+            </summary>
+            <param name="value">Value to be checked.</param>
+            <returns>True if the value is not null and false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.Describe(System.Boolean,System.String,System.String)">
+            <summary>
+            Returns yes or no based on the boolean value.
+            The string values are optional (default yes, no) and can be replaced.
+            </summary>
+            <param name="value">Value to be checked.</param>
+            <param name="yes">String to be returned in case of value is true.</param>
+            <param name="no">String to be returned in case of value is false.</param>
+            <returns>Yes or no, based on the boolean value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.Describe(System.Nullable{System.Boolean},System.String,System.String,System.String)">
+            <summary>
+            Returns yes or no based on the boolean value.
+            The string values are optional (default yes, no) and can be replaced.
+            </summary>
+            <param name="value">Value to be checked.</param>
+            <param name="yes">String to be returned in case of value is true.</param>
+            <param name="no">String to be returned in case of value is false.</param>
+            <param name="null">String to be returned int case of the value is null</param>
+            <returns>Yes or no, based on the boolean value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.IsAllTrue(System.Boolean[])">
+            <summary>
+            Checks if all values are true.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True if all values are true, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.IsAnyTrue(System.Boolean[])">
+            <summary>
+            Checks if any value is true.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True if any value is true, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.IsAllFalse(System.Boolean[])">
+            <summary>
+            Checks if all values are true.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True if all values are true, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.BooleanUtils.IsAnyFalse(System.Boolean[])">
+            <summary>
+            Checks if any value is false.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True if any value is false, otherwise false.</returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.CollectionUtils">
+            <summary>
+            Utility and extensions methods for Collection types.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Performs the given action for each element of the IEnumerable.
+            </summary>
+            <typeparam name="T">Type of elements.</typeparam>
+            <param name="enumerable">IEnumerable instance.</param>
+            <param name="action">Action to be executed for each element.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ForEach(System.Collections.IEnumerable,System.Action{System.Object})">
+            <summary>
+            Performs the given action for each element of the IEnumerable.
+            </summary>
+            <param name="enumerable">IEnumerable instance.</param>
+            <param name="action">Action to be executed for each element.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Performs the given function for each element of the IEnumerable.
+            </summary>
+            <typeparam name="T">Type of elements.</typeparam>
+            <param name="enumerable">IEnumerable instance.</param>
+            <param name="function">Function to be executed for each element.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ForEach(System.Collections.IEnumerable,System.Func{System.Object,System.Boolean})">
+            <summary>
+            Performs the given function for each element of the IEnumerable.
+            </summary>
+            <param name="enumerable">IEnumerable instance.</param>
+            <param name="function">Function to be executed for each element.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.AddElements``1(System.Collections.Generic.ICollection{``0},``0[])">
+            <summary>
+            Adds the items to the given ICollection.
+            </summary>
+            <typeparam name="T">Type of elements.</typeparam>
+            <param name="collection">The collection to add items.</param>
+            <param name="items">Items to be added (Except nulls).</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.AddEnumerable``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Adds the items from given enumerable to the given ICollection.
+            </summary>
+            <typeparam name="T">Type of elements</typeparam>
+            <param name="collection">The collection to add items.</param>
+            <param name="enumerable">IEnumerable with items to be added.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ContainsAll(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Checks if all elements in IEnumerable another are also in the IEnumerable enumerable.
+            </summary>
+            <param name="enumerable">The IEnumerable reference.</param>
+            <param name="another">IEnumerable with elements expected to be in the IEnumerable reference.</param>
+            <returns>True if all elements in IEnumerable another are also in the IEnumerable enumerable.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Checks if all elements in IEnumerable another are also in the IEnumerable enumerable.
+            </summary>
+            <param name="enumerable">The IEnumerable reference.</param>
+            <param name="another">IEnumerable with elements expected to be in the IEnumerable reference.</param>
+            <returns>True if all elements in IEnumerable another are also in the IEnumerable enumerable.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ContainsAny(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Checks if at least one element in IEnumerable another are also in the IEnumerable enumerable.
+            </summary>
+            <param name="enumerable">The IEnumerable reference.</param>
+            <param name="another">IEnumerable with elements expected to be in the IEnumerable reference.</param>
+            <returns>True if at least one element in IEnumerable another is also in the IEnumerable enumerable.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.ContainsAny``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Checks if at least one element in IEnumerable another are also in the IEnumerable enumerable.
+            </summary>
+            <param name="enumerable">The IEnumerable reference.</param>
+            <param name="another">IEnumerable with elements expected to be in the IEnumerable reference.</param>
+            <returns>True if at least one element in IEnumerable another is also in the IEnumerable enumerable.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.EmptyIfNull(System.Collections.IEnumerable)">
+            <summary>
+            Returns an empty IEnumerable if the given IEnumerable is null, otherwise returns the given IEnumerable.
+            </summary>
+            <param name="enumerable">IEnumerable to be checked.</param>
+            <returns>A non null IEnumerable.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.EmptyIfNull``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns an empty IEnumerable if the given IEnumerable is null, otherwise returns the given IEnumerable.
+            </summary>
+            <param name="enumerable">IEnumerable to be checked.</param>
+            <returns>A non null IEnumerable.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.EmptyIfNull(System.Collections.ICollection)">
+            <summary>
+            Returns an empty ICollection if the given ICollection is null, otherwise returns the given ICollection.
+            </summary>
+            <param name="collection">ICollection to be checked.</param>
+            <returns>A non null ICollection.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.EmptyIfNull``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Returns an empty ICollection if the given ICollection is null, otherwise returns the given ICollection.
+            </summary>
+            <param name="collection">ICollection to be checked.</param>
+            <returns>A non null ICollection.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.EmptyIfNull(System.Collections.IList)">
+            <summary>
+            Returns an empty IList if the given IList is null, otherwise returns the given IList.
+            </summary>
+            <param name="list">IList to be checked.</param>
+            <returns>A non null IList.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.EmptyIfNull``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Returns an empty IList if the given IList is null, otherwise returns the given IList.
+            </summary>
+            <param name="list">IList to be checked.</param>
+            <returns>A non null IList.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Get``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Returns the element in the IEnumerable at index position, throwing IndexOutOfRangeException if no element is found at that position.
+            </summary>
+            <param name="enumerable">IEnumerable to be checked.</param>
+            <param name="index">The index of the element.</param>
+            <returns>The element at index</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Get(System.Collections.IEnumerable,System.Int32)">
+            <summary>
+            Returns the element in the IEnumerable at index position, throwing IndexOutOfRangeException if no element is found at that position.
+            </summary>
+            <param name="enumerable">IEnumerable to be checked.</param>
+            <param name="index">The index of the element.</param>
+            <returns>The element at index</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IsEmpty(System.Collections.IEnumerable)">
+            <summary>
+            Checks if the enumerable is null or empty.
+            </summary>
+            <param name="enumerable">IEnumerable to be checked.</param>
+            <returns>True if the enumerable is null or empty.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IsNotEmpty(System.Collections.IEnumerable)">
+            <summary>
+            Checks if the enumerable is not null and not empty.
+            </summary>
+            <param name="enumerable"></param>
+            <returns>True if the enumerable is not null and not empty.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.Byte[],System.Byte,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.Int16[],System.Int16,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.Int64[],System.Int64,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.Single[],System.Single,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.Double[],System.Double,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.Decimal[],System.Decimal,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf(System.String[],System.String,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.IndexOf``1(``0[],``0,System.Int32)">
+            <summary>
+            Searches for the specified object and returns the index of its first occurrence
+            in a one-dimensional array.
+            </summary>
+            <param name="array">The one-dimensional array to search.</param>
+            <param name="value">The item to locate in array.</param>
+            <param name="start">The starting index of the search. 0 (zero) is valid in an empty array.</param>
+            <returns>The index of the first occurrence of value in array, if found; otherwise, the
+            lower bound of the array minus 1</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.Byte[],System.Byte)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.Int16[],System.Int16)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.Int32[],System.Int32)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.Int64[],System.Int64)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.Single[],System.Single)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.Double[],System.Double)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.Decimal[],System.Decimal)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains(System.String[],System.String)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.Contains``1(``0[],``0)">
+            <summary>
+            Checks whether an element value is in the array.
+            </summary>
+            <typeparam name="T">Type of the values in the array.</typeparam>
+            <param name="array">The item to locate in array.</param>
+            <param name="value">The one-dimensional array to search.</param>
+            <returns>True if item is found in the array; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.CollectionUtils.GetKey``2(System.Collections.Generic.IDictionary{``0,``1},``1)">
+            <summary>
+            Gets the Dictionary Key by value.
+            Note that only the first key is returned.
+            </summary>
+            <typeparam name="K">Type of the Key.</typeparam>
+            <typeparam name="V">Type of the value.</typeparam>
+            <param name="dictionary">Dictionary instance.</param>
+            <param name="value">Value used to find the key.</param>
+            <returns>The key, if found.</returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.Constants">
+            <summary>
+            Constants to be used within the TollBox.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.ZERO">
+            <summary>
+            int Zero constant.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.ONE">
+            <summary>
+            int One constant.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.FALSE">
+            <summary>
+            False constant.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.TRUE">
+            <summary>
+            True constant.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.ASTERISK">
+            <summary>
+            Asterisk string constant.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.UNDERSCORE">
+            <summary>
+            Underscore string constant.
+            </summary>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.Constants.Alphabet">
+            <summary>
+            Alphabet constants.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.a">
+            <summary>
+            Constant string letter a
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.b">
+            <summary>
+            Constant string letter b
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.c">
+             <summary>
+             Constant string letter c
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.d">
+             <summary>
+             Constant string letter d
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.e">
+             <summary>
+             Constant string letter e
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.f">
+             <summary>
+             Constant string letter f
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.g">
+             <summary>
+             Constant string letter g
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.h">
+             <summary>
+             Constant string letter h
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.i">
+             <summary>
+             Constant string letter i
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.j">
+             <summary>
+             Constant string letter j
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.k">
+             <summary>
+             Constant string letter k
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.l">
+             <summary>
+             Constant string letter l
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.m">
+             <summary>
+             Constant string letter m
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.n">
+             <summary>
+             Constant string letter n
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.o">
+             <summary>
+             Constant string letter o
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.p">
+             <summary>
+             Constant string letter p
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.q">
+             <summary>
+             Constant string letter q
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.r">
+             <summary>
+             Constant string letter r
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.s">
+             <summary>
+             Constant string letter s
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.t">
+             <summary>
+             Constant string letter t
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.u">
+             <summary>
+             Constant string letter u
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.v">
+             <summary>
+             Constant string letter v
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.w">
+             <summary>
+             Constant string letter w
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.x">
+             <summary>
+             Constant string letter x
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.y">
+             <summary>
+             Constant string letter y
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.z">
+             <summary>
+             Constant string letter z
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.A">
+             <summary>
+             Constant string letter A
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.B">
+             <summary>
+             Constant string letter B
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.C">
+             <summary>
+             Constant string letter C
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.D">
+             <summary>
+             Constant string letter D
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.E">
+             <summary>
+             Constant string letter E
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.F">
+             <summary>
+             Constant string letter F
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.G">
+             <summary>
+             Constant string letter G
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.H">
+             <summary>
+             Constant string letter H
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.I">
+             <summary>
+             Constant string letter I
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.J">
+             <summary>
+             Constant string letter J
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.K">
+             <summary>
+             Constant string letter K
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.L">
+             <summary>
+             Constant string letter L
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.M">
+             <summary>
+             Constant string letter M
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.N">
+             <summary>
+             Constant string letter N
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.O">
+             <summary>
+             Constant string letter O
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.P">
+             <summary>
+             Constant string letter P
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.Q">
+             <summary>
+             Constant string letter Q
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.R">
+             <summary>
+             Constant string letter R
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.S">
+             <summary>
+             Constant string letter S
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.T">
+             <summary>
+             Constant string letter T
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.U">
+             <summary>
+             Constant string letter U
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.V">
+             <summary>
+             Constant string letter V
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.W">
+             <summary>
+             Constant string letter W
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.X">
+             <summary>
+             Constant string letter X
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.Y">
+             <summary>
+             Constant string letter Y
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.Alphabet.Z">
+             <summary>
+             Constant string letter Z
+            </summary>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.Constants.DateTimeFormats">
+            <summary>
+            DateTime format constants.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.ddMMyy">
+            <summary>
+             ddMMyy = "dd/MM/yy
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.ddMMyyyy">
+            <summary>
+             ddMMyyyy = "dd/MM/yyyy
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.MMddyy">
+            <summary>
+             MMddyy = "MM/dd/yy
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.MMddyyyy">
+            <summary>
+             MMddyyyy = "MM/dd/yyyy
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.yyMMdd">
+            <summary>
+             yyMMdd = "yy/MM/dd
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.yyyyMMdd">
+            <summary>
+             yyyyMMdd = "yyyy/MM/dd
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.ddMMyyHHmm">
+            <summary>
+             ddMMyyHHmm = "dd/MM/yy HH:mm
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.ddMMyyyyHHmm">
+            <summary>
+             ddMMyyyyHHmm = "dd/MM/yyyy HH:mm
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.MMddyyHHmm">
+            <summary>
+             MMddyyHHmm = "MM/dd/yy HH:mm
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.MMddyyyyHHmm">
+            <summary>
+             MMddyyyyHHmm = "MM/dd/yyyy HH:mm
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.yyMMddHHmm">
+            <summary>
+             yyMMddHHmm = "yy/MM/dd HH:mm
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.yyyyMMddHHmm">
+            <summary>
+             yyyyMMddHHmm = "yyyy/MM/dd HH:mm
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.ddMMyyHHmmss">
+            <summary>
+             ddMMyyHHmmss = "dd/MM/yy HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.ddMMyyyyHHmmss">
+            <summary>
+             ddMMyyyyHHmmss = "dd/MM/yyyy HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.MMddyyHHmmss">
+            <summary>
+             MMddyyHHmmss = "MM/dd/yy HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.MMddyyyyHHmmss">
+            <summary>
+             MMddyyyyHHmmss = "MM/dd/yyyy HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.yyMMddHHmmss">
+            <summary>
+             yyMMddHHmmss = "yy/MM/dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.yyyyMMddHHmmss">
+            <summary>
+             yyyyMMddHHmmss = "yyyy/MM/dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.HHmm">
+            <summary>
+             HHmm = "HH:mm
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.HHmmss">
+            <summary>
+             HHmmss = "HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.Constants.DateTimeFormats.mmss">
+            <summary>
+             mmss = "mm:ss
+            </summary>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.DateTimeUtils">
+            <summary>
+            Utility and extensions methods for DateTime types.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.ToEpoch(System.DateTime)">
+            <summary>
+            Gets the Unix Epoch Time.
+            </summary>
+            <param name="value">DateTime to be converted to Epoch Time.</param>
+            <returns>The Unix Epoch Time.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.FromEpoch(System.Int64)">
+            <summary>
+            Gets the DateTime from Unix Epoch Time.
+            </summary>
+            <param name="epochTime">Unix Epoch Time</param>
+            <returns>The DateTim from Epoch Time.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.IsSameDay(System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Checks if two dates are on the same day ignoring time.
+            </summary>
+            <param name="dateTime1">The left dateTime object.</param>
+            <param name="dateTime2">The right dateTime object. If null, DateTime.Now is used to compare.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.Equals(System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Checks if the value of this instance is equal to the value of the specified System.DateTime instance.
+            </summary>
+            <param name="dateTime1"></param>
+            <param name="dateTime2"></param>
+            <param name="toleranceInMs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.SubtractDays(System.DateTime,System.Double)">
+             <summary>
+             Returns a new System.DateTime that subtracts the specified number of days from the value
+             of this instance.
+             </summary>
+             <param name="dateTime">The DateTime instance.</param>
+             <param name="value">A number of whole and fractional days. The value parameter can be negative or positive.</param>
+            
+             <returns>An object whose value is the sum of the date and time represented by this instance and the number of days represented by value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.SubtractHours(System.DateTime,System.Double)">
+             <summary>
+             Returns a new System.DateTime that subtracts the specified number of hours from the
+             value of this instance.
+             </summary>
+             Parameters:
+               value:
+             A number of whole and fractional hours. The value parameter can be negative or
+             positive.
+            
+             <returns>
+             An object whose value is the sum of the date and time represented by this instance
+             and the number of hours represented by value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.SubtractMilliseconds(System.DateTime,System.Double)">
+             <summary>
+             Returns a new System.DateTime that subtracts the specified number of milliseconds
+             from the value of this instance.
+             </summary>
+             Parameters:
+               value:
+             A number of whole and fractional milliseconds. The value parameter can be negative
+             or positive. Note that this value is rounded to the nearest integer.
+            
+             <returns>
+             An object whose value is the sum of the date and time represented by this instance
+             and the number of milliseconds represented by value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.SubtractMinutes(System.DateTime,System.Double)">
+             <summary>
+             Returns a new System.DateTime that subtracts the specified number of minutes from the
+             value of this instance.
+             </summary>
+             Parameters:
+               value:
+             A number of whole and fractional minutes. The value parameter can be negative
+             or positive.
+            
+             <returns>
+             An object whose value is the sum of the date and time represented by this instance
+             and the number of minutes represented by value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.SubtractMonths(System.DateTime,System.Int32)">
+             <summary>
+             Returns a new System.DateTime that subtracts the specified number of months from the
+             value of this instance.
+             </summary>
+             Parameters:
+               value:
+             A number of months. The months parameter can be negative or positive.
+            
+             <returns>
+             An object whose value is the sum of the date and time represented by this instance
+             and months.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.SubtractSeconds(System.DateTime,System.Double)">
+             <summary>
+             Returns a new System.DateTime that subtracts the specified number of seconds from the
+             value of this instance.
+             </summary>
+             Parameters:
+               value:
+             A number of whole and fractional seconds. The value parameter can be negative
+             or positive.
+            
+             <returns>
+             An object whose value is the sum of the date and time represented by this instance
+             and the number of seconds represented by value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.DateTimeUtils.SubtractYears(System.DateTime,System.Int32)">
+             <summary>
+             Returns a new System.DateTime that subtracts the specified number of years from the
+             value of this instance.
+             </summary>
+             Parameters:
+               value:
+             A number of years. The value parameter can be negative or positive.
+            
+             <returns>
+             An object whose value is the sum of the date and time represented by this instance
+             and the number of years represented by value.</returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.EnumUtils">
+            <summary>
+            Utility and extensions methods for Enum types.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.EnumUtils.GetEnumNames``1">
+            <summary>
+            Return a List of
+            </summary>
+            <typeparam name="E">Type of the enum.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.NumberUtils">
+            <summary>
+            Utility and extensions methods for Number (byte, short, int, long, float, double, decimal) types.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Max(System.Byte[])">
+            <summary>
+            Returns the maximum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The maximum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Max(System.Int16[])">
+            <summary>
+            Returns the maximum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The maximum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Max(System.Int32[])">
+            <summary>
+            Returns the maximum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The maximum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Max(System.Int64[])">
+            <summary>
+            Returns the maximum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The maximum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Max(System.Single[])">
+            <summary>
+            Returns the maximum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The maximum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Max(System.Double[])">
+            <summary>
+            Returns the maximum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The maximum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Max(System.Decimal[])">
+            <summary>
+            Returns the maximum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The maximum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Min(System.Byte[])">
+            <summary>
+            Returns the minimum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The minimum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Min(System.Int16[])">
+            <summary>
+            Returns the minimum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The minimum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Min(System.Int32[])">
+            <summary>
+            Returns the minimum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The minimum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Min(System.Int64[])">
+            <summary>
+            Returns the minimum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The minimum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Min(System.Single[])">
+            <summary>
+            Returns the minimum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The minimum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Min(System.Double[])">
+            <summary>
+            Returns the minimum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The minimum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Min(System.Decimal[])">
+            <summary>
+            Returns the minimum value within the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The minimum value within the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Average(System.Byte[])">
+            <summary>
+            Returns the average of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The average of the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Average(System.Int16[])">
+            <summary>
+            Returns the average of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The average of the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Average(System.Int32[])">
+            <summary>
+            Returns the average of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The average of the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Average(System.Int64[])">
+            <summary>
+            Returns the average of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The average of the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Average(System.Single[])">
+            <summary>
+            Returns the average of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The average of the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Average(System.Double[])">
+            <summary>
+            Returns the average of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The average of the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Average(System.Decimal[])">
+            <summary>
+            Returns the average of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The average of the values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Sum(System.Byte[])">
+            <summary>
+            Returns the sum of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The sum of the value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Sum(System.Int16[])">
+            <summary>
+            Returns the sum of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The sum of the value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Sum(System.Int32[])">
+            <summary>
+            Returns the sum of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The sum of the value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Sum(System.Int64[])">
+            <summary>
+            Returns the sum of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The sum of the value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Sum(System.Single[])">
+            <summary>
+            Returns the sum of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The sum of the value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Sum(System.Double[])">
+            <summary>
+            Returns the sum of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The sum of the value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Sum(System.Decimal[])">
+            <summary>
+            Returns the sum of the values.
+            </summary>
+            <param name="values">Values to be evaluated.</param>
+            <returns>The sum of the value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Abs(System.SByte)">
+            <summary>
+            Returns the absolute value of a number.
+            </summary>
+            <returns> A number >= 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Abs(System.Int16)">
+            <summary>
+            Returns the absolute value of a number.
+            </summary>
+            <returns> A number >= 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Abs(System.Int32)">
+            <summary>
+            Returns the absolute value of a number.
+            </summary>
+            <returns> A number >= 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Abs(System.Int64)">
+            <summary>
+            Returns the absolute value of a number.
+            </summary>
+            <returns> A number >= 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Abs(System.Single)">
+            <summary>
+            Returns the absolute value of a number.
+            </summary>
+            <returns> A number >= 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Abs(System.Double)">
+            <summary>
+            Returns the absolute value of a number.
+            </summary>
+            <returns> A number >= 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.Abs(System.Decimal)">
+            <summary>
+            Returns the absolute value of a number.
+            </summary>
+            <returns> A number >= 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToBinary(System.Byte,System.Boolean)">
+            <summary>
+            Converts the number value to a binary format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0b">>Prefix the result with 0b. (Optional, default false)</param>
+            <returns>Value in binary format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToBinary(System.Int16,System.Boolean)">
+            <summary>
+            Converts the number value to a binary format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0b">>Prefix the result with 0b. (Optional, default false)</param>
+            <returns>Value in binary format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToBinary(System.Int32,System.Boolean)">
+            <summary>
+            Converts the number value to a binary format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0b">>Prefix the result with 0b. (Optional, default false)</param>
+            <returns>Value in binary format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToBinary(System.Int64,System.Boolean)">
+            <summary>
+            Converts the number value to a binary format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0b">>Prefix the result with 0b. (Optional, default false)</param>
+            <returns>Value in binary format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToHexadecimal(System.Byte,System.Boolean)">
+            <summary>
+            Converts the number value to a hexadecimal format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0x">Prefix the result with 0x. (Optional, default true)</param>
+            <returns>Value in hexadecimal format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToHexadecimal(System.Int16,System.Boolean)">
+            <summary>
+            Converts the number value to a hexadecimal format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0x">Prefix the result with 0x. (Optional, default true)</param>
+            <returns>Value in hexadecimal format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToHexadecimal(System.Int32,System.Boolean)">
+            <summary>
+            Converts the number value to a hexadecimal format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0x">Prefix the result with 0x. (Optional, default true)</param>
+            <returns>Value in hexadecimal format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.ToHexadecimal(System.Int64,System.Boolean)">
+            <summary>
+            Converts the number value to a hexadecimal format.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <param name="include0x">Prefix the result with 0x. (Optional, default true)</param>
+            <returns>Value in hexadecimal format.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.PadLeft(System.Byte,System.Int32,System.Char)">
+            <summary>
+            Returns a string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth.
+            </summary>
+            <param name="value">The byte instance to be converted to string, then left padded.</param>
+            <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+            <param name="padding">The padding character</param>
+            <returns>A string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.PadLeft(System.Int16,System.Int32,System.Char)">
+            <summary>
+            Returns a string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth.
+            </summary>
+            <param name="value">The byte instance to be converted to string, then left padded.</param>
+            <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+            <param name="padding">The padding character</param>
+            <returns>A string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.PadLeft(System.Int32,System.Int32,System.Char)">
+            <summary>
+            Returns a string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth.
+            </summary>
+            <param name="value">The byte instance to be converted to string, then left padded.</param>
+            <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+            <param name="padding">The padding character</param>
+            <returns>A string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.NumberUtils.PadLeft(System.Int64,System.Int32,System.Char)">
+            <summary>
+            Returns a string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth.
+            </summary>
+            <param name="value">The byte instance to be converted to string, then left padded.</param>
+            <param name="maxWidth">The size of the resulting string including, if needed, any additional padding characters</param>
+            <param name="padding">The padding character</param>
+            <returns>A string that representing the numeric value, but right-aligned and padded
+            on the left with the required amount of padding characters as needed to create have a
+            string with the given maxWidth</returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.ObjectUtils">
+            <summary>
+            Utility and extensions methods for Object types.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.IfNotNull``1(``0,System.Action{``0},System.Action)">
+            <summary>
+            If a value is not null, performs the action with the value, otherwise does nothing.
+            </summary>
+            <typeparam name="T??">Type of the value.</typeparam>
+            <param name="value">The value to be checked.</param>
+            <param name="action">Action to be executed in case the value is not null.</param>
+            <param name="ifNullAction">Action to be executed in case the value is null (optional).</param>
+            <returns>Null (internal class).</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.IfNull``1(``0,System.Action,System.Action{``0})">
+            <summary>
+            If a value is null, performs the action with the value, otherwise does nothing.
+            </summary>
+            <typeparam name="T">Type of the value.</typeparam>
+            <param name="value">The value to be checked.</param>
+            <param name="action">Action to be executed in case the value is null.</param>
+            <param name="ifNotNullAction">Action to be executed in case the value is not null (optional)</param>
+            <returns>Null (internal class).</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.Else(Nzr.ToolBox.Core.ObjectUtils.Null,System.Action)">
+            <summary>
+            To be used with IfNotNull. This method is invoked in case the value checked by IsNotNull actually is null.
+            </summary>
+            <param name="null">InternalUse</param>
+            <param name="action">Action to be executed in case the value is null.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.Else``1(Nzr.ToolBox.Core.ObjectUtils.NotNull{``0},System.Action{``0})">
+            <summary>
+            To be used with IfNull. This method is invoked in case the value checked by IsNull actually is not null.
+            </summary>
+            <param name="notnull">Internal use.</param>
+            <param name="action">Action to be executed in case the value is null.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.ElseThrow(Nzr.ToolBox.Core.ObjectUtils.Null,System.String)">
+            <summary>
+            To be used with IfNotNull.
+            This method is invoked in case the value checked by IsNotNull actually is null and
+            throws a new ArgumentNullException.
+            </summary>
+            <param name="null">Internal use.</param>
+            <param name="exceptionMessage">Action to be executed in case the value is null.</param>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.ObjectUtils.Null">
+            <summary>
+            Internal use.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.Null.#ctor">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.ObjectUtils.NotNull`1">
+            <summary>
+            Internal use.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <remarks>
+            For internal use.
+            </remarks>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.NotNull`1.#ctor(`0)">
+            <summary>
+            Internal use.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <remarks>
+            For internal use.
+            </remarks>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.IsAllNonNull(System.Object[])">
+            <summary>
+            Checks if all values are not nulls.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True is all values are not null.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.IsAllNull(System.Object[])">
+            <summary>
+            Checks if all values are not nulls.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True is all values are not null.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.IsAnyNull(System.Object[])">
+            <summary>
+            Checks if any value is null.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True is at least one value is null.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.IsAnyNonNull(System.Object[])">
+            <summary>
+            Checks if any value is not null.
+            </summary>
+            <param name="values">Values to be checked.</param>
+            <returns>True is at least one value is not null.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.FirstNonNull``1(``0[])">
+            <summary>
+            Returns the first value which is not null.
+            </summary>
+            <typeparam name="T">Type of the values</typeparam>
+            <param name="values">Values to be checked.</param>
+            <returns>First value not null, if found, otherwise null</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.LastNonNull``1(``0[])">
+            <summary>
+            Returns the last value which is not null.
+            </summary>
+            <typeparam name="T">Type of the values</typeparam>
+            <param name="values">Values to be checked.</param>
+            <returns>Last value not null, if found, otherwise null</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.RequireNonNull(System.Object,System.String)">
+            <summary>
+            Checks that the value is not null.
+            </summary>
+            <param name="value">Value to be checked.</param>
+            <param name="exceptionMessage">A message used in the ArgumentNullException, in case of null value. (Optional)</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.ToDynamic(System.Object)">
+            <summary>
+            Converts the object value as  Dynamic ExpandoObject.
+            </summary>
+            <param name="value">Value to be converted.</param>
+            <returns>Dynamic ExpandoObject.</returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.RandomUtils">
+            <summary>
+            Utility methods for Randomized valued.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomBoolean(System.Nullable{System.Int32})">
+            <summary>
+            Returns a random boolean value.
+            </summary>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A random boolean value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomByte(System.Byte,System.Byte,System.Nullable{System.Int32})">
+            <summary>
+            Returns a byte that is within a specified range.
+            </summary>
+            <param name="min">The inclusive lower bound of the random number returned.</param>
+            <param name="max">The exclusive upper bound of the random number returned. maxValue must be greater.</param>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A byte greater than or equal to minValue and less than maxValue;
+            that is, the range of return values includes minValue but not maxValue. If minValue
+            equals maxValue, minValue is returned</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomShort(System.Int16,System.Int16,System.Nullable{System.Int32})">
+            <summary>
+            Returns a random short that is within a specified range.
+            </summary>
+            <param name="min">The inclusive lower bound of the random number returned.</param>
+            <param name="max">The exclusive upper bound of the random number returned. maxValue must be greater.</param>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A 16-bit signed short greater than or equal to minValue and less than maxValue;
+            that is, the range of return values includes minValue but not maxValue. If minValue
+            equals maxValue, minValue is returned</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomInt(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Returns a random integer that is within a specified range.
+            </summary>
+            <param name="min">The inclusive lower bound of the random number returned.</param>
+            <param name="max">The exclusive upper bound of the random number returned. maxValue must be greater.</param>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A 32-bit signed integer greater than or equal to minValue and less than maxValue;
+            that is, the range of return values includes minValue but not maxValue. If minValue
+            equals maxValue, minValue is returned</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomLong(System.Int64,System.Int64,System.Nullable{System.Int32})">
+            <summary>
+            Returns a random long that is within a specified range.
+            </summary>
+            <param name="min">The inclusive lower bound of the random number returned.</param>
+            <param name="max">The exclusive upper bound of the random number returned. maxValue must be greater.</param>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A 64-bit signed long greater than or equal to minValue and less than maxValue;
+            that is, the range of return values includes minValue but not maxValue. If minValue
+            equals maxValue, minValue is returned</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomDouble(System.Double,System.Nullable{System.Int32})">
+            <summary>
+            Returns a random double number that is greater than or equal to 0.0 and less than 1.0 times multiplier.
+            </summary>
+            <param name="multiplier">Used to multiply the result (from 0.0 to 1.0). (Optional, default 1.0).</param>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A double-precision floating point number that is greater than or equal to 0.0 and less than 1.0 times multiplier.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomDecimal(System.Decimal,System.Nullable{System.Int32})">
+            <summary>
+            Returns a random decimal number that is greater than or equal to 0.0 and less than 1.0 times multiplier.
+            </summary>
+            <param name="multiplier">Used to multiply the result (from 0.0 to 1.0). (Optional, default 1.0).</param>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A double-precision floating point number that is greater than or equal to 0.0 and less than 1.0 times multiplier.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomFloat(System.Double,System.Nullable{System.Int32})">
+            <summary>
+            Returns a random float number that is greater than or equal to 0.0 and less than 1.0 times multiplier.
+            </summary>
+            <param name="multiplier">Used to multiply the result (from 0.0 to 1.0). (Optional, default 1.0).</param>
+            <param name="seed">A number used to calculate a starting value for the pseudo-random number sequence. (optional)</param>
+            <returns>A double-precision floating point number that is greater than or equal to 0.0 and less than 1.0 times multiplier.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.RandomUtils.RandomString(System.UInt32,System.String,System.String,System.String)">
+            <summary>
+            Returns a random string with the given length;
+            </summary>
+            <param name="length">Length of the generated string.</param>
+            <param name="letters">Group of letters used to generated the random string. Optional</param>
+            <param name="numbers">Group of numbers used to generated the random string. Optional</param>
+            <param name="symbols">Group of symbols used to generated the random string. Optional</param>
+            <returns>A random string.</returns>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.RandomUtils.RANDOM_LETTERS">
+            <summary>
+            Letters (the alphabet) used in the Random methods.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.RandomUtils.RANDOM_NUMBER">
+            <summary>
+            Letters (the numbers) used in the Random methods.
+            </summary>
+        </member>
+        <member name="F:Nzr.ToolBox.Core.RandomUtils.RANDOM_SYMBOLS">
+            <summary>
+            Symbols <![CDATA[(!?,.;:@#$%&*()-_+={[}]^~`´<>)]]> used in the Random methods.
+            </summary>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.ReflectionUtils">
+            <summary>
+            Utility and extensions methods for Reflect types.
+            </summary>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.ReflectionUtils.Reflect">
+            <summary>
+            A container with the Entity, Property and Property value.
+            </summary>
+        </member>
+        <member name="P:Nzr.ToolBox.Core.ReflectionUtils.Reflect.Entity">
+            <summary>
+            The entity that was reflected.
+            </summary>
+        </member>
+        <member name="P:Nzr.ToolBox.Core.ReflectionUtils.Reflect.Property">
+            <summary>
+            One of entities Property.
+            </summary>
+        </member>
+        <member name="P:Nzr.ToolBox.Core.ReflectionUtils.Reflect.Value">
+            <summary>
+            The property value.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ReflectionUtils.ExecuteForEachProperty(System.Object,System.Action{Nzr.ToolBox.Core.ReflectionUtils.Reflect},System.Reflection.BindingFlags)">
+            <summary>
+            Iterate recursively on each property of given entity and invoke the action on each property found.
+            </summary>
+            <param name="entity"></param>
+            <param name="action">Action to be performed on each property. It receives an Reflect container with the entity, property info and property value.</param>
+            <param name="bindingAttr">A bit-mask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.
+            -or- Zero, to return null. (Optional, default BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ReflectionUtils.GetPropertyNames(System.Object,System.Reflection.BindingFlags)">
+            <summary>
+            Returns a Dictionary with entity name as key and properties names as value.
+            </summary>
+            <param name="entity">The entity to be inspected.</param>
+            <param name="bindingAttr">A bit-mask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.
+            -or- Zero, to return null. (Optional, default BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)</param>
+            <returns>IDictionary with entity name as key and properties names as value.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ReflectionUtils.GetValue(System.Object,System.String)">
+            <summary>
+            Gets a value from an object (including nested ones) by using the property path (Ex: A.B.C.Property1).
+            </summary>
+            <param name="entity"></param>
+            <param name="propertyPath">A string representing the property including the nested levels.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ReflectionUtils.GetValue``1(System.Object,System.String)">
+            <summary>
+            Gets a value from an object (including nested ones) by using the property path (Ex: A.B.C.Property1).
+            </summary>
+            <typeparam name="R">The type of the returned value.</typeparam>
+            <param name="entity"></param>
+            <param name="propertyPath">A string representing the property including the nested levels.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.StringUtils">
+            <summary>
+            Utility and extensions methods for String types.
+            </summary>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Suffix(System.String,System.String,System.Boolean,System.StringComparison)">
+            <summary>
+            Appends the suffix to the string if the string is not null.
+            If the string is null the return will be a new string with the suffix.
+            </summary>
+            <param name="value">The string to be suffixed.</param>
+            <param name="suffix">The suffix string.</param>
+            <param name="onlyIfNotExisits">Appends the suffix only if the string does not already ends with the suffix. (Default true)</param>
+            <param name="stringComparison">One of the StringComparison values that specifies the rules for the search.(Default OrdinalIgnoreCase)</param>
+            <returns>A string with suffix.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Prefix(System.String,System.String,System.Boolean,System.StringComparison)">
+            <summary>
+            Appends the prefix to the string if the string is not null.
+            If the string is null the return will be a new string with the prefix.
+            </summary>
+            <param name="value">The string to be suffixed.</param>
+            <param name="prefix">The prefix string.</param>
+            <param name="onlyIfNotExisits">Appends the prefix only if the string does not already starts with the prefix. (Default true)</param>
+            <param name="stringComparison">One of the StringComparison values that specifies the rules for the search.(Default OrdinalIgnoreCase)</param>
+            <returns>A string with prefix.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ToUpper(System.Char)">
+            <summary>
+            Converts the value of a Unicode character to its uppercase equivalent.
+            </summary>
+            <param name="c">The Unicode character to convert.</param>
+            <returns>The uppercase equivalent of c, or the unchanged value of c if c is already uppercase,
+            has no uppercase equivalent, or is not alphabetic</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ToLower(System.Char)">
+            <summary>
+            Converts the value of a Unicode character to its lowercase equivalent.
+            </summary>
+            <param name="c">The Unicode character to convert.</param>
+            <returns>The lowercase equivalent of c, or the unchanged value of c if c is already lowercase,
+            has no lowercase equivalent, or is not alphabetic</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsUpper(System.Char)">
+            <summary>
+            Indicates whether the specified Unicode character is categorized as an uppercase letter.
+            </summary>
+            <param name="c">The Unicode character to check.</param>
+            <returns>True if c is an uppercase letter, otherwise, false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Capitalize(System.String)">
+            <summary>
+            Capitalizes a string changing the first character to title case.
+            </summary>
+            <param name="value">The string to be capitalized.</param>
+            <returns>A capitalized string.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.RemoveEnd(System.String,System.String[])">
+            <summary>
+            Removes the substrings at the end of string (if exists, using OrdinalIgnoreCase).
+            Null strings will return null.
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="substrings">The list of substrings to be removed.</param>
+            <returns>A new string without the given substrings at the end.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.RemoveEnd(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Removes the substrings at the end of string (if exists).
+            Null strings will return null.
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="stringComparison">One of the StringComparison values that specifies the rules for the search.(Default OrdinalIgnoreCase)</param>
+            <param name="substrings">The list of substrings to be removed.</param>
+            <returns>A new string without the given substrings at the end.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.RemoveStart(System.String,System.String[])">
+            <summary>
+            Removes the substrings at the beginning of string (if exists, using OrdinalIgnoreCase).
+            Null strings will return null.
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="substrings">The list of substrings to be removed.</param>
+            <returns>A new string without the given substrings at the beginning.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.RemoveStart(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Removes the substrings at the beginning of string (if exists).
+            Null strings will return null.
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="stringComparison">One of the StringComparison values that specifies the rules for the search.(Default OrdinalIgnoreCase)</param>
+            <param name="substrings">The list of substrings to be removed.</param>
+            <returns>A new string without the given substrings at the beginning.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsEmpty(System.String)">
+            <summary>
+            Checks if a string is null or length == 0.
+            Invoking <c>StringUtils.IsEmpty("")</c> returns true.
+            Invoking <c>StringUtils.IsEmpty(null)</c> returns true.
+            Invoking <c>StringUtils.IsEmpty(" ")</c> returns false.
+            </summary>
+            <param name="value">A <c>string</c> to be checked.</param>
+            <returns>True if the string is null or has length == 0.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsNotEmpty(System.String)">
+            <summary>
+            Checks if a string is not null and length > 0.
+            Invoking <c>StringUtils.IsEmpty("")</c> returns false.
+            Invoking <c>StringUtils.IsEmpty(null)</c> returns false.
+            Invoking <c>StringUtils.IsEmpty(" ")</c> returns true.
+            </summary>
+            <param name="value">A <c>string</c> to be checked.</param>
+            <returns>True if the string is not null and length > 0.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsBlank(System.String)">
+            <summary>
+            Checks if a string is null or length (After trim) == 0.
+            Invoking <c>StringUtils.IsEmpty("")</c> returns true.
+            Invoking <c>StringUtils.IsEmpty(null)</c> returns true.
+            Invoking <c>StringUtils.IsEmpty(" ")</c> returns true.
+            </summary>
+            <param name="value">A <c>string</c> to be checked.</param>
+            <returns>True if the string is null or length (After trim) == 0</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsNotBlank(System.String)">
+            <summary>
+            Checks if a string is not null and length (After trim) > 0.
+            Invoking <c>StringUtils.IsEmpty("")</c> returns false.
+            Invoking <c>StringUtils.IsEmpty(null)</c> returns false.
+            Invoking <c>StringUtils.IsEmpty(" ")</c> returns false.
+            </summary>
+            <param name="value">A <c>string</c> to be checked.</param>
+            <returns>string is not null and length (After trim) > 0.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Replace(System.String,System.String,System.String,System.String)">
+            <summary>
+            Checks if the string value is null before call the Replace method.
+            If the value is null, returns the default value (if provided).
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="oldValue">The string to be replaced.</param>
+            <param name="newValue">The string to replace all occurrences of oldValue.</param>
+            <param name="defaultValue">The default value returned in case the value is null.</param>
+            <returns>
+            If the string is null the defaultValue is returned, otherwise a string that is equivalent to the current
+            string except that all instances of oldValue are replaced with newValue. If oldValue is not found in the current
+            instance, the method returns the current instance unchanged.
+            </returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ContainsAny(System.String,System.String[])">
+            <summary>
+            Returns a value indicating whether one of the specified substrings occurs within this string (OrdinalIgnoreCase).
+            </summary>
+            <param name="value">The string to seek.</param>
+            <param name="substrings">The substrings to seek.</param>
+            <returns>True if one of substrings occurs within this string, or if value is the null and one of substrings is null as well.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ContainsAny(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Returns a value indicating whether one of the specified substrings occurs within this string.
+            </summary>
+            <param name="value">The string to seek.</param>
+            <param name="stringComparison">One of the StringComparison enumeration values that specifies the rules for the search.</param>
+            <param name="substrings">The substrings to seek.</param>
+            <returns>True if one of substrings occurs within this string, or if value is the null and one of substrings is null as well.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ContainsNone(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Returns a value indicating whether none of the specified substrings occurs within this string.
+            </summary>
+            <param name="value">The string to seek.</param>
+            <param name="stringComparison">One of the StringComparison enumeration values that specifies the rules for the search.</param>
+            <param name="substrings">The substrings to seek.</param>
+            <returns>True if none of substrings occurs within this string, or if value is the null and none of substrings is null as well.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ContainsNone(System.String,System.String[])">
+            <summary>
+            Returns a value indicating whether none of the specified substrings occurs within this string.
+            </summary>
+            <param name="value">The string to seek.</param>
+            <param name="substrings">The substrings to seek.</param>
+            <returns>True if none of substrings occurs within this string, or if value is the null and none of substrings is null as well.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ContainsAll(System.String,System.String[])">
+            <summary>
+            Returns a value indicating whether all specified substrings occurs within this string (OrdinalIgnoreCase).
+            </summary>
+            <param name="value">The string to seek.</param>
+            <param name="substrings">The substrings to seek.</param>
+            <returns>True if all substrings occurs within this string, or if value is the null and all substrings is null as well.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ContainsAll(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Returns a value indicating whether all specified substrings occurs within this string.
+            </summary>
+            <param name="value">The string to seek.</param>
+            <param name="stringComparison">One of the StringComparison enumeration values that specifies the rules for the search.</param>
+            <param name="substrings">The substrings to seek.</param>
+            <returns>True if all substrings occurs within this string, or if value is the null and all substrings is null as well.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.DefaultIfEmpty(System.String,System.String)">
+            <summary>
+            Returns either the defaultValue if the given string value is empty (null or length == 0), otherwise return the string value.
+            </summary>
+            <param name="value">The string to check</param>
+            <param name="defaultValue">The defaultValue to be returned if the given string value is empty.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.DefaultIfBlank(System.String,System.String)">
+            <summary>
+            Returns either the defaultValue if the given string value is blank (null or length (After trim) == 0), otherwise return the string value.
+            </summary>
+            <param name="value">The string to check</param>
+            <param name="defaultValue">The defaultValue to be returned if the given string value is Blank.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.GetFirstNonEmpty(System.String[])">
+            <summary>
+            Returns the first string in the given array which is not empty (not null and length > 0).
+            </summary>
+            <param name="values">The string values to seek.</param>
+            <returns>The first string in the given array which is not empty, or null if none is empty.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.GetFirstNonBlank(System.String[])">
+            <summary>
+            Returns the first string in the given array which is not blank (not null and length (After trim) > 0).
+            </summary>
+            <param name="values">The string values to seek.</param>
+            <returns>The first string in the given array which is not empty, or null if none is empty.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsAllEmpty(System.String[])">
+            <summary>
+            Checks the given strings are empty (null or length == 0)
+            </summary>
+            <param name="values">String values to check.</param>
+            <returns>True if all given strings are empty.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsAllBlank(System.String[])">
+            <summary>
+            Checks the given strings are blank (null or length (After trim) == 0)
+            </summary>
+            <param name="values">String values to check.</param>
+            <returns>True if all given strings are blank.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsAnyEmpty(System.String[])">
+            <summary>
+            Checks if one of the given strings is empty (null or length == 0)
+            </summary>
+            <param name="values">String values to check.</param>
+            <returns>True if all given strings are empty.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsAnyBlank(System.String[])">
+            <summary>
+            Checks if one of the given strings is blank (null or length (After trim) == 0)
+            </summary>
+            <param name="values">String values to check.</param>
+            <returns>True if all given strings are blank.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Remove(System.String,System.String)">
+            <summary>
+            Removes all occurrences of the substring from the string.
+            </summary>
+            <param name="value">string value to seek.</param>
+            <param name="substring">Substring to be removed from string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Repeat(System.String,System.Int32)">
+            <summary>
+            Repeats the given string n times.
+            </summary>
+            <param name="value">The string to repeat.</param>
+            <param name="times">Times to repeat the string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Reverse(System.String)">
+            <summary>
+            Returns the given string value in the reverse order.
+            </summary>
+            <param name="value">The string value to invert.</param>
+            <returns>An inverted string.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.RemoveDiacritics(System.String)">
+            <summary>
+            Removes diacritics from the given string value.
+            </summary>
+            <param name="value">String value to remove diacritics.</param>
+            <returns>String value without diacritics.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Truncate(System.String,System.Int32)">
+            <summary>
+            Retrieves a substring from this instance. The substring starts at 0 and has a specified length.
+            </summary>
+            <param name="value">String value to be truncated.</param>
+            <param name="length">The number of characters in the substring up to the length.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.ReplaceNonNumeric(System.String,System.String)">
+            <summary>
+            Replaces all non-numeric chars in the string.
+            </summary>
+            <param name="value">Numeric string to be 'cleaned'.</param>
+            <param name="replace">String value used to replace non-numeric chars. (Default "")</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsNumber(System.String)">
+            <summary>
+            Checks if the string value is a number.
+            </summary>
+            <param name="value">String to be checked.</param>
+            <returns>True if the string value is a number, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.IsNotNumber(System.String)">
+            <summary>
+            Checks if the string value is not a number.
+            </summary>
+            <param name="value">String to be checked.</param>
+            <returns>True if the string value is not a number, otherwise false.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.DescribeIfNone(System.String)">
+            <summary>
+            Returns a string if the value is null, empty or blank.
+            is null => (null)
+            is empty => (empty)
+            is blank => (blank)
+            </summary>
+            <param name="value">string value to be checked.</param>
+            <returns>A description for the string if null, empty or blank, otherwise return the vlaue.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Format(System.String,System.Object[])">
+            <summary>
+            Replaces the format arg placeholders in the value string with the string representations of corresponding args.
+            A parameter supplies culture-specific formatting information.
+            </summary>
+            <param name="value">A composite format string</param>
+            <param name="args">An object array that contains zero or more args to format.</param>
+            <returns>A formatted string in which the format args placeholder have been replaced by the args values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Format(System.String,System.IFormatProvider,System.Object[])">
+            <summary>
+            Replaces the format arg placeholders in the value string with the string representations of corresponding args.
+            A parameter supplies culture-specific formatting information.
+            </summary>
+            <param name="value">A composite format string</param>
+            <param name="provider">An object that supplies culture-specific formatting information</param>
+            <param name="args">An object array that contains zero or more args to format.</param>
+            <returns>A formatted string in which the format args placeholder have been replaced by the args values.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Append(System.String,System.String[])">
+            <summary>
+            Creates a new string with the original value appended by the give args.
+            </summary>
+            <param name="value">The original string value.</param>
+            <param name="args">The string arguments to be appended</param>
+            <returns>A new string with the original value appended by the give args or null, of the value is null.</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.Equals(System.String,System.String,System.Boolean,System.StringComparison)">
+             <summary>
+             Determines whether this string and a specified System.String object have the
+             same value. A parameter specifies the culture, case, and sort rules used in the
+             comparison.
+            
+             </summary>
+             <param name="value">The source instance string to compare.</param>
+             <param name="other">The string to compare to this instance.</param>
+             <param name="ignoreDiacritics">If true, will remove the diacritics from strings before compare them.</param>
+             <param name="stringComparison">comparisonType is not a System.StringComparison value.</param>
+             <returns>True if the value of the value parameter is the same as this string; otherwise, false</returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.StringUtils.NumericDigitsRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>[^0-9]</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match a character in the set [^0-9].<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.ToolBox">
+            <summary>
+            The main class of all utility methods
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the NumericDigitsRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NumericDigitsRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+    </members>
+</doc>

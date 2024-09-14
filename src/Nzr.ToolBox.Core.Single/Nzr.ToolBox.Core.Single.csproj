@@ -19,7 +19,7 @@ This is a all-in-one version of Nzr.ToolBox.Core, so you just need one import.
 		<PackageTags>Extension Extension-Methods Utils Utility C# .NET</PackageTags>
 		<RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/marionzr/Nzr.ToolBox</PackageProjectUrl>
-		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>nzr.png</PackageIcon>
 	</PropertyGroup>
@@ -50,22 +50,22 @@ This is a all-in-one version of Nzr.ToolBox.Core, so you just need one import.
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
-	</ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<None Include="..\..\License.txt">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
-		<None Include="..\..\nzr.png">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
-		</None>
-		<None Include="..\..\README.md" Link="README.md">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
-		</None>
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Link="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\assets\nzr.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md" Link="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
