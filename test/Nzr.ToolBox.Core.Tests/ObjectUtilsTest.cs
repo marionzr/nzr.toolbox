@@ -36,7 +36,7 @@ namespace Nzr.ToolBox.Core.Tests
             var actionNull = Substitute.For<Action>();
 
             // Act
-            s.IfNotNull(i => actionNotNull(i), () => actionNull());
+            _ = s.IfNotNull(i => actionNotNull(i), () => actionNull());
             s.IfNotNull(i => actionNotNull(i)).Else(() => actionNull());
 
             // Assert
@@ -115,7 +115,7 @@ namespace Nzr.ToolBox.Core.Tests
 
             // Act
 
-            s.IfNull(() => actionNull(), i => actionNotNull(i));
+            _ = s.IfNull(() => actionNull(), i => actionNotNull(i));
             s.IfNull(() => actionNull()).Else(i => actionNotNull(i));
 
             // Assert
@@ -400,6 +400,25 @@ namespace Nzr.ToolBox.Core.Tests
             // Assert
         }
 
+        [Fact]
+        public void ToString_With_StringifyBuilder_Should_Return_Appended_Property_Values()
+        {
+            // Arrange
+
+            var b = new B { P2 = new C() { P3 = 101 } };
+
+            // Act
+
+            var toStringB = b.ToString();
+            var toStringC = b.P2.ToString();
+
+            // Assert
+
+            Assert.Equal("B -> P2: C -> P3: 101, M1: ACME", toStringB);
+            Assert.Equal("C -> P3: 101, M1: ACME", toStringC);
+
+        }
+
         private class A
         {
             public B? P1 { get; set; }
@@ -408,11 +427,28 @@ namespace Nzr.ToolBox.Core.Tests
         private class B
         {
             public C? P2 { get; set; }
+
+            public override string ToString()
+            {
+                return this.StringifyBuilder()
+                    .Append(b => b.P2)
+                    .Build();
+            }
         }
 
         private class C
         {
             public int P3 { get; set; }
+
+            public override string ToString()
+            {
+                return this.StringifyBuilder()
+                    .Append(c => c.P3)
+                    .Append(p => p.M1())
+                    .Build();
+            }
+
+            public string M1() => "ACME";
         }
     }
 }

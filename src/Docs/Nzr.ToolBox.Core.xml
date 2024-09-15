@@ -1518,6 +1518,54 @@
             <param name="value">Value to be converted.</param>
             <returns>Dynamic ExpandoObject.</returns>
         </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.StringifyBuilder``1(``0)">
+            <summary>
+            Extension method to create a <see cref="T:Nzr.ToolBox.Core.ObjectUtils.Stringify`1"/> builder for an object.
+            </summary>
+            <typeparam name="T">
+            The type of the object being represented as a string.
+            </typeparam>
+            <param name="obj">The object to build a string representation for.</param>
+            <returns>
+            A <see cref="T:Nzr.ToolBox.Core.ObjectUtils.Stringify`1"/> instance for the given object.
+            </returns>
+        </member>
+        <member name="T:Nzr.ToolBox.Core.ObjectUtils.Stringify`1">
+            <summary>
+            A class for building a string representation of an object with the ability to append properties or method values dynamically.
+            </summary>
+            <typeparam name="T">
+            The type of the object that is being represented as a string.
+            </typeparam>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.Stringify`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Nzr.ToolBox.Core.ObjectUtils.Stringify`1"/> class with the specified object.
+            </summary>
+            <param name="obj">The object whose string representation is being built.</param>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.Stringify`1.Append``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Appends the value of a property or method of the object to the list of values.
+            </summary>
+            <typeparam name="TProperty">
+            The type of the property or method result.
+            </typeparam>
+            <param name="member">
+            An expression representing the property or method of the object to append.
+            </param>
+            <returns>
+            The current <see cref="T:Nzr.ToolBox.Core.ObjectUtils.Stringify`1"/> instance to allow method chaining.
+            </returns>
+        </member>
+        <member name="M:Nzr.ToolBox.Core.ObjectUtils.Stringify`1.Build">
+            <summary>
+            Builds and returns the final string representation of the object.
+            </summary>
+            <returns>
+            A string representation of the object, including its type and all appended values.
+            </returns>
+        </member>
         <member name="T:Nzr.ToolBox.Core.RandomUtils">
             <summary>
             Utility methods for Randomized valued.

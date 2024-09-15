@@ -45,7 +45,7 @@ using static Nzr.ToolBox.Core.ToolBox
 
 All notable changes to this project will be documented in this file.
 
-#### v1.0.0
+### v1.0.0
 Added the following group of utilities and extension methods:
 * BooleanUtils
 * CollectionUtils
@@ -57,21 +57,29 @@ Added the following group of utilities and extension methods:
 * ReflectionUtils
 * StringUtils
 
-#### v1.1.0
+### v1.1.0
 Added null check for some extension methods.
 
-#### v1.2.0
+### v1.2.0
 Added new extensions:
 * NumberUtils: PadLeft extension for numeric values.
 * CollectionUtils: Contains extension for Arrays
 
-#### v1.3.0
+### v1.3.0
 Added new extensions:
 * Equals: Compare string ignoring diacritics
 
-Fixed bugs:
-https://github.com/marionzr/Nzr.ToolBox/issues/1
-https://github.com/marionzr/Nzr.ToolBox/issues/2
+### v1.4.0
+
+Upgraded the projects to target net8.0
+Upgraded all libraries to the latest version (27.07.2024)
+
+### v1.4.1
+
+Added new extensions to ObjectUtils:
+* StringifyBuilder is a extension to build a better string representation of a object.
+
+Upgraded all libraries to the latest version (14.09.2024)
 
 ## Know Issues
 

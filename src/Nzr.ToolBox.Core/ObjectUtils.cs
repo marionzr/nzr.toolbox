@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Nzr.ToolBox.Core
 {
+
     /// <summary>
     /// Utility and extensions methods for Object types.
     /// </summary>
@@ -86,7 +88,6 @@ namespace Nzr.ToolBox.Core
                 action.Invoke(notnull.Value);
             }
         }
-
 
         /// <summary>
         /// To be used with IfNotNull.
@@ -213,6 +214,90 @@ namespace Nzr.ToolBox.Core
             }
 
             return expando as ExpandoObject;
+        }
+
+        /// <summary>
+        /// Extension method to create a <see cref="Stringify{T}"/> builder for an object.
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type of the object being represented as a string.
+        /// </typeparam>
+        /// <param name="obj">The object to build a string representation for.</param>
+        /// <returns>
+        /// A <see cref="Stringify{T}"/> instance for the given object.
+        /// </returns>
+        public static Stringify<T> StringifyBuilder<T>(this T obj)
+        {
+            ArgumentNullException.ThrowIfNull(obj);
+
+            return new Stringify<T>(obj);
+        }
+
+        /// <summary>
+        /// A class for building a string representation of an object with the ability to append properties or method values dynamically.
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type of the object that is being represented as a string.
+        /// </typeparam>
+        public class Stringify<T>
+        {
+            private readonly T _obj;
+            private readonly IList<string> _stringRepresentations;
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="Stringify{T}"/> class with the specified object.
+            /// </summary>
+            /// <param name="obj">The object whose string representation is being built.</param>
+            public Stringify(T obj)
+            {
+                ArgumentNullException.ThrowIfNull(obj);
+
+                _obj = obj;
+                _stringRepresentations = [];
+            }
+
+            /// <summary>
+            /// Appends the value of a property or method of the object to the list of values.
+            /// </summary>
+            /// <typeparam name="TProperty">
+            /// The type of the property or method result.
+            /// </typeparam>
+            /// <param name="member">
+            /// An expression representing the property or method of the object to append.
+            /// </param>
+            /// <returns>
+            /// The current <see cref="Stringify{T}"/> instance to allow method chaining.
+            /// </returns>
+            public Stringify<T> Append<TProperty>(Expression<Func<T, TProperty>> member)
+            {
+                if (member.Body is MemberExpression memberExpression)
+                {
+                    var memberName = memberExpression.Member.Name;
+                    var memberValue = member.Compile()(_obj);
+                    var value = (memberValue is null) ? "null" : memberValue.ToString();
+                    _stringRepresentations.Add($"{memberName}: {value}");
+                }
+                else if (member.Body is MethodCallExpression methodCallExpression)
+                {
+                    var methodName = methodCallExpression.Method.Name;
+                    var methodReturnValue = member.Compile()(_obj);
+                    var value = (methodReturnValue is null) ? "null" : methodReturnValue.ToString();
+                    _stringRepresentations.Add($"{methodName}: {value}");
+                }
+
+                return this;
+            }
+
+            /// <summary>
+            /// Builds and returns the final string representation of the object.
+            /// </summary>
+            /// <returns>
+            /// A string representation of the object, including its type and all appended values.
+            /// </returns>
+            public string Build()
+            {
+                return $"{_obj!.GetType().Name} -> {string.Join(", ", _stringRepresentations)}";
+            }
         }
     }
 }
