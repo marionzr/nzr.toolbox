@@ -4,13 +4,13 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<RootNamespace>Nzr.ToolBox.Core</RootNamespace>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<Description>A collection of utility classes and extension methods that allow developers to have a social life.</Description>
 		<Copyright>Copyright 2019</Copyright>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<RepositoryUrl>https://github.com/marionzr/Nzr.ToolBox</RepositoryUrl>
-		<Version>1.4.0</Version>
-		<AssemblyVersion>1.4.0.0</AssemblyVersion>
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<PackageReleaseNotes>Check the release notes at https://raw.githubusercontent.com/marionzr/Nzr.ToolBox/master/README.md</PackageReleaseNotes>
 
 		<!-- nuget -->
