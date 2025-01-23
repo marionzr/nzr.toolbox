@@ -1,7 +1,12 @@
-﻿![GitHub last commit](https://img.shields.io/github/last-commit/marionzr/nzr.toolbox)
-![NuGet Downloads (Single)](https://img.shields.io/nuget/dt/nzr.toolbox.core.single)
+﻿# Nzr.ToolBox
 
-# Nzr.ToolBox   
+![NuGet Version](https://img.shields.io/nuget/v/Nzr.Toolbox.Core.Single?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FNzr.ToolBox.Core.Single)
+![NuGet Downloads](https://img.shields.io/nuget/dt/Nzr.Toolbox.Core?logoColor=red&label=downloads%20(Core))
+![NuGet Downloads](https://img.shields.io/nuget/dt/Nzr.Toolbox.Core.Single?logoColor=red&label=downloads%20(Single))
+![GitHub last commit](https://img.shields.io/github/last-commit/marionzr/nzr.toolbox)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/marionzr/nzr.toolbox/ci.yaml)
+![GitHub License](https://img.shields.io/github/license/marionzr/nzr.toolbox)
+
 A collection of utility classes and extension methods that allow developers to have a social life.
 
 # How to use
@@ -81,7 +86,20 @@ Added new extensions to ObjectUtils:
 
 Upgraded all libraries to the latest version (14.09.2024)
 
-## Know Issues
+### v1.6.1
 
-There are no known issues so far. The tests were written as a how-to guide but also to cover almost 100% of the code (currently 99.5% (718 of 721) line covered and 99.6% (305 of 306) branch covered).
+Upgraded all libraries to the latest version (23.01.2025)
 
+## License
+
+Nzr.Nano is licensed under the Apache License, Version 2.0, January 2004. You may obtain a copy of the License at:
+
+```
+http://www.apache.org/licenses/LICENSE-2.0
+```
+
+# Disclaimer
+
+This project is provided "as-is" without any warranty or guarantee of its functionality. The author assumes no responsibility or liability for any issues, damages, or consequences arising from the use of this code, whether direct or indirect. By using this project, you agree that you are solely responsible for any risks associated with its use, and you will not hold the author accountable for any loss, injury, or legal ramifications that may occur.
+
+Please ensure that you understand the code and test it thoroughly before using it in any production environment.

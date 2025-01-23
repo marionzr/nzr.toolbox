@@ -26,9 +26,11 @@ jobs:
     # Output the new tag version for the next job
     outputs:
       new_tag: ${{ steps.tag_version.outputs.new_tag }}
+      old_tag: ${{ steps.tag_version.outputs.old_tag }}
 
   # Job to package and publish the NuGet package
   package-and-publish:
+    if: ${{ needs.tag-version.outputs.new_tag != '' && needs.tag-version.outputs.new_tag != needs.tag-version.outputs.old_tag }}
     runs-on: ubuntu-latest
     needs: tag-version  # Depends on the 'tag-version' job
 
@@ -71,4 +73,4 @@ jobs:
       - name: Publish NuGet package
         run: |
           # Push the generated NuGet packages to NuGet.org using the API key
-          dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY_GITHUB_ACTIONS }} --source https://api.nuget.org/v3/index.json
+          dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY_GITHUB_ACTIONS }} --source https://api.nuget.org/v3/index.json --skip-duplicate

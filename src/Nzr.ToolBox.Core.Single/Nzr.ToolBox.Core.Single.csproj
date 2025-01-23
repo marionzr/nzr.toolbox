@@ -50,7 +50,7 @@ This is a all-in-one version of Nzr.ToolBox.Core, so you just need one import.
 	</ItemGroup>
 
 	<ItemGroup>
-    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="9.0.1" />
   </ItemGroup>
 
   <ItemGroup>
