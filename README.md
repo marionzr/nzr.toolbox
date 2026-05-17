@@ -92,7 +92,7 @@ Upgraded all libraries to the latest version (23.01.2025)
 
 ## License
 
-Nzr.Nano is licensed under the Apache License, Version 2.0, January 2004. You may obtain a copy of the License at:
+Nzr.Toolbox is licensed under the Apache License, Version 2.0, January 2004. You may obtain a copy of the License at:
 
 ```
 http://www.apache.org/licenses/LICENSE-2.0
